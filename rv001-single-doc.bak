@@ -3,6 +3,7 @@
 import rivtlib.rvapi as rv
 
 # rv singledoc: True
+# rv latex: False
 
 # %% rv.I("""Load Combinations
 rv.I("""Load Combinations 
@@ -15,10 +16,12 @@ rv.I("""Load Combinations
     16-3           1.2(D+F+T) + 1.6(Lr or S or R) + (f1L or 0.8W)
     ============= ================================================
 
-    | IMAGE | beam1.png | Beam Geometry, 65, num
+    | IMAGE | beam1.png | Beam Geometry, 50, num
 
     Bending Stress _[E]
     
+    :ref:`linktoref`
+
     σ1 = M1 / S1 _[M]
     """)
 
@@ -28,7 +31,7 @@ rv.V("""Loads and Geometry
     D_1 ==: 3.8*psf | psf, kPA, 2 | joists DL         
     D_2 ==: 2.1*psf | psf, kPA, 2 | plywood DL          
     D_3 ==: 10.0*psf | psf, kPA, 2 | partitions DL       
-    D_4 ==: 2*0.5*klf |klf, kN_m , 2 | fixed machinery  DL
+    D_4 ==: 2*0.5*klf |klf, kN_m, 2 | fixed machinery  DL
     L_1 ==: 40*psf | psf, kPA, 2 | ASCE7-O5 LL 
     
     | VALTABLE | beam1.csv | Beam Geometry, 0:0, num
@@ -64,38 +67,39 @@ rv.V("""Beam Stress
 
 # %% rv.D("""Publish Doc
 rv.D("""Publish Doc 
+    
+    .. _linktoref:
+
     _[[METADATA]] 
+    [primary]
     authors = rholland
     version = 0.8.1
     repo = https://github.com/rivt-info/rivt-single-doc
     license = https://opensource.org/license/mit/
+    [forks]
     fork1 = _author_, _version_, _repo_
     _[[END]]
 
     _[[LAYOUT]]    
     [general]
     logopath = logo.png
-    footer = date, time, filename, version
+    footer = docname, author, date, time, version
     pagesize = letter
     margins = 1in, 1in, 1in, 1in
-    
-    [rlabpdf]
+    [pdf]
     header = page, totalpages
     stylesheet = rlab.yaml
     cover = cover.rst
-    
+    [html]
+    cssfile =  htmlsite.css
+    [text]
+    title = docname, author, date, time, version
+    width=80    
     [texpdf]
     header = page, totalpages
     stylesheet = texpdf.sty
     cover = cover.tex
-    
-    [html]
-    cssfile =  htmlsite.css
-
-    [text]
-    title = docname, date, time, version
-    width=80    
     _[[END]]
     
-    | PUBLISH | Single Doc Example1 | rlabpdf
+    | PUBLISH | Single Doc Example 1 | text
     """)
