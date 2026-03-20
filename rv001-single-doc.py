@@ -74,15 +74,15 @@ rv.D("""Publish Doc
     fork1 = _author_, _version_, _repo_
     [layout]
     logoname = logo.png
-    pdf-footer = docname, author1;author2, date, time, version
-    pdf-pagesize = letter
-    pdf-margins = 1in, 1in, 1in, 1in
-    pdf-header = totalpages
-    pdf-cover = cover.rst
+    pdf_footer = docname, author1;author2, date, time, version
+    pdf_pagesize = letter
+    pdf_margins = 1in, 1in, 1in, 1in
+    pdf_header = totalpages
+    pdf_cover = cover.rst
     text_width=80    
     latex_stylesheet = texpdf.sty
     latex_cover = cover.tex
     _[[END]]
     
-    | PUBLISH | Single Doc Example 1 | html
+    | PUBLISH | Single Doc Example 1 | pdf
     """)

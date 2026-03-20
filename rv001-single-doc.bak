@@ -45,7 +45,7 @@ rv.V("""Loads and Geometry
 rv.V("""Beam Stress
     **Section Properties**
 
-    ## this is a comment and will not appear in the doc
+    ## comments have double hashes and will not appear in the docs
 
     | PYTHON | sectprop.py | nodocstring
 
@@ -66,34 +66,23 @@ rv.V("""Beam Stress
 rv.D("""Publish Doc 
     
     _[[METADATA]] 
-    [primary]
+    [metadata]
     authors = rholland
     version = 0.8.1
     repo = https://github.com/rivt-info/rivt-single-doc
     license = https://opensource.org/license/mit/
-    [forks]
     fork1 = _author_, _version_, _repo_
-    _[[END]]
-
-    _[[LAYOUT]]    
-    [general]
-    logopath = logo.png
-    footer = docname, author1;author2, date, time, version
-    pagesize = letter
-    margins = 1in, 1in, 1in, 1in
-    [pdf]
-    header = page, totalpages
-    stylesheet = rivtrlab.yaml
-    cover = cover.rst
-    [html]
-    indexfile = $filename
-    [text]
-    width=80    
-    [latex]
-    header = page, totalpages
-    stylesheet = texpdf.sty
-    cover = cover.tex
+    [layout]
+    logoname = logo.png
+    pdf_footer = docname, author1;author2, date, time, version
+    pdf_pagesize = letter
+    pdf_margins = 1in, 1in, 1in, 1in
+    pdf_header = totalpages
+    pdf_cover = cover.rst
+    text_width=80    
+    latex_stylesheet = texpdf.sty
+    latex_cover = cover.tex
     _[[END]]
     
-    | PUBLISH | Single Doc Example 1 | html
+    | PUBLISH | Single Doc Example 1 | pdf
     """)

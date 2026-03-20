@@ -75,15 +75,12 @@ favicons = [
 
 # -- Options for PDF output -------------------------------------------------
 # List of tuples  (source start file, target name, title, author, options).
-# The options element is a dictionary that lets you override
-# this config per-document. For example:
+# The options element is a dictionary that lets you override per-document.
 # ('index', 'MyProject', 'My Project', 'Author Name', {'pdf_compressed': True})
-# More than one author, separate them with \\.
-# r'Guido van Rossum\\Fred L. Drake, Jr., editor'
+# More than one author, separate them with \\r'Guido van Rossum\\Fred L. Drake, Jr., editor'
 #
-pdf_documents = [
-    ("index", "rivt_manual", "rivt", "r holland"),
-]
+pdf_documents = [("rv001-single-doc", "rv001-single-doc", "rivt", "r holland")]
+#
 # Label to use as a prefix for the subtitle on the cover page
 subtitle_prefix = "User Manual"
 # A list of folders to search for stylesheets. Example:
@@ -91,7 +88,7 @@ pdf_style_path = ["./pdfdocs/stylepdf"]
 # A colon-separated list of folders to search for fonts. Example:
 pdf_font_path = ["./pdfdocs/fontpdf"]
 # A comma-separated list of custom stylesheets. Example:
-pdf_stylesheets = ["stylepdf1.yaml"]
+pdf_stylesheets = ["./pdfdocs/stylepdf/stylepdf1.yaml"]
 # Example: compressed=True
 pdf_compressed = False
 # Language to be used for hyphenation support
