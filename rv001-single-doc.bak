@@ -66,12 +66,15 @@ rv.V("""Beam Stress
 rv.D("""Publish Doc 
     
     _[[METADATA]] 
-    [metadata]
+    [doc]
     authors = rholland
     version = 0.8.1
     repo = https://github.com/rivt-info/rivt-single-doc
     license = https://opensource.org/license/mit/
-    fork1 = _author_, _version_, _repo_
+    fork1_authors = _authors_
+    fork1_version = _version_
+    fork1_repo = _repo_
+    fork1_license = https://opensource.org/license/mit/
     [layout]
     logoname = logo.png
     pdf_footer = docname, author1;author2, date, time, version
@@ -82,6 +85,7 @@ rv.D("""Publish Doc
     text_width=80    
     latex_stylesheet = texpdf.sty
     latex_cover = cover.tex
+    latex_path = ./latex
     _[[END]]
     
     | PUBLISH | Single Doc Example 1 | pdf

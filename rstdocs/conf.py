@@ -3,15 +3,8 @@ import os
 from pathlib import Path
 
 sys.path.append(str(Path(".").resolve()))
-pypathS = os.path.dirname(sys.executable)
-rvstyleP = os.path.join(
-    pypathS,
-    "Lib",
-    "site-packages",
-    "rivtlib",
-    "styles",
-)
-project = "rivt.info"
+
+project = "rivt doc"
 copyright = "2023 StructureLabs LLC"
 author = "rholland"
 release = "0.3.0"
@@ -30,19 +23,18 @@ extensions = [
     "rst2pdf.pdfbuilder",
 ]
 root_doc = "index"
+duration_write_json = ""
+html_show_sourcelink = False
 exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 source_suffix = [".rst", ".md"]
 templates_path = ["_templates"]
 locale_dirs = ["_locale"]
 html_title = "rivt"
 html_theme = "pydata_sphinx_theme"
-html_show_sourcelink = False
 html_context = {"default_mode": "dark"}
 html_sidebars = {"**": ["sidebar-nav-bs.html"]}
 html_static_path = ["_static", "_static/img"]
-html_css_files = [
-    "css/custom.css",
-]
+html_css_files = ["css/custom.css"]
 html_theme_options = {
     "pygments_light_style": "tango",
     "pygments_dark_style": "github-dark",
@@ -74,21 +66,18 @@ favicons = [
 ]
 
 # -- Options for PDF output -------------------------------------------------
-# List of tuples  (source start file, target name, title, author, options).
-# The options element is a dictionary that lets you override per-document.
-# ('index', 'MyProject', 'My Project', 'Author Name', {'pdf_compressed': True})
-# More than one author, separate them with \\r'Guido van Rossum\\Fred L. Drake, Jr., editor'
-#
+# source start file, target name, title, author, options
+# options: ('index', 'MyProject', 'My Project', 'Author Name', {'pdf_compressed': True})
+# More than one author : \\r'Guido van Rossum\\Fred L. Drake, Jr., editor'
 pdf_documents = [("rv001-single-doc", "rv001-single-doc", "rivt", "r holland")]
-#
 # Label to use as a prefix for the subtitle on the cover page
 subtitle_prefix = "User Manual"
 # A list of folders to search for stylesheets. Example:
-pdf_style_path = ["./pdfdocs/stylepdf"]
+pdf_style_path = ["./rstdocs/_static/pdfstyle"]
 # A colon-separated list of folders to search for fonts. Example:
-pdf_font_path = ["./pdfdocs/fontpdf"]
+pdf_font_path = ["./rstdocs/_staticfonts"]
 # A comma-separated list of custom stylesheets. Example:
-pdf_stylesheets = ["./pdfdocs/stylepdf/stylepdf1.yaml"]
+pdf_stylesheets = ["./rstdocs/_static/pdfstyle/stylepdf1.yaml"]
 # Example: compressed=True
 pdf_compressed = False
 # Language to be used for hyphenation support

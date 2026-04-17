@@ -382,7 +382,7 @@
     "workbench.editor.empty.hint": "hidden",
     "workbench.startupEditor": "none",
     "workbench.sideBar.location": "right",
-    "workbench.colorTheme": "Default Dark Modern",
+    "workbench.colorTheme": "Dark Modern",
     "workbench.colorCustomizations": {
         "tab.activeBackground": "#2a2570",
         "tab.inactiveBackground": "#606068",
