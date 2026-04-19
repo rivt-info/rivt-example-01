@@ -9,14 +9,12 @@ rv.I("""Summary
     This rivt example calculates the maximum stress and deflection in a simply
     supported, uniformly loaded beam.
 
-    It is an annotated example of a single rivt doc with multiple sections.
-    As a single doc, the report generating script is not used. It illustrates
-    the use of most API functions commands and tags. The file can
-    be formatted as a text, PDF or HTML doc by changing the format parameter
-    in | PUBLISH | command of the *Doc API (rv.D)*. Further details are provided 
-    in the _[U] rivt user manual, https://www.rivt.info |.
-    
-    
+    It is also an annotated example of a *single rivt doc* with multiple
+    sections. As a *single doc*, the report generating script is not used. The
+    example illustrates the use of most API functions, commands and tags. The
+    file can be formatted as a text, PDF or HTML doc by changing the format
+    parameter in | PUBLISH | command of the *Doc API (rv.D)*. Further details
+    are provided in the _[U] rivt user manual, https://www.rivt.info|. 
     """)
 
 # %% rv.I("""Load Combinations
