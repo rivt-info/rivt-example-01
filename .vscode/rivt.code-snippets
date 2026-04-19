@@ -15,7 +15,6 @@
             "rv.M(\"\"\"${1:section-label} | ${2|private,public|}, ${3|hide,show|}, ${4|merge,section|} ",
             "",
             "    ${0:text}",
-            "    ",
             "    \"\"\")"
         ]
     },
@@ -27,7 +26,6 @@
             "rv.R(\"\"\"${1:section-label} | ${2|private,public|}, ${3|hide,show|}, ${4|merge,section|} ",
             "",
             "    ${0:text}",
-            "    ",
             "    \"\"\")"
         ]
     },
@@ -62,8 +60,7 @@
         "body": [
             "rv.T(\"\"\"${1:section-label} | ${2|private,public|}, ${3|hide,show|}, ${4|merge,section|} ",
             "",
-            "    ${0:text}",
-            "    ",
+            "    ${0:text} ",
             "    \"\"\")"
         ]
     },
@@ -75,7 +72,6 @@
             "rv.D(\"\"\"${1:section-label} | ${2|private,public|}, ${3|hide,show|}, ${4|merge,section|} ",
             "",
             "    ${0:text}",
-            "    ",
             "    \"\"\")"
         ]
     },

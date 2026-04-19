@@ -4,19 +4,22 @@ import rivtlib.rvapi as rv
 
 # rv public: False
 
+# %% rv.I("""Summary
 rv.I("""Summary  
-
-    This is an annotated example of a single document with multiple sections.
-    As a single doc, the report geenerating script is not used. It illustrates
-    the use of each API function and most of the tags. The file can be
-    formatted as a text, PDF or HTML doc by changing the format parameter
-    the Doc API (rv.D). Further details are provided in 
-    the _[U] rivt user manual, https://www.rivt.info |.
-    
-    The example calculates the maximum stress and deflection in a simply
+    This rivt example calculates the maximum stress and deflection in a simply
     supported, uniformly loaded beam.
+
+    It is an annotated example of a single rivt doc with multiple sections.
+    As a single doc, the report generating script is not used. It illustrates
+    the use of most API functions commands and tags. The file can
+    be formatted as a text, PDF or HTML doc by changing the format parameter
+    in | PUBLISH | command of the *Doc API (rv.D)*. Further details are provided 
+    in the _[U] rivt user manual, https://www.rivt.info |.
+    
+    
     """)
 
+# %% rv.I("""Load Combinations
 rv.I("""Load Combinations 
     ASCE 7-05 Load Effects _[T]
     ============= ================================================
@@ -72,6 +75,12 @@ rv.V("""Beam Stress
     fb_1 <=: m_1 / section_1 | lb_in2, MPA, 1 | bending stress _[E]
 
     fb_1 < 20000*lb_in2 | ksi, 2, >>> OK, >>> NOT OK | stress ratio _[E]
+    """)
+
+
+rv.V("""Beam deflection  
+
+    text
     """)
 
 # %% rv.D("""Publish Doc
