@@ -14,7 +14,7 @@ rv.I("""Summary
     
     The example illustrates the use of most of the API functions, commands and
     tags. The file is be formatted as a text, PDF or HTML doc by changing the
-    format parameter in | PUBLISH | command of the *Doc API (rv.D)*. Further
+    type parameter in the *| PUBLISH |* command of the *Doc API (rv.D)*. Further
     details are provided in the _[U] rivt user manual, https://www.rivt.info|.
     
     """)
@@ -22,8 +22,8 @@ rv.I("""Summary
 # %% rv.I("""Load Combinations
 rv.I("""Load Combinations 
 
-    This is an inline table that uses the restructured text syntax. The *[T]* 
-    tag numbers the table.
+    This is an inline table using the restructured text syntax. The line tag
+    *[T]* numbers the table.
     
     ASCE 7-05 Load Effects _[T]
     ============= ================================================
@@ -34,8 +34,8 @@ rv.I("""Load Combinations
     16-3           1.2(D+F+T) + 1.6(Lr or S or R) + (f1L or 0.8W)
     ============= ================================================
 
-    An inline table within a *[[TABLE]]* block produces the same output as above
-    and also writes the table to a CSV file in the *_stored* folder.
+    When an inline table is in a *[[TABLE]]* block it produces the same output
+    as above but also writes the table to a CSV file in the *_stored* folder.
 
     _[[TABLE]]  ASCE 7-05 Load Effects(2)
     ============= ================================================
@@ -47,16 +47,16 @@ rv.I("""Load Combinations
     ============= ================================================
     _[[END]]
 
-The *| IMAGE |* command inserts an image file with caption, scale (as
-percentage) and numbered options.
+   The *| IMAGE |* command inserts an image file with caption, scale (as
+   percentage) and numbered options.
 
-    | IMAGE | beam1.png | Beam Geometry, 50, num
+    | IMAGE | beam1.png | Beam Geometry, 50, nonum
 
-The *[E]* tagight justifies the label and adds an equation number
+    The line  tag *[E]* right justifies the label and adds an equation number.
 
     Bending Stress _[E]
 
-The *[M]* tag formats the equation using utf-8 text.
+    The line tag *[M]* formats the equation using utf-8 text.
 
     σ1 = M1 / S1 _[M]
     """)
@@ -64,7 +64,9 @@ The *[M]* tag formats the equation using utf-8 text.
 # %% rv.V("""Loads and Geometry
 rv.V("""Loads and Geometry 
     
-    
+    Variable values are defined with the define operator.  Successive lines of 
+    value definiiions are formatted as a table. The line tag *[T]* numbers
+    the table.
     
     Unit Loads _[T]
     D_1 ==: 3.8*psf | psf, kPA, 2 | joists DL         
@@ -73,14 +75,19 @@ rv.V("""Loads and Geometry
     D_4 ==: 2*0.5*klf |klf, kN_m, 2 | fixed machinery  DL
     L_1 ==: 40*psf | psf, kPA, 2 | ASCE7-O5 LL 
     
-    | VALTABLE | beam1.csv | Beam Geometry, 0:0, num
+    The *| VALTABLE |* command reads variable values from the file in the
+    SrC/Vals folder. The text is used as the table title. The range specifies
+    the starting and ending line to be read from the file (0:0 means all lines). 
+    The *num;nonum* parameter specifies whether theimported table is numbered.
+
+    | VALTABLE | beam1.csv | Beam Geometry, 0:0
 
     Uniform Distributed Loads
-    dl_1 <=: 1.2 * (W_1 * (D_1 + D_2 + D_3) + D_4) | klf, kN_m, 2 | dead load : ASCE7-05 2.3.2  _[E]
+    dl_1 <=: 1.2 * (W_1 * (D_1 + D_2 + D_3) + D_4) | klf, kN_m, 2 | dead load : ASCE7-05 2.3.2
 
-    ll_1 <=: 1.6 * W_1 * L_1 | klf, kN_m, 2 | live load : ASCE7-05 2.3.2 _[E]
+    ll_1 <=: 1.6 * W_1 * L_1 | klf, kN_m, 2 | live load : ASCE7-05 2.3.2
     
-    omega_1 <=: dl_1 + ll_1 | klf, kN_m, 2 | total load : ASCE7-05 2.3.2 _[E]
+    omega_1 <=: dl_1 + ll_1 | klf, kN_m, 2 | total load : ASCE7-05 2.3.2
     """)
 
 # %% rv.V("""Beam Stress
@@ -89,11 +96,13 @@ rv.V("""Beam Stress
 
     ## indented comments with double hashes will not appear in the doc
 
-    | PYTHON | sectprop.py | nodocstring
+    | PYTHON | sectprop.py | nodoc
 
-    section_1 :=: rectsect(10*inch, 18*inch) | in3, cm3, 2 | function: rect. S _[E]
+    yy = 10*inch
 
-    inertia_1 :=: rectinertia(10*inch, 18*inch) | in4, cm4, 1 | function: rect. I _[E]
+    section_1 :=: rectsect(yy, 18*inch) | in3, cm3, 2 | S-rectangle
+
+    inertia_1 :=: rectinertia(10*inch, 18*inch) | in4, cm4, 1 | I-rectangle
 
     **Bending Stress**
 
@@ -132,9 +141,6 @@ rv.D("""Publish Doc
     pdf_header = totalpages
     pdf_cover = cover.rst
     text_width=80    
-    latex_stylesheet = texpdf.sty
-    latex_cover = cover.tex
-    latex_path = ./latex
     _[[END]]
     
     | PUBLISH | Single Doc Example 1 | pdf

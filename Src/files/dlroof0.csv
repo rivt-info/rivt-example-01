@@ -1,7 +1,0 @@
-variable,value,unit,[unit],description
-ld1,2.,PSF,KPA,Urethane foam (4 inch thick)
-ld2,1.,PSF,KPA,Three-ply roofing
-ld3,5.,PSF,KPA,Doug Fir decking 2-in.
-ld4,1.,PSF,KPA,Doug Fir beams 4x12 at 12 ft o.c.
-, , , , 
-roofdl1,9.,PSF,KPA,Total roof unit load

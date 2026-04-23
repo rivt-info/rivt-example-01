@@ -1,5 +1,0 @@
-------
-
-some example text from a file
-
-------
