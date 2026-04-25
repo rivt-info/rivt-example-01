@@ -2,20 +2,24 @@
 # %% import
 import rivtlib.rvapi as rv
 
-# rv public: False
+# rv setpublic: False
 
 # %% rv.I("""Summary
 rv.I("""Summary  
     
     This rivt example calculates the maximum stress and deflection in a simply
     supported, uniformly loaded beam. It also serves as an annotated example of
-    a single doc with multiple sections (a *single doc* does not use the report
-    generating script).
+    a *single doc* with multiple sections (a *single doc* does not use the
+    report generating script).
     
-    The example illustrates the use of most of the API functions, commands and
-    tags. The file is be formatted as a text, PDF or HTML doc by changing the
-    type parameter in the *| PUBLISH |* command of the *Doc API (rv.D)*. Further
-    details are provided in the _[U] rivt user manual, https://www.rivt.info|.
+    The example illustrates the use of some of the most common API functions,
+    commands and tags. Further details are provided in the _[U] rivt user manual,
+    https://www.rivt.info|.
+
+    The file may be formatted as a text, PDF or HTML doc by changing the type
+    parameter in the *| PUBLISH |* command of the *Doc API (rv.D)* at the end
+    of the file. Published files are found in the respective sub-folders of the
+    *_published* folder.
     
     """)
 
@@ -24,7 +28,7 @@ rv.I("""Load Combinations
 
     This is an inline table using the restructured text syntax. The line tag
     *[T]* numbers the table.
-    
+
     ASCE 7-05 Load Effects _[T]
     ============= ================================================
     Equation No.    Load Combination
@@ -35,7 +39,7 @@ rv.I("""Load Combinations
     ============= ================================================
 
     When an inline table is in a *[[TABLE]]* block it produces the same output
-    as above but also writes the table to a CSV file in the *_stored* folder.
+    as above, and also writes the table to a CSV file in the *_stored* folder.
 
     _[[TABLE]]  ASCE 7-05 Load Effects(2)
     ============= ================================================
@@ -47,8 +51,8 @@ rv.I("""Load Combinations
     ============= ================================================
     _[[END]]
 
-   The *| IMAGE |* command inserts an image file with caption, scale (as
-   percentage) and numbered options.
+    The *| IMAGE |* command inserts an image file with caption, scale (as
+    percentage) and numbered options.
 
     | IMAGE | beam1.png | Beam Geometry, 50, nonum
 
