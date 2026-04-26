@@ -1,11 +1,14 @@
-04-25 01:58  rv001-example01   INFO     Doc start
-04-25 01:58  rv001-example01   INFO     rivtlib version: 1.0.0a5
-04-25 01:58  rv001-example01   INFO     rivt backup : c:\git\rivt-example-01-git\rivt-report\stored_\logs\rv001-example01.bak
-04-25 01:58  rv001-example01   INFO     SECTION 1 - type I
-04-25 01:58  rv001-example01   INFO     tag : _[U] rivt user manual,
-04-25 01:58  rv001-example01   INFO     SECTION 2 - type I
-04-25 01:58  rv001-example01   INFO     tag : _[T]
-04-25 01:58  rv001-example01   INFO     tag : _[[TABLE]]  ASCE 7-05 Load Effects(2)
-04-25 01:58  rv001-example01   INFO     tag : _[[END]]
-04-25 01:58  rv001-example01   INFO     SECTION 3 - type V
-04-25 01:58  rv001-example01   INFO     command : VALTABLE
+04-26 07:06  rv001-example01   INFO     Doc start
+04-26 07:06  rv001-example01   INFO     rivtlib version: 1.0.0a5
+04-26 07:06  rv001-example01   INFO     rivt backup : c:\git\rivt-example-01-git\rivt-report\stored_\logs\rv001-example01.bak
+04-26 07:06  rv001-example01   INFO     SECTION 1 - type I
+04-26 07:06  rv001-example01   INFO     tag : _[U]
+04-26 07:06  rv001-example01   INFO     SECTION 2 - type I
+04-26 07:06  rv001-example01   INFO     tag : _[T]
+04-26 07:06  rv001-example01   INFO     tag : _[[TABLE]]
+04-26 07:06  rv001-example01   INFO     command : IMAGE
+04-26 07:06  rv001-example01   INFO     tag : _[E]
+04-26 07:06  rv001-example01   INFO     tag : _[M]
+04-26 07:06  rv001-example01   INFO     SECTION 3 - type V
+04-26 07:06  rv001-example01   INFO     tag : _[T]
+04-26 07:06  rv001-example01   INFO     command : VALTABLE

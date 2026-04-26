@@ -26,8 +26,8 @@ rv.I("""Summary
 # %% rv.I("""Load Combinations
 rv.I("""Load Combinations 
 
-    This is an inline table using the restructured text syntax. The line tag
-    *[T]* numbers the table.
+    This is an inline table using the restructured text syntax. 
+    ## The line tag *[T]* numbers the table.##
 
     ASCE 7-05 Load Effects _[T]
     ============= ================================================
@@ -41,7 +41,7 @@ rv.I("""Load Combinations
     When an inline table is in a *[[TABLE]]* block it produces the same output
     as above, and also writes the table to a CSV file in the *_stored* folder.
 
-    _[[TABLE]]  ASCE 7-05 Load Effects(2)
+    _[[TABLE]]  ASCE 7-05 Load Effects (saved as csv)
     ============= ================================================
     Equation No.    Load Combination
     ============= ================================================
@@ -51,40 +51,40 @@ rv.I("""Load Combinations
     ============= ================================================
     _[[END]]
 
-    The *| IMAGE |* command inserts an image file with caption, scale (as
-    percentage) and numbered options.
+    ## The IMAGE command inserts an image file with caption, scale (as
+    ## percentage) and numbered options.
 
     | IMAGE | beam1.png | Beam Geometry, 50, nonum
 
-    The line  tag *[E]* right justifies the label and adds an equation number.
+    ## The line  tag *[E]* right justifies the label and adds an equation number.
 
     Bending Stress _[E]
 
-    The line tag *[M]* formats the equation using utf-8 text.
-
     σ1 = M1 / S1 _[M]
+
+    ## The line tag *[M]* formats the equation using utf-8 text.
     """)
 
 # %% rv.V("""Loads and Geometry
 rv.V("""Loads and Geometry 
     
-    Variable values are defined with the define operator.  Successive lines of 
-    value definiiions are formatted as a table. The line tag *[T]* numbers
-    the table.
+    Successive lines of value definiiions are formatted as a table. Variable
+    values are defined with the define operator. The line tag [T] labels and
+    numbers the table.
     
-    Unit Loads _[T]
+    Assign Unit Loads _[T]
     D_1 ==: 3.8*psf | psf, kPA, 2 | joists DL         
     D_2 ==: 2.1*psf | psf, kPA, 2 | plywood DL          
     D_3 ==: 10.0*psf | psf, kPA, 2 | partitions DL       
     D_4 ==: 2*0.5*klf |klf, kN_m, 2 | fixed machinery  DL
     L_1 ==: 40*psf | psf, kPA, 2 | ASCE7-O5 LL 
     
-    The *| VALTABLE |* command reads variable values from the file in the
-    SrC/Vals folder. The text is used as the table title. The range specifies
+    The VALTABLE command reads variable values from the file in the
+    _src folder. The text is used as the table title. The range specifies
     the starting and ending line to be read from the file (0:0 means all lines). 
     The *num;nonum* parameter specifies whether theimported table is numbered.
 
-    | VALTABLE | beam1.csv | Beam Geometry, 0:0
+    | VALTABLE | _src/beam1.csv | Assign Beam Geometry, 0:0
 
     Uniform Distributed Loads
     dl_1 <=: 1.2 * (W_1 * (D_1 + D_2 + D_3) + D_4) | klf, kN_m, 2 | dead load : ASCE7-05 2.3.2
