@@ -69,15 +69,15 @@ favicons = [
 # source start file, target name, title, author, options
 # options: ('index', 'MyProject', 'My Project', 'Author Name', {'pdf_compressed': True})
 # More than one author : \\r'Guido van Rossum\\Fred L. Drake, Jr., editor'
-pdf_documents = [("rv001-single-doc", "rv001-single-doc", "rivt", "r holland")]
+pdf_documents = [("rv001-example01", "rv001-example01", "rivt", "r holland")]
 # Label to use as a prefix for the subtitle on the cover page
 subtitle_prefix = "User Manual"
 # A list of folders to search for stylesheets. Example:
-pdf_style_path = ["./rstdocs/_static/pdfstyle"]
+pdf_style_path = ["./rstdocs_/_static/pdfstyle"]
 # A colon-separated list of folders to search for fonts. Example:
-pdf_font_path = ["./rstdocs/_staticfonts"]
+pdf_font_path = ["./rstdocs_/_staticfonts"]
 # A comma-separated list of custom stylesheets. Example:
-pdf_stylesheets = ["./rstdocs/_static/pdfstyle/stylepdf1.yaml"]
+pdf_stylesheets = ["./rstdocs_/_static/pdfstyle/stylepdf1.yaml"]
 # Example: compressed=True
 pdf_compressed = False
 # Language to be used for hyphenation support

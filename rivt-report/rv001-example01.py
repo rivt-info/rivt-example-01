@@ -54,7 +54,7 @@ rv.I("""Load Combinations
     ## The IMAGE command inserts an image file with caption, scale (as
     ## percentage) and numbered options.
 
-    | IMAGE | beam1.png | Beam Geometry, 50, nonum
+    | IMAGE | _src/beam1.png | Beam Geometry, 50, nonum
 
     ## The line  tag *[E]* right justifies the label and adds an equation number.
 
@@ -72,26 +72,27 @@ rv.V("""Loads and Geometry
     values are defined with the define operator. The line tag [T] labels and
     numbers the table.
     
-    Assign Unit Loads _[T]
+    Define Unit Loads _[T]
     D_1 ==: 3.8*psf | psf, kPA, 2 | joists DL         
     D_2 ==: 2.1*psf | psf, kPA, 2 | plywood DL          
     D_3 ==: 10.0*psf | psf, kPA, 2 | partitions DL       
     D_4 ==: 2*0.5*klf |klf, kN_m, 2 | fixed machinery  DL
     L_1 ==: 40*psf | psf, kPA, 2 | ASCE7-O5 LL 
     
+
     The VALTABLE command reads variable values from the file in the
     _src folder. The text is used as the table title. The range specifies
     the starting and ending line to be read from the file (0:0 means all lines). 
     The *num;nonum* parameter specifies whether theimported table is numbered.
 
-    | VALTABLE | _src/beam1.csv | Assign Beam Geometry, 0:0
+    | VALTABLE | _src/beam1.csv | Define Beam Geometry, 0:0
 
-    Uniform Distributed Loads
-    dl_1 <=: 1.2 * (W_1 * (D_1 + D_2 + D_3) + D_4) | klf, kN_m, 2 | dead load : ASCE7-05 2.3.2
+    Uniform Distributed Loads _[E]
+    dl_1 <=: 1.2 * (W_1 * (D_1 + D_2 + D_3) + D_4) | klf, kN_m, 2 | dead load: ASCE7-05 2.3.2
 
-    ll_1 <=: 1.6 * W_1 * L_1 | klf, kN_m, 2 | live load : ASCE7-05 2.3.2
+    ll_1 <=: 1.6 * W_1 * L_1 | klf, kN_m, 2 | live load: ASCE7-05 2.3.2
     
-    omega_1 <=: dl_1 + ll_1 | klf, kN_m, 2 | total load : ASCE7-05 2.3.2
+    omega_1 <=: dl_1 + ll_1 | klf, kN_m, 2 | total load: ASCE7-05 2.3.2
     """)
 
 # %% rv.V("""Beam Stress
@@ -100,27 +101,26 @@ rv.V("""Beam Stress
 
     ## indented comments with double hashes will not appear in the doc
 
-    | PYTHON | sectprop.py | nodoc
+    | PYTHON | _src/sectprop.py | nodoc
 
-    yy = 10*inch
-
-    section_1 :=: rectsect(yy, 18*inch) | in3, cm3, 2 | S-rectangle
+    section_1 :=: rectsect(10*inch, 18*inch) | in3, cm3, 2 | S-rectangle
 
     inertia_1 :=: rectinertia(10*inch, 18*inch) | in4, cm4, 1 | I-rectangle
 
     **Bending Stress**
 
-    m_1 <=: omega_1 * S_1**2 / 8 | ftkips, mkN, 2 | mid-span UDL moment _[E]
+    m_1 <=: omega_1 * S_1**2 / 8 | ftkips, mkN, 2 | mid-span UDL moment 
+    
+    fb_1 <=: m_1 / section_1 | lb_in2, MPA, 1 | bending stress 
 
-    fb_1 <=: m_1 / section_1 | lb_in2, MPA, 1 | bending stress _[E]
-
-    fb_1 < 20000*lb_in2 | ksi, 2, >>> OK, >>> NOT OK | stress ratio _[E]
+    fb_1 < 20000*lb_in2 | ksi, 2, >>> OK, >>> NOT OK | stress ratio 
     """)
 
 
 rv.V("""Beam deflection  
 
-    text
+    text 123
+
     """)
 
 # %% rv.D("""Publish Doc
@@ -147,5 +147,9 @@ rv.D("""Publish Doc
     text_width=80    
     _[[END]]
     
-    | PUBLISH | Single Doc Example 1 | pdf
+    The rivt file may be published as a text, PDF or HTML doc by changing the
+    type parameter to text, pdf or html. Published files are found in
+    the sub-folders of the *_published* folder.
+
+    | PUBLISH | Single Doc Example 1 | html
     """)
