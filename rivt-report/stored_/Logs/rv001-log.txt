@@ -1,23 +1,6 @@
-04-26 22:17  rv001-example01   INFO     Doc start
-04-26 22:17  rv001-example01   INFO     rivtlib version: 1.0.0a5
-04-26 22:17  rv001-example01   INFO     rivt backup : c:\git\rivt-example-01-git\rivt-report\stored_\logs\rv001-example01.bak
-04-26 22:17  rv001-example01   INFO     SECTION 1 - type I
-04-26 22:17  rv001-example01   INFO     tag : _[U]
-04-26 22:17  rv001-example01   INFO     SECTION 2 - type I
-04-26 22:17  rv001-example01   INFO     tag : _[T]
-04-26 22:17  rv001-example01   INFO     tag : _[[TABLE]]
-04-26 22:17  rv001-example01   INFO     command : IMAGE
-04-26 22:17  rv001-example01   DEBUG    STREAM b'IHDR' 16 13
-04-26 22:17  rv001-example01   DEBUG    STREAM b'pHYs' 41 9
-04-26 22:17  rv001-example01   DEBUG    STREAM b'IDAT' 62 8192
-04-26 22:17  rv001-example01   INFO     tag : _[E]
-04-26 22:17  rv001-example01   INFO     tag : _[M]
-04-26 22:17  rv001-example01   INFO     SECTION 3 - type V
-04-26 22:17  rv001-example01   INFO     tag : _[T]
-04-26 22:17  rv001-example01   INFO     command : VALTABLE
-04-26 22:17  rv001-example01   INFO     tag : _[E]
-04-26 22:17  rv001-example01   INFO     SECTION 4 - type V
-04-26 22:17  rv001-example01   INFO     command : PYTHON
-04-26 22:17  rv001-example01   INFO     SECTION 5 - type V
-04-26 22:17  rv001-example01   INFO     SECTION : Publish Doc 
-04-26 22:17  rv001-example01   INFO     block tag : _[[METADATA]]
+04-28 13:36  rv001-example01   INFO     Doc start
+04-28 13:36  rv001-example01   INFO     rivtlib version: 1.0.0a5
+04-28 13:36  rv001-example01   INFO     rivt backup : c:\git\rivt-example-01-git\rivt-report\stored_\logs\rv001-example01.bak
+04-28 13:36  rv001-example01   INFO     SECTION 1 - type I
+04-28 13:36  rv001-example01   INFO     SECTION 2 - type I
+04-28 13:36  rv001-example01   INFO     tag : _[T]

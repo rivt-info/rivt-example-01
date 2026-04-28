@@ -2,6 +2,7 @@
 # %% import
 import rivtlib.rvapi as rv
 
+# when true the following sets the default "private" section header to "public"
 # rv setpublic: False
 
 # %% rv.I("""Summary
@@ -13,11 +14,11 @@ rv.I("""Summary
     report generating script).
     
     The example illustrates the use of some of the most common API functions,
-    commands and tags. Further details are provided in the _[U] rivt user manual,
+    commands and tags. Further details are provided in the [U] rivt user manual,
     https://www.rivt.info|.
 
     The file may be formatted as a text, PDF or HTML doc by changing the type
-    parameter in the *| PUBLISH |* command of the *Doc API (rv.D)* at the end
+    parameter in the |PUBLISH| command of the *Doc API (rv.D)* at the end
     of the file. Published files are found in the respective sub-folders of the
     *_published* folder.
     
@@ -54,7 +55,7 @@ rv.I("""Load Combinations
     ## The IMAGE command inserts an image file with caption, scale (as
     ## percentage) and numbered options.
 
-    | IMAGE | _src/beam1.png | Beam Geometry, 50, nonum
+    | IMAGE | beam1.png | Beam Geometry, 50, num
 
     ## The line  tag *[E]* right justifies the label and adds an equation number.
 
@@ -85,7 +86,7 @@ rv.V("""Loads and Geometry
     the starting and ending line to be read from the file (0:0 means all lines). 
     The *num;nonum* parameter specifies whether theimported table is numbered.
 
-    | VALTABLE | _src/beam1.csv | Define Beam Geometry, 0:0
+    | VALTABLE | beam1.csv | Define Beam Geometry, 0:0
 
     Uniform Distributed Loads _[E]
     dl_1 <=: 1.2 * (W_1 * (D_1 + D_2 + D_3) + D_4) | klf, kN_m, 2 | dead load: ASCE7-05 2.3.2
@@ -151,5 +152,5 @@ rv.D("""Publish Doc
     type parameter to text, pdf or html. Published files are found in
     the sub-folders of the *_published* folder.
 
-    | PUBLISH | Single Doc Example 1 | html
+    | PUBLISH | Single Doc Example 1 | text
     """)
