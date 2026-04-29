@@ -1,6 +1,7 @@
-04-28 13:36  rv001-example01   INFO     Doc start
-04-28 13:36  rv001-example01   INFO     rivtlib version: 1.0.0a5
-04-28 13:36  rv001-example01   INFO     rivt backup : c:\git\rivt-example-01-git\rivt-report\stored_\logs\rv001-example01.bak
-04-28 13:36  rv001-example01   INFO     SECTION 1 - type I
-04-28 13:36  rv001-example01   INFO     SECTION 2 - type I
-04-28 13:36  rv001-example01   INFO     tag : _[T]
+04-28 23:42  rv001-example01   INFO     Doc start
+04-28 23:42  rv001-example01   INFO     rivtlib version: 1.0.0a5
+04-28 23:42  rv001-example01   INFO     rivt backup : c:\git\rivt-example-01-git\rivt-report\stored_\logs\rv001-example01.bak
+04-28 23:42  rv001-example01   INFO     SECTION 1 - type I
+04-28 23:42  rv001-example01   INFO     SECTION 2 - type I
+04-28 23:42  rv001-example01   INFO     tag : _[T]
+04-28 23:42  rv001-example01   INFO     tag : _[[TABLE]]

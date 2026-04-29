@@ -12,7 +12,7 @@ rv.I("""Summary
     supported, uniformly loaded beam. It also serves as an annotated example of
     a *single doc* with multiple sections (a *single doc* does not use the
     report generating script).
-    
+
     The example illustrates the use of some of the most common API functions,
     commands and tags. Further details are provided in the [U] rivt user manual,
     https://www.rivt.info|.
@@ -28,7 +28,7 @@ rv.I("""Summary
 rv.I("""Load Combinations 
 
     This is an inline table using the restructured text syntax. 
-    ## The line tag *[T]* numbers the table.##
+    ## The tag _[T] numbers the table. Double hashses are non-printed comments. 
 
     ASCE 7-05 Load Effects _[T]
     ============= ================================================
@@ -52,8 +52,8 @@ rv.I("""Load Combinations
     ============= ================================================
     _[[END]]
 
-    ## The IMAGE command inserts an image file with caption, scale (as
-    ## percentage) and numbered options.
+    The IMAGE command inserts an image file with caption, scale (as
+    percentage) and numbered options.
 
     | IMAGE | beam1.png | Beam Geometry, 50, num
 
