@@ -1,7 +1,17 @@
-04-28 23:42  rv001-example01   INFO     Doc start
-04-28 23:42  rv001-example01   INFO     rivtlib version: 1.0.0a5
-04-28 23:42  rv001-example01   INFO     rivt backup : c:\git\rivt-example-01-git\rivt-report\stored_\logs\rv001-example01.bak
-04-28 23:42  rv001-example01   INFO     SECTION 1 - type I
-04-28 23:42  rv001-example01   INFO     SECTION 2 - type I
-04-28 23:42  rv001-example01   INFO     tag : _[T]
-04-28 23:42  rv001-example01   INFO     tag : _[[TABLE]]
+04-29 23:25  rv001-example01   INFO     Doc start
+04-29 23:25  rv001-example01   INFO     rivtlib version: 1.0.0a5
+04-29 23:25  rv001-example01   INFO     rivt backup : c:\git\rivt-example-01-git\rivt-report\stored_\logs\rv001-example01.bak
+04-29 23:25  rv001-example01   INFO     SECTION 1 - type I
+04-29 23:25  rv001-example01   INFO     SECTION 2 - type I
+04-29 23:25  rv001-example01   INFO     tag : _[T]
+04-29 23:25  rv001-example01   INFO     tag : _[[TABLE]]
+04-29 23:25  rv001-example01   INFO     command : IMAGE
+04-29 23:25  rv001-example01   DEBUG    STREAM b'IHDR' 16 13
+04-29 23:25  rv001-example01   DEBUG    STREAM b'pHYs' 41 9
+04-29 23:25  rv001-example01   DEBUG    STREAM b'IDAT' 62 8192
+04-29 23:25  rv001-example01   INFO     tag : _[E]
+04-29 23:25  rv001-example01   INFO     tag : _[M]
+04-29 23:25  rv001-example01   INFO     SECTION 3 - type V
+04-29 23:25  rv001-example01   INFO     tag : _[T]
+04-29 23:25  rv001-example01   INFO     command : VALTABLE
+04-29 23:25  rv001-example01   INFO     tag : _[E]

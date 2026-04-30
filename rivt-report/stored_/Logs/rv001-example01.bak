@@ -21,14 +21,14 @@ rv.I("""Summary
     parameter in the |PUBLISH| command of the *Doc API (rv.D)* at the end
     of the file. Published files are found in the respective sub-folders of the
     *_published* folder.
-    
+
     """)
 
 # %% rv.I("""Load Combinations
 rv.I("""Load Combinations 
 
     This is an inline table using the restructured text syntax. 
-    ## The tag _[T] numbers the table. Double hashses are non-printed comments. 
+    ## The tag _[T] numbers the table. Double hashes are non-printed comments. 
 
     ASCE 7-05 Load Effects _[T]
     ============= ================================================
@@ -52,8 +52,8 @@ rv.I("""Load Combinations
     ============= ================================================
     _[[END]]
 
-    The IMAGE command inserts an image file with caption, scale (as
-    percentage) and numbered options.
+    The IMAGE command inserts an image file with caption, scale (as percentage)
+    and numbered options.
 
     | IMAGE | beam1.png | Beam Geometry, 50, num
 
@@ -64,6 +64,7 @@ rv.I("""Load Combinations
     σ1 = M1 / S1 _[M]
 
     ## The line tag *[M]* formats the equation using utf-8 text.
+    
     """)
 
 # %% rv.V("""Loads and Geometry
@@ -80,13 +81,12 @@ rv.V("""Loads and Geometry
     D_4 ==: 2*0.5*klf |klf, kN_m, 2 | fixed machinery  DL
     L_1 ==: 40*psf | psf, kPA, 2 | ASCE7-O5 LL 
     
+    The VALTABLE command reads variable values from the file in the _src
+    folder. The text is used as the table title. The range specifies the
+    starting and ending line to be read from the file (0:0 means all lines).
+    The *num;non* parameter specifies whether theimported table is numbered.
 
-    The VALTABLE command reads variable values from the file in the
-    _src folder. The text is used as the table title. The range specifies
-    the starting and ending line to be read from the file (0:0 means all lines). 
-    The *num;nonum* parameter specifies whether theimported table is numbered.
-
-    | VALTABLE | beam1.csv | Define Beam Geometry, 0:0
+    | VALTABLE | beam1.csv | Beam Geometry, 0:0, num
 
     Uniform Distributed Loads _[E]
     dl_1 <=: 1.2 * (W_1 * (D_1 + D_2 + D_3) + D_4) | klf, kN_m, 2 | dead load: ASCE7-05 2.3.2
@@ -94,6 +94,7 @@ rv.V("""Loads and Geometry
     ll_1 <=: 1.6 * W_1 * L_1 | klf, kN_m, 2 | live load: ASCE7-05 2.3.2
     
     omega_1 <=: dl_1 + ll_1 | klf, kN_m, 2 | total load: ASCE7-05 2.3.2
+    
     """)
 
 # %% rv.V("""Beam Stress
