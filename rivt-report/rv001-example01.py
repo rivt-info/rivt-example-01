@@ -18,7 +18,7 @@ rv.I("""Summary
     https://www.rivt.info|.
 
     The file may be formatted as a text, PDF or HTML doc by changing the type
-    parameter in the |PUBLISH| command of the *Doc API (rv.D)* at the end
+    parameter in the PUBLISH command of the *Doc API (rv.D)* at the end
     of the file. Published files are found in the respective sub-folders of the
     *_published* folder.
 
@@ -28,7 +28,9 @@ rv.I("""Summary
 rv.I("""Load Combinations 
 
     This is an inline table using the restructured text syntax. 
-    ## The tag _[T] numbers the table. Double hashes are non-printed comments. 
+
+    ## indented comments with double hashes will not appear in the doc
+    ## The tag _[T] numbers the table.
 
     ASCE 7-05 Load Effects _[T]
     ============= ================================================
@@ -52,14 +54,14 @@ rv.I("""Load Combinations
     ============= ================================================
     _[[END]]
 
-    The IMAGE command inserts an image file with caption, scale (as percentage)
-    and numbered options.
+    ## The IMAGE command inserts an image file with caption, scale (as percentage)
+    ## and numbered options.
 
     | IMAGE | beam1.png | Beam Geometry, 50, num
 
     ## The line  tag *[E]* right justifies the label and adds an equation number.
 
-    Bending Stress _[E]
+    Maximum Bending Stress 
 
     σ1 = M1 / S1 _[M]
 
@@ -81,6 +83,7 @@ rv.V("""Loads and Geometry
     D_4 ==: 2*0.5*klf |klf, kN_m, 2 | fixed machinery  DL
     L_1 ==: 40*psf | psf, kPA, 2 | ASCE7-O5 LL 
     
+
     The VALTABLE command reads variable values from the file in the _src
     folder. The text is used as the table title. The range specifies the
     starting and ending line to be read from the file (0:0 means all lines).
@@ -88,7 +91,7 @@ rv.V("""Loads and Geometry
 
     | VALTABLE | beam1.csv | Beam Geometry, 0:0, num
 
-    Uniform Distributed Loads _[E]
+    Uniform Distributed Loads 
     dl_1 <=: 1.2 * (W_1 * (D_1 + D_2 + D_3) + D_4) | klf, kN_m, 2 | dead load: ASCE7-05 2.3.2
 
     ll_1 <=: 1.6 * W_1 * L_1 | klf, kN_m, 2 | live load: ASCE7-05 2.3.2
@@ -99,9 +102,8 @@ rv.V("""Loads and Geometry
 
 # %% rv.V("""Beam Stress
 rv.V("""Beam Stress
-    **Section Properties**
 
-    ## indented comments with double hashes will not appear in the doc
+    Section Properties
 
     | PYTHON | _src/sectprop.py | nodoc
 
@@ -109,7 +111,7 @@ rv.V("""Beam Stress
 
     inertia_1 :=: rectinertia(10*inch, 18*inch) | in4, cm4, 1 | I-rectangle
 
-    **Bending Stress**
+    Bending Stress
 
     m_1 <=: omega_1 * S_1**2 / 8 | ftkips, mkN, 2 | mid-span UDL moment 
     
@@ -153,5 +155,5 @@ rv.D("""Publish Doc
     type parameter to text, pdf or html. Published files are found in
     the sub-folders of the *_published* folder.
 
-    | PUBLISH | Single Doc Example 1 | text
+    | PUBLISH | Single Doc Example 1 | html
     """)
