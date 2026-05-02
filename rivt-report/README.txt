@@ -55,10 +55,10 @@ Equation No.    Load Combination
 ============= ================================================
 ============= ================================================
  
-When an inline table is in a [[TABLE]] block it produces the same output
-When an inline table is in a [[TABLE]] block it produces the same output
-as above, and also writes the table to a CSV file in the _stored folder.
-as above, and also writes the table to a CSV file in the _stored folder.
+When an inline table is in a TABLE block it produces the same output
+When an inline table is in a TABLE block it produces the same output
+as above and also writes the table to a CSV file in the _stored folder.
+as above and also writes the table to a CSV file in the _stored folder.
  
 Table 2: ASCE 7-05 Load Effects (saved as csv)
 ============= ================================================ 
@@ -91,15 +91,22 @@ Fig. 1 - Beam Geometry  [file: beam1.png ]
 Maximum Bending Stress 
 Maximum Bending Stress 
  
-          M₁
-     σ₁ = ──
-          S₁
+┌  Eq-2
+│
+│          M₁
+│     σ₁ = ──
+│          S₁
+└
 
-          M₁
-     σ₁ = ──
-          S₁
 
- 
+┌  Eq-2
+│
+│          M₁
+│     σ₁ = ──
+│          S₁
+└
+
+
  
  
 
@@ -159,7 +166,7 @@ S_1         14.00 ft     4.27 m  beam span
  
 Uniform Distributed Loads 
 Uniform Distributed Loads 
-┌  Eq-9
+┌  Eq-3
 │
 │     dl_1 = 1.2*(D_4 + W_1*(D_1 + D_2 + D_3))
 └
@@ -170,12 +177,12 @@ Uniform Distributed Loads
 1.24 klf  18.07 kN_m  dead load: ASCE7-05 2.3.2
 ========  ==========  =========================
 
-========  =========  ========  =======  =====
-  D_1        D_3       D_2       W_1     D_4
-========  =========  ========  =======  =====
-3.80 psf  10.00 psf  2.10 psf  2.00 ft   klf
-========  =========  ========  =======  =====
-┌  Eq-9
+=======  =====  ========  =========  ========
+  W_1     D_4     D_2        D_3       D_1
+=======  =====  ========  =========  ========
+2.00 ft   klf   2.10 psf  10.00 psf  3.80 psf
+=======  =====  ========  =========  ========
+┌  Eq-3
 │
 │     dl_1 = 1.2*(D_4 + W_1*(D_1 + D_2 + D_3))
 └
@@ -186,13 +193,13 @@ Uniform Distributed Loads
 1.24 klf  18.07 kN_m  dead load: ASCE7-05 2.3.2
 ========  ==========  =========================
 
-========  =========  ========  =======  =====
-  D_1        D_3       D_2       W_1     D_4
-========  =========  ========  =======  =====
-3.80 psf  10.00 psf  2.10 psf  2.00 ft   klf
-========  =========  ========  =======  =====
+=======  =====  ========  =========  ========
+  W_1     D_4     D_2        D_3       D_1
+=======  =====  ========  =========  ========
+2.00 ft   klf   2.10 psf  10.00 psf  3.80 psf
+=======  =====  ========  =========  ========
  
-┌  Eq-10
+┌  Eq-4
 │
 │     ll_1 = 1.6*L_1*W_1
 └
@@ -203,12 +210,12 @@ Uniform Distributed Loads
 0.13 klf  1.87 kN_m  live load: ASCE7-05 2.3.2
 ========  =========  =========================
 
-=======  =========
-  W_1       L_1
-=======  =========
-2.00 ft  40.00 psf
-=======  =========
-┌  Eq-10
+=========  =======
+   L_1       W_1
+=========  =======
+40.00 psf  2.00 ft
+=========  =======
+┌  Eq-4
 │
 │     ll_1 = 1.6*L_1*W_1
 └
@@ -219,13 +226,13 @@ Uniform Distributed Loads
 0.13 klf  1.87 kN_m  live load: ASCE7-05 2.3.2
 ========  =========  =========================
 
-=======  =========
-  W_1       L_1
-=======  =========
-2.00 ft  40.00 psf
-=======  =========
+=========  =======
+   L_1       W_1
+=========  =======
+40.00 psf  2.00 ft
+=========  =======
  
-┌  Eq-11
+┌  Eq-5
 │
 │     omega_1 = dl_1 + ll_1
 └
@@ -241,7 +248,7 @@ Uniform Distributed Loads
 =============  ========
 128.00 ft·psf  1.24 klf
 =============  ========
-┌  Eq-11
+┌  Eq-5
 │
 │     omega_1 = dl_1 + ll_1
 └
@@ -263,8 +270,6 @@ Uniform Distributed Loads
 [ 4v ] Beam Stress
 --------------------------------------------------------------------------------
  
-Section Properties
-Section Properties
  
 [ Python file read: _src/sectprop.py ]
 
@@ -275,7 +280,11 @@ Section Properties
 
 
  
-    section_1 = rectsect(10*inch, 18*inch)
+┌  Eq-6
+│
+│     section_1 = rectsect(10*inch, 18*inch)
+└
+
 
 ============  ==============
  section_1     [section_1 ]
@@ -283,7 +292,11 @@ Section Properties
  540.00 in3    8849.01 cm3
 ============  ==============
 
-    section_1 = rectsect(10*inch, 18*inch)
+┌  Eq-6
+│
+│     section_1 = rectsect(10*inch, 18*inch)
+└
+
 
 ============  ==============
  section_1     [section_1 ]
@@ -292,7 +305,11 @@ Section Properties
 ============  ==============
 
  
-    inertia_1 = rectinertia(10*inch, 18*inch)
+┌  Eq-7
+│
+│     inertia_1 = rectinertia(10*inch, 18*inch)
+└
+
 
 ============  ==============
  inertia_1     [inertia_1 ]
@@ -300,7 +317,11 @@ Section Properties
  4860.0 in4    202288.5 cm4
 ============  ==============
 
-    inertia_1 = rectinertia(10*inch, 18*inch)
+┌  Eq-7
+│
+│     inertia_1 = rectinertia(10*inch, 18*inch)
+└
+
 
 ============  ==============
  inertia_1     [inertia_1 ]
@@ -309,10 +330,11 @@ Section Properties
 ============  ==============
 
  
-Bending Stress
-Bending Stress
  
-┌  Eq-15
+Bending Stress _[B]
+Bending Stress _[B]
+ 
+┌  Eq-8
 │
 │              2        
 │           S_1 *omega_1
@@ -326,12 +348,12 @@ Bending Stress
 33.47 ftkip  45.38 mkN  mid-span UDL moment
 ===========  =========  ===================
 
-=========  ========
- omega_1     S_1
-=========  ========
-1.37 klf   14.00 ft
-=========  ========
-┌  Eq-15
+========  =========
+  S_1      omega_1
+========  =========
+14.00 ft  1.37 klf
+========  =========
+┌  Eq-8
 │
 │              2        
 │           S_1 *omega_1
@@ -345,13 +367,13 @@ Bending Stress
 33.47 ftkip  45.38 mkN  mid-span UDL moment
 ===========  =========  ===================
 
-=========  ========
- omega_1     S_1
-=========  ========
-1.37 klf   14.00 ft
-=========  ========
+========  =========
+  S_1      omega_1
+========  =========
+14.00 ft  1.37 klf
+========  =========
  
-┌  Eq-16
+┌  Eq-9
 │
 │               m_1   
 │     fb_1 = ---------
@@ -369,7 +391,7 @@ Bending Stress
 ===========  ============
 540.0 inch3  33.5 ft2·klf
 ===========  ============
-┌  Eq-16
+┌  Eq-9
 │
 │               m_1   
 │     fb_1 = ---------
@@ -388,10 +410,34 @@ Bending Stress
 540.0 inch3  33.5 ft2·klf
 ===========  ============
  
+┌  Eq-10
+│
+│     fb_1 < 20000*lb_in2
+└
 
+========  ===============  =========  =======  ============
+  fb_1     20000*lb_in2      ratio     check    reference
+========  ===============  =========  =======  ============
+0.74 ksi     20.00 ksi     0.0371899    OK     stress ratio
+========  ===============  =========  =======  ============
 
-fb_1 < 20000*lb_in2 | ksi, 2, >>> OK, >>> NOT OK | stress ratio 
-fb_1 < 20000*lb_in2 | ksi, 2, >>> OK, >>> NOT OK | stress ratio 
+┌  Eq-10
+│
+│     fb_1 < 20000*lb_in2
+└
+
+========  ===============  =========  =======  ============
+  fb_1     20000*lb_in2      ratio     check    reference
+========  ===============  =========  =======  ============
+0.74 ksi     20.00 ksi     0.0371899    OK     stress ratio
+========  ===============  =========  =======  ============
+
+ 
+ 
+Deflection _[B]
+Deflection _[B]
+ 
+ 
  
 
 [ 5v ] Beam deflection

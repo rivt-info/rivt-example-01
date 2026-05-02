@@ -120,3 +120,7 @@ hr {
     background-color: hwb(200 15% 27%);
     border: none;
 }
+
+.big-text {
+    font-size: 200%;
+}

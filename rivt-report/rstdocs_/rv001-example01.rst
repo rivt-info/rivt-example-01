@@ -35,8 +35,8 @@ Equation No.    Load Combination
 16-3           1.2(D+F+T) + 1.6(Lr or S or R) + (f1L or 0.8W)
 ============= ================================================
  
-When an inline table is in a [[TABLE]] block it produces the same output
-as above, and also writes the table to a CSV file in the _stored folder.
+When an inline table is in a TABLE block it produces the same output
+as above and also writes the table to a CSV file in the _stored folder.
  
 **Table 2**: ASCE 7-05 Load Effects (saved as csv)
 
@@ -53,7 +53,7 @@ Equation No.    Load Combination
 
 
 .. image:: c:/git/rivt-example-01-git/rivt-report/_src/beam1.png
-   :width: 50%
+   :width: 75%
    :align: center
 
 
@@ -66,14 +66,16 @@ Equation No.    Load Combination
 Maximum Bending Stress 
  
 
-.. code:: 
+.. code-block:: text 
 
-          M₁
-     σ₁ = ──
-          S₁
+   Eq.2
+                M₁
+           σ₁ = ──
+                S₁
 
 
- 
+
+
  
  
 
@@ -117,7 +119,7 @@ Uniform Distributed Loads
 
 .. code-block:: text 
 
-   Eq.9
+   [Eq.3]
            dl_1 = 1.2*(D_4 + W_1*(D_1 + D_2 + D_3))
 
 
@@ -127,16 +129,16 @@ Uniform Distributed Loads
 1.24 klf  18.07 kN_m  dead load: ASCE7-05 2.3.2
 ========  ==========  =========================
 
-========  =========  ========  =======  =====
-  D_1        D_3       D_2       W_1     D_4
-========  =========  ========  =======  =====
-3.80 psf  10.00 psf  2.10 psf  2.00 ft   klf
-========  =========  ========  =======  =====
+=======  =====  ========  =========  ========
+  W_1     D_4     D_2        D_3       D_1
+=======  =====  ========  =========  ========
+2.00 ft   klf   2.10 psf  10.00 psf  3.80 psf
+=======  =====  ========  =========  ========
  
 
 .. code-block:: text 
 
-   Eq.10
+   [Eq.4]
            ll_1 = 1.6*L_1*W_1
 
 
@@ -146,16 +148,16 @@ Uniform Distributed Loads
 0.13 klf  1.87 kN_m  live load: ASCE7-05 2.3.2
 ========  =========  =========================
 
-=======  =========
-  W_1       L_1
-=======  =========
-2.00 ft  40.00 psf
-=======  =========
+=========  =======
+   L_1       W_1
+=========  =======
+40.00 psf  2.00 ft
+=========  =======
  
 
 .. code-block:: text 
 
-   Eq.11
+   [Eq.5]
            omega_1 = dl_1 + ll_1
 
 
@@ -176,14 +178,19 @@ Uniform Distributed Loads
 [ 4v ] Beam Stress
 --------------------------------------------------------------------------------
  
-Section Properties
  
 **[ Python file read:** _src/sectprop.py **]**
 
 
 
  
-    section_1 = rectsect(10*inch, 18*inch)
+
+.. code-block:: text 
+
+   Eq.6
+           section_1 = rectsect(10*inch, 18*inch)
+
+
 
 ============  ==============
  section_1     [section_1 ]
@@ -192,7 +199,13 @@ Section Properties
 ============  ==============
 
  
-    inertia_1 = rectinertia(10*inch, 18*inch)
+
+.. code-block:: text 
+
+   Eq.7
+           inertia_1 = rectinertia(10*inch, 18*inch)
+
+
 
 ============  ==============
  inertia_1     [inertia_1 ]
@@ -201,12 +214,13 @@ Section Properties
 ============  ==============
 
  
-Bending Stress
+ 
+Bending Stress _[B]
  
 
 .. code-block:: text 
 
-   Eq.15
+   [Eq.8]
                     2        
                  S_1 *omega_1
            m_1 = ------------
@@ -219,16 +233,16 @@ Bending Stress
 33.47 ftkip  45.38 mkN  mid-span UDL moment
 ===========  =========  ===================
 
-=========  ========
- omega_1     S_1
-=========  ========
-1.37 klf   14.00 ft
-=========  ========
+========  =========
+  S_1      omega_1
+========  =========
+14.00 ft  1.37 klf
+========  =========
  
 
 .. code-block:: text 
 
-   Eq.16
+   [Eq.9]
                      m_1   
            fb_1 = ---------
                   section_1
@@ -247,7 +261,23 @@ Bending Stress
 ===========  ============
  
 
-fb_1 < 20000*lb_in2 | ksi, 2, >>> OK, >>> NOT OK | stress ratio 
+.. code-block:: text 
+
+   Eq.10
+               fb_1 < 20000*lb_in2
+
+
+========  ===============  =========  =======  ============
+  fb_1     20000*lb_in2      ratio     check    reference
+========  ===============  =========  =======  ============
+0.74 ksi     20.00 ksi     0.0371899    OK     stress ratio
+========  ===============  =========  =======  ============
+
+ 
+ 
+Deflection _[B]
+ 
+ 
  
 
 [ 5v ] Beam deflection

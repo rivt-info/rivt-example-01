@@ -41,8 +41,8 @@ rv.I("""Load Combinations
     16-3           1.2(D+F+T) + 1.6(Lr or S or R) + (f1L or 0.8W)
     ============= ================================================
 
-    When an inline table is in a *[[TABLE]]* block it produces the same output
-    as above, and also writes the table to a CSV file in the *_stored* folder.
+    When an inline table is in a TABLE block it produces the same output
+    as above and also writes the table to a CSV file in the *_stored* folder.
 
     _[[TABLE]]  ASCE 7-05 Load Effects (saved as csv)
     ============= ================================================
@@ -54,19 +54,17 @@ rv.I("""Load Combinations
     ============= ================================================
     _[[END]]
 
-    ## The IMAGE command inserts an image file with caption, scale (as percentage)
-    ## and numbered options.
+    ## The IMAGE command inserts image file, caption, % scale, fig number option 
 
-    | IMAGE | beam1.png | Beam Geometry, 50, num
+    | IMAGE | beam1.png | Beam Geometry, 75, num
 
-    ## The line  tag *[E]* right justifies the label and adds an equation number.
+    ## The line tag [E] right justifies the label and adds an equation number.
 
     Maximum Bending Stress 
 
+    ##  The line tag [M] formats the equation using utf-8 text.
     σ1 = M1 / S1 _[M]
-
-    ## The line tag *[M]* formats the equation using utf-8 text.
-    
+        
     """)
 
 # %% rv.V("""Loads and Geometry
@@ -103,21 +101,26 @@ rv.V("""Loads and Geometry
 # %% rv.V("""Beam Stress
 rv.V("""Beam Stress
 
-    Section Properties
 
-    | PYTHON | _src/sectprop.py | nodoc
+    | PYTHON | _src/sectprop.py | section properties
 
     section_1 :=: rectsect(10*inch, 18*inch) | in3, cm3, 2 | S-rectangle
 
     inertia_1 :=: rectinertia(10*inch, 18*inch) | in4, cm4, 1 | I-rectangle
 
-    Bending Stress
+    
+    Bending Stress _[B]
 
     m_1 <=: omega_1 * S_1**2 / 8 | ftkips, mkN, 2 | mid-span UDL moment 
     
     fb_1 <=: m_1 / section_1 | lb_in2, MPA, 1 | bending stress 
 
-    fb_1 < 20000*lb_in2 | ksi, 2, >>> OK, >>> NOT OK | stress ratio 
+    fb_1 < 20000*lb_in2 | ksi, 2, OK, >> NOT OK | stress ratio 
+
+
+    Deflection _[B]
+
+
     """)
 
 
@@ -132,18 +135,21 @@ rv.D("""Publish Doc
     
     _[[METADATA]] 
     [doc]
-    authors = rholland
-    version = 0.8.1
+    authors = R Holland
+    version = 1.0.0a6
     repo = https://github.com/rivt-info/rivt-single-doc
     license = https://opensource.org/license/mit/
-    fork1_authors = _authors_
-    fork1_version = _version_
-    fork1_repo = _repo_
+    copyright = -
+    fork1_authors = -
+    fork1_version = -
+    fork1_repo = -
     fork1_license = https://opensource.org/license/mit/
     
     [layout]
-    logoname = logo.png
-    pdf_footer = docname, author1;author2, date, time, version
+    coverlogo = logo.png
+    footlogo = logo.png
+    subtitle =  
+    pdf_footer = docname, author1; author2, date, time, version
     pdf_pagesize = letter
     pdf_margins = 1in, 1in, 1in, 1in
     pdf_header = totalpages
@@ -155,5 +161,5 @@ rv.D("""Publish Doc
     type parameter to text, pdf or html. Published files are found in
     the sub-folders of the *_published* folder.
 
-    | PUBLISH | Single Doc Example 1 | html
+    | PUBLISH | Single Doc Example 1 | pdf
     """)

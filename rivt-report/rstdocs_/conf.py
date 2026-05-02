@@ -1,13 +1,14 @@
+
 import sys
 import os
 from pathlib import Path
 
 sys.path.append(str(Path(".").resolve()))
 
-project = "rivt doc"
-copyright = "2023 StructureLabs LLC"
-author = "rholland"
-release = "0.3.0"
+project = "Single Doc Example 1"
+copyright = "-"
+author = "R Holland"
+release = "1.0.0a6"
 
 extensions = [
     "sphinx.ext.githubpages",
@@ -36,7 +37,7 @@ html_sidebars = {"**": ["sidebar-nav-bs.html"]}
 html_static_path = ["_static", "_static/img"]
 html_css_files = ["css/custom.css"]
 html_theme_options = {
-    "pygments_light_style": "tango",
+            "pygments_light_style": "tango",
     "pygments_dark_style": "github-dark",
     "navbar_start": ["navbar-logo"],
     "collapse_navigation": True,
@@ -47,29 +48,29 @@ html_theme_options = {
     "footer_start": ["copyright"],
     "footer_end": [],
     "logo": {
-        "text": "rivt",
+            "text": "rivt",
         "image_dark": "rivhome11c.png",
         "image_light": "rivhome11c.png",
     },
 }
 favicons = [
     {
-        "rel": "icon",
+            "rel": "icon",
         "sizes": "16x16",
         "href": "favicon-16x16.png",
     },
     {
-        "rel": "icon",
+            "rel": "icon",
         "sizes": "32x32",
         "href": "favicon-32x32.png",
     },
 ]
-
 # -- Options for PDF output -------------------------------------------------
 # source start file, target name, title, author, options
-# options: ('index', 'MyProject', 'My Project', 'Author Name', {'pdf_compressed': True})
-# More than one author : \\r'Guido van Rossum\\Fred L. Drake, Jr., editor'
-pdf_documents = [("rv001-example01", "rv001-example01", "rivt", "r holland")]
+# options: ('index', 'MyProject', 'My Project', 'Author Name', {"pdf_compressed": True})
+# More than one author : \r'Guido van Rossum\Fred L. Drake, Jr., editor'
+pdf_documents = [("rv001-example01", "rv001-example01", "Single Doc Example 1", 
+            "R Holland")]
 # Label to use as a prefix for the subtitle on the cover page
 subtitle_prefix = "User Manual"
 # A list of folders to search for stylesheets. Example:
@@ -86,24 +87,12 @@ pdf_language = "en_US"
 pdf_fit_mode = "shrink"
 # 1 means top-level sections start in a new page 0 disabled
 pdf_break_level = 0
-# When a section starts in a new page, force it to be 'even', 'odd',
-# or just use 'any'
+# When a section starts in a new page, force it to be 'even', 'odd', 'any
 pdf_breakside = "any"
 # If false, no coverpage is generated.
 pdf_use_coverpage = True
 # Name of the cover page template to use
-pdf_cover_template = "pdfcover.rst"
-# Page template name for "regular" pages
-# pdf_page_template = 'cutePage'
-# Documents to append as an appendix to all manuals.
-# pdf_appendices = []
-# Enable experimental feature to split table cells. Use it
-# if you get "DelayedTable too big" errors
-# pdf_splittables = False
-# Set the default DPI for images
-# pdf_default_dpi = 72
-# Enable rst2pdf extension modules
-# pdf_extensions = []
+pdf_cover_template = "_templates/pdfcover.rst"
 # Show Table Of Contents at the beginning?
 pdf_use_toc = True
 # How many levels deep should the table of contents be?
@@ -111,8 +100,6 @@ pdf_toc_depth = 9999
 # Insert footnotes where they are defined instead of
 # at the end.
 pdf_inline_footnotes = True
-# verbosity level. 0 1 or 2
-# pdf_verbosity = 0
 # If false, no index is generated.
 pdf_use_index = True
 # If false, no modindex is generated.
@@ -125,3 +112,17 @@ pdf_fit_background_mode = "scale"
 pdf_repeat_table_rows = True
 # Enable smart quotes (1, 2 or 3) or disable by setting to 0
 pdf_smartquotes = 0
+# verbosity level. 0 1 or 2
+# pdf_verbosity = 0
+# Page template name for "regular" pages
+# pdf_page_template = 'cutePage'
+# Documents to append as an appendix to all manuals.
+# pdf_appendices = []
+# Enable experimental feature to split table cells. Use it
+# if you get "DelayedTable too big" errors
+# pdf_splittables = False
+# Set the default DPI for images
+# pdf_default_dpi = 72
+# Enable rst2pdf extension modules
+# pdf_extensions = []
+    
