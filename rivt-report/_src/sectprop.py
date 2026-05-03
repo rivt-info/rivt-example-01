@@ -1,5 +1,5 @@
 """
-This script contains functions for calculating properties of rectangular
+This file contains functions for calculating properties of rectangular
 sections.
 
     - section(b,d) : section modulus
@@ -32,3 +32,18 @@ def rectinertia(b, d):
         float: inertia
     """
     return b * d**3 / 12.0
+
+
+def midspan_delta(ln, w, e, i):
+    """mid-span deflection of simply supported beam with UDL
+
+    Args:
+        l (float): span
+        w (float): uniform load
+        e (float): modulus of elasticity
+        i (float): moment of inertia
+
+    Returns:
+        float: mid-span deflection
+    """
+    return 5 * w * ln**4 / (384 * e * i)

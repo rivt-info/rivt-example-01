@@ -1,2 +1,2 @@
-    W_1 = 2*ft, ft, m, 2, beam spacing  
-    S_1 = 14*ft, ft, m, 2, beam span 
+    spc_1 = 2*ft, ft, m, 2, beam spacing  
+    spn_1 = 16*ft, ft, m, 2, beam span 

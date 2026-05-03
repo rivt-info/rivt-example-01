@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" sizes="16x16" href="_static/favicon-16x16.png" type="image/png">
     <link rel="icon" sizes="32x32" href="_static/favicon-32x32.png" type="image/png">
-    <title>[ 1i ] Summary &#8212; rivt</title>
+    <title>[ 1i ] Summary &#8212;  </title>
   
   
   
@@ -35,7 +35,7 @@
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="_static/css/custom.css?v=8c833d13" />
+    <link rel="stylesheet" type="text/css" href="_static/css/custom.css?v=954ca308" />
   
   <!-- So that users can add custom icons -->
   <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -45,7 +45,7 @@
 
     <script src="_static/jquery.js?v=5d32c60e"></script>
     <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-    <script src="_static/documentation_options.js?v=e259d695"></script>
+    <script src="_static/documentation_options.js?v=6f0970fd"></script>
     <script src="_static/doctools.js?v=fd6eb6e6"></script>
     <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="_static/clipboard.min.js?v=a7894cd8"></script>
@@ -125,11 +125,11 @@
     
     
     
-    <img src="_static/rivhome11c.png" class="logo__image only-dark" alt=""/>
-    <img src="_static/rivhome11c.png" class="logo__image only-light pst-js-only" alt=""/>
+    <img src="_static/logo1.png" class="logo__image only-dark" alt=""/>
+    <img src="_static/logo1.png" class="logo__image only-light pst-js-only" alt=""/>
   
   
-    <p class="title logo__title">rivt</p>
+    <p class="title logo__title">Example 1 - Single Doc</p>
   
 </a></div>
     
@@ -272,15 +272,15 @@
 <h1>[ 1i ] Summary<a class="headerlink" href="#i-summary" title="Link to this heading">#</a></h1>
 <p>This rivt example calculates the maximum stress and deflection in a simply
 supported, uniformly loaded beam. It also serves as an annotated example of
-a single doc with multiple sections (a single doc does not use the
+a <em>single doc</em> with multiple sections (a <em>single doc</em> does not use the
 report generating script).</p>
 <p>The example illustrates the use of some of the most common API functions,
 commands and tags. Further details are provided in the [U] rivt user manual,
 <a class="reference external" href="https://www.rivt" rel="noreferrer" target="_blank">https://www.rivt</a>.info|.</p>
 <p>The file may be formatted as a text, PDF or HTML doc by changing the type
-parameter in the PUBLISH command of the Doc API (rv.D) at the end
+parameter in the PUBLISH command of the <em>Doc API (rv.D)</em> at the end
 of the file. Published files are found in the respective sub-folders of the
-_published folder.</p>
+<em>_published</em> folder.</p>
 </section>
 <section id="i-load-combinations">
 <h1>[ 2i ] Load Combinations<a class="headerlink" href="#i-load-combinations" title="Link to this heading">#</a></h1>
@@ -305,8 +305,8 @@ _published folder.</p>
 </tbody>
 </table>
 </div>
-<p>When an inline table is in a [[TABLE]] block it produces the same output
-as above, and also writes the table to a CSV file in the _stored folder.</p>
+<p>When an inline table is in a TABLE block it produces the same output
+as above and also writes the table to a CSV file in the _stored folder.</p>
 <p><strong>Table 2</strong>: ASCE 7-05 Load Effects (saved as csv)</p>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
@@ -327,10 +327,11 @@ as above, and also writes the table to a CSV file in the _stored folder.</p>
 </tbody>
 </table>
 </div>
-<a class="reference internal image-reference" href="_images/beam1.png"><img alt="_images/beam1.png" class="align-center" src="_images/beam1.png" style="width: 50%;" />
+<a class="reference internal image-reference" href="_images/beam1.png"><img alt="_images/beam1.png" class="align-center" src="_images/beam1.png" style="width: 75%;" />
 </a>
 <p align="center">Fig. 1 - Beam Geometry<p>Maximum Bending Stress</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>     M₁
+<p><strong>[Eq.1]</strong></p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>     M₁
 σ₁ = ──
      S₁
 </pre></div>
@@ -367,8 +368,8 @@ numbers the table.</p>
 <td><p>partitions DL</p></td>
 </tr>
 <tr class="row-odd"><td><p>D_4</p></td>
-<td><p>1.00 klf</p></td>
-<td><p>14.59 kN_m</p></td>
+<td><p>3.00 klf</p></td>
+<td><p>43.78 kN_m</p></td>
 <td><p>fixed machinery  DL</p></td>
 </tr>
 <tr class="row-even"><td><p>L_1</p></td>
@@ -393,23 +394,42 @@ The <em>num;non</em> parameter specifies whether theimported table is numbered.<
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>W_1</p></td>
+<tr class="row-even"><td><p>spc_1</p></td>
 <td><p>2.00 ft</p></td>
 <td><p>0.61 m</p></td>
 <td><p>beam spacing</p></td>
 </tr>
-<tr class="row-odd"><td><p>S_1</p></td>
-<td><p>14.00 ft</p></td>
-<td><p>4.27 m</p></td>
+<tr class="row-odd"><td><p>spn_1</p></td>
+<td><p>16.00 ft</p></td>
+<td><p>4.88 m</p></td>
 <td><p>beam span</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 <p>Uniform Distributed Loads</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Eq.9
-        dl_1 = 1.2*(D_4 + W_1*(D_1 + D_2 + D_3))
+<p><strong>[Eq.2]</strong></p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>dl_1 = 1.2*(D_4 + spc_1*(D_1 + D_2 + D_3))
 </pre></div>
+</div>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>D_1</p></th>
+<th class="head"><p>D_3</p></th>
+<th class="head"><p>D_2</p></th>
+<th class="head"><p>D_4</p></th>
+<th class="head"><p>spc_1</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>3.80 psf</p></td>
+<td><p>10.00 psf</p></td>
+<td><p>2.10 psf</p></td>
+<td><p>3.00 klf</p></td>
+<td><p>2.00 ft</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
@@ -419,35 +439,29 @@ The <em>num;non</em> parameter specifies whether theimported table is numbered.<
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>1.24 klf</p></td>
-<td><p>18.07 kN_m</p></td>
+<tr class="row-even"><td><p>3.64 klf</p></td>
+<td><p>53.09 kN_m</p></td>
 <td><p>dead load: ASCE7-05 2.3.2</p></td>
 </tr>
 </tbody>
 </table>
 </div>
+<p><strong>[Eq.3]</strong></p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>ll_1 = 1.6*L_1*spc_1
+</pre></div>
+</div>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
-<tr class="row-odd"><th class="head"><p>D_1</p></th>
-<th class="head"><p>D_3</p></th>
-<th class="head"><p>D_2</p></th>
-<th class="head"><p>W_1</p></th>
-<th class="head"><p>D_4</p></th>
+<tr class="row-odd"><th class="head"><p>L_1</p></th>
+<th class="head"><p>spc_1</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>3.80 psf</p></td>
-<td><p>10.00 psf</p></td>
-<td><p>2.10 psf</p></td>
+<tr class="row-even"><td><p>40.00 psf</p></td>
 <td><p>2.00 ft</p></td>
-<td><p>klf</p></td>
 </tr>
 </tbody>
 </table>
-</div>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Eq.10
-        ll_1 = 1.6*L_1*W_1
-</pre></div>
 </div>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
@@ -464,37 +478,9 @@ The <em>num;non</em> parameter specifies whether theimported table is numbered.<
 </tbody>
 </table>
 </div>
-<div class="pst-scrollable-table-container"><table class="table">
-<thead>
-<tr class="row-odd"><th class="head"><p>W_1</p></th>
-<th class="head"><p>L_1</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>2.00 ft</p></td>
-<td><p>40.00 psf</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Eq.11
-        omega_1 = dl_1 + ll_1
+<p><strong>[Eq.4]</strong></p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>omega_1 = dl_1 + ll_1
 </pre></div>
-</div>
-<div class="pst-scrollable-table-container"><table class="table">
-<thead>
-<tr class="row-odd"><th class="head"><p>omega_1</p></th>
-<th class="head"><p>[omega_1 ]</p></th>
-<th class="head"><p>reference</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>1.37 klf</p></td>
-<td><p>19.94 kN_m</p></td>
-<td><p>total load: ASCE7-05 2.3.2</p></td>
-</tr>
-</tbody>
-</table>
 </div>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
@@ -504,19 +490,53 @@ The <em>num;non</em> parameter specifies whether theimported table is numbered.<
 </thead>
 <tbody>
 <tr class="row-even"><td><p>128.00 ft·psf</p></td>
-<td><p>1.24 klf</p></td>
+<td><p>3.64 klf</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>omega_1</p></th>
+<th class="head"><p>[omega_1 ]</p></th>
+<th class="head"><p>reference</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>3.77 klf</p></td>
+<td><p>54.96 kN_m</p></td>
+<td><p>total load: ASCE7-05 2.3.2</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 </section>
-<section id="v-beam-stress">
-<h1>[ 4v ] Beam Stress<a class="headerlink" href="#v-beam-stress" title="Link to this heading">#</a></h1>
-<p>Section Properties</p>
-<p><strong>[ Python file read:</strong> _src/sectprop.py <strong>]</strong></p>
-<blockquote>
-<div><p>section_1 = rectsect(10*inch, 18*inch)</p>
-</div></blockquote>
+<section id="v-beam-response">
+<h1>[ 4v ] Beam Response<a class="headerlink" href="#v-beam-response" title="Link to this heading">#</a></h1>
+<p><strong>Function Table 5</strong>: Beam functions   <strong>[file:</strong> _src/sectprop.py <strong>]</strong></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Function</p></th>
+<th class="head"><p>Docstring</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>rectsect(b, d)</p></td>
+<td><p>section modulus of rectangle</p></td>
+</tr>
+<tr class="row-odd"><td><p>rectinertia(b, d)</p></td>
+<td><p>moment of inertia of rectangle</p></td>
+</tr>
+<tr class="row-even"><td><p>midspan_delta(ln, w, e, i)</p></td>
+<td><p>mid-span deflection of simply supported beam with UDL</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>[Eq.5]</strong></p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>section_1 = rectsect(10*inch, 18*inch)
+</pre></div>
+</div>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>section_1</p></th>
@@ -530,9 +550,10 @@ The <em>num;non</em> parameter specifies whether theimported table is numbered.<
 </tbody>
 </table>
 </div>
-<blockquote>
-<div><p>inertia_1 = rectinertia(10*inch, 18*inch)</p>
-</div></blockquote>
+<p><strong>[Eq.6]</strong></p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>inertia_1 = rectinertia(10*inch, 18*inch)
+</pre></div>
+</div>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>inertia_1</p></th>
@@ -546,13 +567,26 @@ The <em>num;non</em> parameter specifies whether theimported table is numbered.<
 </tbody>
 </table>
 </div>
-<p>Bending Stress</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Eq.15
-                 2
-              S_1 *omega_1
-        m_1 = ------------
-                   8
+<p><strong>Bending Stress</strong></p>
+<p><strong>[Eq.7]</strong></p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>                   2
+      omega_1*spn_1
+m_1 = --------------
+            8
 </pre></div>
+</div>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>omega_1</p></th>
+<th class="head"><p>spn_1</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>3.77 klf</p></td>
+<td><p>16.00 ft</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
@@ -562,46 +596,18 @@ The <em>num;non</em> parameter specifies whether theimported table is numbered.<
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>33.47 ftkip</p></td>
-<td><p>45.38 mkN</p></td>
+<tr class="row-even"><td><p>120.52 ftkip</p></td>
+<td><p>163.40 mkN</p></td>
 <td><p>mid-span UDL moment</p></td>
 </tr>
 </tbody>
 </table>
 </div>
-<div class="pst-scrollable-table-container"><table class="table">
-<thead>
-<tr class="row-odd"><th class="head"><p>omega_1</p></th>
-<th class="head"><p>S_1</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>1.37 klf</p></td>
-<td><p>14.00 ft</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Eq.16
-                  m_1
-        fb_1 = ---------
-               section_1
+<p><strong>[Eq.8]</strong></p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>          m_1
+fb_1 = ---------
+       section_1
 </pre></div>
-</div>
-<div class="pst-scrollable-table-container"><table class="table">
-<thead>
-<tr class="row-odd"><th class="head"><p>fb_1</p></th>
-<th class="head"><p>[fb_1 ]</p></th>
-<th class="head"><p>reference</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>743.8 lb_in2</p></td>
-<td><p>5.1 MPA</p></td>
-<td><p>bending stress</p></td>
-</tr>
-</tbody>
-</table>
 </div>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
@@ -611,17 +617,67 @@ The <em>num;non</em> parameter specifies whether theimported table is numbered.<
 </thead>
 <tbody>
 <tr class="row-even"><td><p>540.0 inch3</p></td>
-<td><p>33.5 ft2·klf</p></td>
+<td><p>120.5 ft2·klf</p></td>
 </tr>
 </tbody>
 </table>
 </div>
-<p>fb_1 &lt; 20000*lb_in2 | ksi, 2, &gt;&gt;&gt; OK, &gt;&gt;&gt; NOT OK | stress ratio</p>
-</section>
-<section id="v-beam-deflection">
-<h1>[ 5v ] Beam deflection<a class="headerlink" href="#v-beam-deflection" title="Link to this heading">#</a></h1>
-<p>text 123</p>
-<p>end of doc</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>fb_1</p></th>
+<th class="head"><p>[fb_1 ]</p></th>
+<th class="head"><p>reference</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>2678.2 lb_in2</p></td>
+<td><p>18.5 MPA</p></td>
+<td><p>bending stress</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>[Eq.9]</strong></p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>fb_1 &lt; 20000*lb_in2
+</pre></div>
+</div>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>fb_1</p></th>
+<th class="head"><p>20000*lb_in2</p></th>
+<th class="head"><p>ratio</p></th>
+<th class="head"><p>check</p></th>
+<th class="head"><p>reference</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>2.68 ksi</p></td>
+<td><p>20.00 ksi</p></td>
+<td><p>0.133908</p></td>
+<td><p>OK</p></td>
+<td><p>stress ratio</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Deflection</strong></p>
+<p><strong>[Eq.10]</strong></p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>delta_1 = midspan_delta(spn_1, omega_1, 29000*ksi, inertia_1)
+</pre></div>
+</div>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>delta_1</p></th>
+<th class="head"><p>[delta_1 ]</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0.04 inch</p></td>
+<td><p>1.00 mm</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 </section>
 
 
@@ -656,8 +712,7 @@ The <em>num;non</em> parameter specifies whether theimported table is numbered.<
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">[ 1i ] Summary</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#i-load-combinations">[ 2i ] Load Combinations</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#v-loads-and-geometry">[ 3v ] Loads and Geometry</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#v-beam-stress">[ 4v ] Beam Stress</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#v-beam-deflection">[ 5v ] Beam deflection</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#v-beam-response">[ 4v ] Beam Response</a></li>
 </ul>
 
   </nav></div>
@@ -687,15 +742,33 @@ The <em>num;non</em> parameter specifies whether theimported table is numbered.<
 
   <p class="copyright">
     
-      © Copyright 2023 StructureLabs LLC.
+      © Copyright -.
       <br/>
     
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.1.0.
+    <br/>
   </p>
 </div>
       
     </div>
   
   
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
+</p></div>
+      
+    </div>
   
 </div>
 

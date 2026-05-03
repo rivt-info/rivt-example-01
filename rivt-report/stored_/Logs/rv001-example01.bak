@@ -30,7 +30,7 @@ rv.I("""Load Combinations
     This is an inline table using the restructured text syntax. 
 
     ## indented comments with double hashes will not appear in the doc
-    ## The tag _[T] numbers the table.
+    ## The table is written in restructured text. The tag _[T] numbers the table.
 
     ASCE 7-05 Load Effects _[T]
     ============= ================================================
@@ -42,7 +42,7 @@ rv.I("""Load Combinations
     ============= ================================================
 
     When an inline table is in a TABLE block it produces the same output
-    as above and also writes the table to a CSV file in the *_stored* folder.
+    as above and also writes the table to a CSV file in the _stored folder.
 
     _[[TABLE]]  ASCE 7-05 Load Effects (saved as csv)
     ============= ================================================
@@ -78,7 +78,7 @@ rv.V("""Loads and Geometry
     D_1 ==: 3.8*psf | psf, kPA, 2 | joists DL         
     D_2 ==: 2.1*psf | psf, kPA, 2 | plywood DL          
     D_3 ==: 10.0*psf | psf, kPA, 2 | partitions DL       
-    D_4 ==: 2*0.5*klf |klf, kN_m, 2 | fixed machinery  DL
+    D_4 ==: 2*1.5*klf |klf, kN_m, 2 | fixed machinery  DL
     L_1 ==: 40*psf | psf, kPA, 2 | ASCE7-O5 LL 
     
 
@@ -90,45 +90,38 @@ rv.V("""Loads and Geometry
     | VALTABLE | beam1.csv | Beam Geometry, 0:0, num
 
     Uniform Distributed Loads 
-    dl_1 <=: 1.2 * (W_1 * (D_1 + D_2 + D_3) + D_4) | klf, kN_m, 2 | dead load: ASCE7-05 2.3.2
+    dl_1 <=: 1.2 * (spc_1 * (D_1 + D_2 + D_3) + D_4) | klf, kN_m, 2 | dead load: ASCE7-05 2.3.2
 
-    ll_1 <=: 1.6 * W_1 * L_1 | klf, kN_m, 2 | live load: ASCE7-05 2.3.2
+    ll_1 <=: 1.6 * spc_1 * L_1 | klf, kN_m, 2 | live load: ASCE7-05 2.3.2
     
     omega_1 <=: dl_1 + ll_1 | klf, kN_m, 2 | total load: ASCE7-05 2.3.2
     
     """)
 
 # %% rv.V("""Beam Stress
-rv.V("""Beam Stress
+rv.V("""Beam Response
 
 
-    | PYTHON | _src/sectprop.py | section properties
+    | PYTHON | _src/sectprop.py | Beam functions
 
     section_1 :=: rectsect(10*inch, 18*inch) | in3, cm3, 2 | S-rectangle
 
     inertia_1 :=: rectinertia(10*inch, 18*inch) | in4, cm4, 1 | I-rectangle
 
-    
     Bending Stress _[B]
 
-    m_1 <=: omega_1 * S_1**2 / 8 | ftkips, mkN, 2 | mid-span UDL moment 
+    m_1 <=: omega_1 * spn_1**2 / 8 | ftkips, mkN, 2 | mid-span UDL moment 
     
     fb_1 <=: m_1 / section_1 | lb_in2, MPA, 1 | bending stress 
 
     fb_1 < 20000*lb_in2 | ksi, 2, OK, >> NOT OK | stress ratio 
 
-
     Deflection _[B]
 
+    delta_1 :=: midspan_delta(spn_1, omega_1, 29000*ksi, inertia_1) | inch, mm, 2 | mid-span deflection
 
     """)
 
-
-rv.V("""Beam deflection  
-
-    text 123
-
-    """)
 
 # %% rv.D("""Publish Doc
 rv.D("""Publish Doc 
@@ -146,10 +139,10 @@ rv.D("""Publish Doc
     fork1_license = https://opensource.org/license/mit/
     
     [layout]
-    coverlogo = logo.png
-    footlogo = logo.png
-    subtitle =  
-    pdf_footer = docname, author1; author2, date, time, version
+    coverlogo = logo1.png
+    footlogo = logo2.png
+    subtitle =  -
+    copyright = -
     pdf_pagesize = letter
     pdf_margins = 1in, 1in, 1in, 1in
     pdf_header = totalpages
@@ -161,5 +154,5 @@ rv.D("""Publish Doc
     type parameter to text, pdf or html. Published files are found in
     the sub-folders of the *_published* folder.
 
-    | PUBLISH | Single Doc Example 1 | pdf
+    | PUBLISH | Example 1 - Single Doc | html
     """)

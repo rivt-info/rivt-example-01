@@ -1,3 +1,4 @@
+
 fontsAlias:
   fontSerif: DejaVuSans
   fontSerifBold: DejaVuSans-Bold
@@ -15,7 +16,7 @@ fontsAlias:
   margin-bottom: 1cm
   margin-top: 1cm
 pageSetup:
-  firstTemplate: mainPage
+  firstTemplate: coverPage
   height: null
   margin-bottom: 1.0cm
   margin-gutter: 0cm
@@ -28,13 +29,11 @@ pageSetup:
   width: null
 pageTemplates:
   coverPage:
-    defaultFooter: " "
-    defaultHeader: " "
-    showFooter: false
-    showHeader: false
+    showFooter: False
+    showHeader: False
   mainPage:
-    showFooter: true
-    showHeader: true
+    showFooter: True
+    showHeader: True
 styles:
   base:
     alignment: TA_LEFT
@@ -63,6 +62,10 @@ styles:
     textColor: black
     underline: false
     wordWrap: null
+  big-text:
+    fontSize: 150%
+    parent: base
+    fontName: fontSansBold
   blockquote:
     leftIndent: 20
     parent: bodytext

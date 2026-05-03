@@ -4,7 +4,7 @@
 |
 |
         
-.. image:: ../_src/logo.png
+.. image:: ../_src/logo1.png
    :width: 600px
    :align: center
 
@@ -15,7 +15,7 @@
 
 .. class:: center
 
-    :big-text:`Single Doc Example 1`
+    :big-text:`Example 1 - Single Doc`
 
 |
 |
@@ -32,7 +32,7 @@
 
 .. class:: center
 
-    2026-05-02 - 02:29AM
+    2026-05-03
 
     
 .. raw:: pdf

@@ -63,6 +63,10 @@ styles:
     textColor: black
     underline: false
     wordWrap: null
+  big-text:
+    fontSize: 150%
+    parent: base
+    fontName: fontSansBold
   blockquote:
     leftIndent: 20
     parent: bodytext
