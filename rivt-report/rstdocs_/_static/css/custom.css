@@ -124,3 +124,18 @@ hr {
 .big-text {
     font-size: 200%;
 }
+
+.rvdate {
+    font-size: 100%;
+    color: hwb(200 15% 27%);
+}
+
+.rvtitle {
+    font-size: 100%;
+    color: hwb(200 15% 27%);
+}
+
+.rvauthor {
+    font-size: 100%;
+    color: hwb(200 15% 27%);
+}

@@ -241,7 +241,7 @@ styles:
         - 0
       - - -1
         - -1
-      - TOP
+      - MIDDLE
     - - BOTTOMPADDING
       - - 0
         - 0
@@ -253,7 +253,7 @@ styles:
         - 0
       - - -1
         - -1
-      - -10
+      - 0
   table:
     spaceBefore: 6
     spaceAfter: 6

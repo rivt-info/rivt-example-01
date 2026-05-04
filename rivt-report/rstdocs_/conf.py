@@ -44,8 +44,11 @@ html_theme_options = {
     "navbar_align": "left",
     "show_toc_level": 1,
     "navigation_depth": 1,
+    "footer_start": ["rv-author"],
+    "footer_center": ["rv-title"],
+    "footer_end": ["rv-date"],
     "logo": {
-            "text": "Example 1 - Single Doc",
+            "text": "rivt",
         "image_dark": "logo1.png",
         "image_light": "logo1.png",
     },

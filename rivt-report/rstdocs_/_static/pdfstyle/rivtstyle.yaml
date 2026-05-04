@@ -8,10 +8,10 @@ fontsAlias:
   fontMonoBold: DejaVuSansMono-Bold
   fontMonoBoldItalic: DejaVuSansMono-BoldOblique
   fontMonoItalic: DejaVuSansMono-Oblique
-  fontSans: OpenSans-Regular
-  fontSansBold: OpenSans-Bold
-  fontSansBoldItalic: OpenSans-BoldItalic
-  fontSansItalic: OpenSans-Italic
+  fontSans: DejaVuSans
+  fontSansBold: DejaVuSans-Bold
+  fontSansBoldItalic: DejaVuSans-BoldOblique
+  fontSansItalic: DejaVuSans-Oblique
   size: letter
   margin-bottom: 1cm
   margin-top: 1cm
@@ -50,9 +50,9 @@ styles:
     commands: []
     firstLineIndent: 0
     fontName: fontSans
-    fontSize: 10
+    fontSize: 9
     hyphenation: false
-    leading: 12
+    leading: 11
     leftIndent: 0
     parent: null
     rightIndent: 0
@@ -62,6 +62,13 @@ styles:
     textColor: black
     underline: false
     wordWrap: null
+  link:
+    parent: base
+    underline: true
+    fontSize: 16
+    textColor: blue
+    underlineColor: blue
+    fontName: fontSansBold
   big-text:
     fontSize: 150%
     parent: base
@@ -241,7 +248,7 @@ styles:
         - 0
       - - -1
         - -1
-      - TOP
+      - MIDDLE
     - - BOTTOMPADDING
       - - 0
         - 0
@@ -253,7 +260,7 @@ styles:
         - 0
       - - -1
         - -1
-      - -10
+      - 0
   table:
     spaceBefore: 6
     spaceAfter: 6

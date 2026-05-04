@@ -2,8 +2,8 @@
 # %% import
 import rivtlib.rvapi as rv
 
-# when true the following sets the default "private" section header to "public"
-# rv setpublic: False
+# rv setpublic: False ; true sets default "private"  header to "public"
+# rv setwidth : 80 ; width of text output, default is 80 characters
 
 # %% rv.I("""Summary
 rv.I("""Summary  
@@ -14,8 +14,8 @@ rv.I("""Summary
     report generating script).
 
     The example illustrates the use of some of the most common API functions,
-    commands and tags. Further details are provided in the [U] rivt user manual,
-    https://www.rivt.info|.
+    commands and tags. Further details are provided in the 
+    _[U] rivt user manual, https://www.rivt.info].
 
     The file may be formatted as a text, PDF or HTML doc by changing the type
     parameter in the PUBLISH command of the *Doc API (rv.D)* at the end
@@ -41,10 +41,10 @@ rv.I("""Load Combinations
     16-3           1.2(D+F+T) + 1.6(Lr or S or R) + (f1L or 0.8W)
     ============= ================================================
 
-    When an inline table is in a TABLE block it produces the same output
-    as above and also writes the table to a CSV file in the _stored folder.
+    When an inline table is contained in a TABLE block it produces the same
+    output as above and also writes the table to a CSV file.
 
-    _[[TABLE]]  ASCE 7-05 Load Effects (saved as csv)
+    _[[TABLE]]  ASCE 7-05 Load Effects (saved as csv in _storeed folder)
     ============= ================================================
     Equation No.    Load Combination
     ============= ================================================
@@ -85,11 +85,11 @@ rv.V("""Loads and Geometry
     The VALTABLE command reads variable values from the file in the _src
     folder. The text is used as the table title. The range specifies the
     starting and ending line to be read from the file (0:0 means all lines).
-    The *num;non* parameter specifies whether theimported table is numbered.
+    The num;non parameter specifies whether theimported table is numbered.
 
     | VALTABLE | beam1.csv | Beam Geometry, 0:0, num
 
-    Uniform Distributed Loads 
+    Uniform Distributed Loads _[B]
     dl_1 <=: 1.2 * (spc_1 * (D_1 + D_2 + D_3) + D_4) | klf, kN_m, 2 | dead load: ASCE7-05 2.3.2
 
     ll_1 <=: 1.6 * spc_1 * L_1 | klf, kN_m, 2 | live load: ASCE7-05 2.3.2
@@ -140,19 +140,18 @@ rv.D("""Publish Doc
     
     [layout]
     coverlogo = logo1.png
-    footlogo = logo2.png
     subtitle =  -
+    runninglogo = logo2.png
+    runningtext = rivt
     copyright = -
     pdf_pagesize = letter
-    pdf_margins = 1in, 1in, 1in, 1in
-    pdf_header = totalpages
-    pdf_cover = cover.rst
-    text_width=80    
+    pdf_margins = 1in, 1in, 1in, 1in 
     _[[END]]
     
     The rivt file may be published as a text, PDF or HTML doc by changing the
-    type parameter to text, pdf or html. Published files are found in
-    the sub-folders of the *_published* folder.
+    type parameter to text, pdf or html. A README.txt file is always written to
+    the rivt-report folder. Published files are found in the sub-folders of the
+    *_published* folder.
 
-    | PUBLISH | Example 1 - Single Doc | html
+    | PUBLISH | Example 1 - Single Doc | pdf
     """)

@@ -6,26 +6,26 @@ This rivt example calculates the maximum stress and deflection in a simply
 This rivt example calculates the maximum stress and deflection in a simply
 supported, uniformly loaded beam. It also serves as an annotated example of
 supported, uniformly loaded beam. It also serves as an annotated example of
-a *single doc* with multiple sections (a *single doc* does not use the
-a *single doc* with multiple sections (a *single doc* does not use the
+a single doc with multiple sections (a single doc does not use the
+a single doc with multiple sections (a single doc does not use the
 report generating script).
 report generating script).
  
 The example illustrates the use of some of the most common API functions,
 The example illustrates the use of some of the most common API functions,
-commands and tags. Further details are provided in the [U] rivt user manual,
-commands and tags. Further details are provided in the [U] rivt user manual,
-https://www.rivt.info|.
-https://www.rivt.info|.
+commands and tags. Further details are provided in the 
+commands and tags. Further details are provided in the 
+ rivt user manual, https://www.rivt.info .
+ rivt user manual, https://www.rivt.info .
  
 The file may be formatted as a text, PDF or HTML doc by changing the type
 The file may be formatted as a text, PDF or HTML doc by changing the type
-parameter in the PUBLISH command of the *Doc API (rv.D)* at the end
-parameter in the PUBLISH command of the *Doc API (rv.D)* at the end
+parameter in the PUBLISH command of the Doc API (rv.D) at the end
+parameter in the PUBLISH command of the Doc API (rv.D) at the end
 of the file. Published files are found in the respective sub-folders of the
 of the file. Published files are found in the respective sub-folders of the
-*_published* folder.
-*_published* folder.
+_published folder.
+_published folder.
  
  
 
@@ -55,12 +55,12 @@ Equation No.    Load Combination
 ============= ================================================
 ============= ================================================
  
-When an inline table is in a TABLE block it produces the same output
-When an inline table is in a TABLE block it produces the same output
-as above and also writes the table to a CSV file in the _stored folder.
-as above and also writes the table to a CSV file in the _stored folder.
+When an inline table is contained in a TABLE block it produces the same
+When an inline table is contained in a TABLE block it produces the same
+output as above and also writes the table to a CSV file.
+output as above and also writes the table to a CSV file.
  
-Table 2: ASCE 7-05 Load Effects (saved as csv)
+Table 2: ASCE 7-05 Load Effects (saved as csv in _storeed folder)
 ============= ================================================ 
 Equation No.    Load Combination 
 ============= ================================================ 
@@ -69,7 +69,7 @@ Equation No.    Load Combination
 16-3           1.2(D+F+T) + 1.6(Lr or S or R) + (f1L or 0.8W) 
 ============= ================================================ 
 
-Table 2: ASCE 7-05 Load Effects (saved as csv)
+Table 2: ASCE 7-05 Load Effects (saved as csv in _storeed folder)
 ============= ================================================ 
 Equation No.    Load Combination 
 ============= ================================================ 
@@ -140,8 +140,8 @@ folder. The text is used as the table title. The range specifies the
 folder. The text is used as the table title. The range specifies the
 starting and ending line to be read from the file (0:0 means all lines).
 starting and ending line to be read from the file (0:0 means all lines).
-The *num;non* parameter specifies whether theimported table is numbered.
-The *num;non* parameter specifies whether theimported table is numbered.
+The num;non parameter specifies whether theimported table is numbered.
+The num;non parameter specifies whether theimported table is numbered.
  
 
 Table 4: Beam Geometry [file: beam1.csv]
@@ -164,18 +164,20 @@ spn_1       16.00 ft     4.88 m  beam span
 ==========  ========  =========  =============
 
  
-Uniform Distributed Loads 
-Uniform Distributed Loads 
+Uniform Distributed Loads
+
+Uniform Distributed Loads
+
 ┌  Eq-2
 │
 │     dl_1 = 1.2*(D_4 + spc_1*(D_1 + D_2 + D_3))
 └
 
-========  =========  ========  ========  =======
-  D_1        D_3       D_2       D_4      spc_1
-========  =========  ========  ========  =======
-3.80 psf  10.00 psf  2.10 psf  3.00 klf  2.00 ft
-========  =========  ========  ========  =======
+=========  ========  ========  ========  =======
+   D_3       D_2       D_4       D_1      spc_1
+=========  ========  ========  ========  =======
+10.00 psf  2.10 psf  3.00 klf  3.80 psf  2.00 ft
+=========  ========  ========  ========  =======
 
 ========  ==========  =========================
  dl_1      [dl_1 ]            reference
@@ -187,11 +189,11 @@ Uniform Distributed Loads
 │     dl_1 = 1.2*(D_4 + spc_1*(D_1 + D_2 + D_3))
 └
 
-========  =========  ========  ========  =======
-  D_1        D_3       D_2       D_4      spc_1
-========  =========  ========  ========  =======
-3.80 psf  10.00 psf  2.10 psf  3.00 klf  2.00 ft
-========  =========  ========  ========  =======
+=========  ========  ========  ========  =======
+   D_3       D_2       D_4       D_1      spc_1
+=========  ========  ========  ========  =======
+10.00 psf  2.10 psf  3.00 klf  3.80 psf  2.00 ft
+=========  ========  ========  ========  =======
 
 ========  ==========  =========================
  dl_1      [dl_1 ]            reference
@@ -237,11 +239,11 @@ Uniform Distributed Loads
 │     omega_1 = dl_1 + ll_1
 └
 
-=============  ========
-    ll_1         dl_1
-=============  ========
-128.00 ft·psf  3.64 klf
-=============  ========
+========  =============
+  dl_1        ll_1
+========  =============
+3.64 klf  128.00 ft·psf
+========  =============
 
 ==========  ============  ==========================
  omega_1     [omega_1 ]           reference
@@ -253,11 +255,11 @@ Uniform Distributed Loads
 │     omega_1 = dl_1 + ll_1
 └
 
-=============  ========
-    ll_1         dl_1
-=============  ========
-128.00 ft·psf  3.64 klf
-=============  ========
+========  =============
+  dl_1        ll_1
+========  =============
+3.64 klf  128.00 ft·psf
+========  =============
 
 ==========  ============  ==========================
  omega_1     [omega_1 ]           reference
