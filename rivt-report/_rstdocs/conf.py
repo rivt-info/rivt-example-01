@@ -1,0 +1,127 @@
+
+import sys
+from pathlib import Path
+
+sys.path.append(str(Path(".").resolve()))
+
+project = "rv001-example01"
+copyright = "-"
+author = "R Holland"
+release = "1.0.0a10"
+
+extensions = [
+    "sphinx.ext.githubpages",
+    "sphinx_togglebutton",
+    "sphinxcontrib.jquery",
+    "sphinx_copybutton",
+    "sphinx_favicon",
+    "sphinx.ext.duration",
+    "sphinx.ext.doctest",
+    "sphinx.ext.autodoc",
+    "sphinx_design",
+    "sphinx_new_tab_link",
+    "rst2pdf.pdfbuilder",
+]
+root_doc = "index"
+duration_write_json = ""
+html_show_sourcelink = False
+exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
+source_suffix = [".rst", ".md"]
+templates_path = ["_templates"]
+locale_dirs = ["_locale"]
+html_title = " "
+html_theme = "pydata_sphinx_theme"
+html_context = {"default_mode": "dark"}
+html_sidebars = {"**": ["sidebar-nav-bs.html"]}
+html_static_path = ["_static", "_static/img", "../src"]
+html_css_files = ["css/custom.css"]
+html_theme_options = {
+    "pygments_light_style": "tango",
+    "pygments_dark_style": "github-dark",
+    "navbar_start": ["navbar-logo"],
+    "collapse_navigation": True,
+    "header_links_before_dropdown": 6,
+    "navbar_align": "left",
+    "show_toc_level": 1,
+    "navigation_depth": 1,
+    "footer_start": ["rv-author"],
+    "footer_center": ["rv-title"],
+    "footer_end": ["rv-date"],
+    "logo": {
+            "text": "rivt",
+        "image_dark": "logo2.png",
+        "image_light": "logo2.png",
+    },
+}
+favicons = [
+    {
+        "rel": "icon",
+        "sizes": "16x16",
+        "href": "favicon-16x16.png",
+    },
+    {
+        "rel": "icon",
+        "sizes": "32x32",
+        "href": "favicon-32x32.png",
+    },
+]
+# -- Options for PDF output -------------------------------------------------
+# source start file, target name, title, author, options
+# options: ('index', 'MyProject', 'My Project', 'Author Name', {"pdf_compressed": True})
+# More than one author : \r'Guido van Rossum\Fred L. Drake, Jr., editor'
+pdf_documents = [("rv001-example01", "rv001-example01", "Example 1 - Single Doc", 
+            "R Holland")]
+# Label to use as a prefix for the subtitle on the cover page
+subtitle_prefix = "User Manual"
+# A list of folders to search for stylesheets.
+pdf_style_path = ["./_rstdocs/_static/pdfstyle"]
+# A colon-separated list of folders to search for fonts.
+pdf_font_path = ["./_rstdocs/_static/fonts"]
+# Example: compressed=True
+pdf_compressed = False
+# Language to be used for hyphenation support
+pdf_language = "en_US"
+# literal blocks wider than the frame overflow, shrink or truncate
+pdf_fit_mode = "shrink"
+# 1 means top-level sections start in a new page 0 disabled
+pdf_break_level = 0
+# When a section starts in a new page, force it to be 'even', 'odd', 'any
+pdf_breakside = "any"
+# If false, no coverpage is generated.
+pdf_use_coverpage = True
+# Name of the cover page template to use
+pdf_cover_template = "_templates/pdfcover.rst"
+# Show Table Of Contents at the beginning?
+pdf_use_toc = True
+# How many levels deep should the table of contents be?
+pdf_toc_depth = 9999
+# Insert footnotes where they are defined 
+pdf_inline_footnotes = False
+# If false, no index is generated.
+pdf_use_index = True
+# If false, no modindex is generated.
+pdf_use_modindex = False
+# Add section number to section references
+pdf_use_numbered_links = False
+# Background images fitting mode
+pdf_fit_background_mode = "scale"
+# Repeat table header on tables that cross a page boundary?
+pdf_repeat_table_rows = True
+# Enable smart quotes (1, 2 or 3) or disable by setting to 0
+pdf_smartquotes = 0
+# Page template name for "regular" pages
+pdf_page_template = 'mainPage'
+# verbosity level. 0 1 or 2
+# pdf_verbosity = 0
+# Documents to append as an appendix to all manuals.
+# pdf_appendices = []
+# Enable experimental feature to split table cells. Use it
+# if you get "DelayedTable too big" errors
+# pdf_splittables = False
+# Set the default DPI for images
+# pdf_default_dpi = 72
+# Enable rst2pdf extension modules
+# pdf_extensions = []
+# A comma-separated list of custom stylesheets.
+pdf_stylesheets = ["./_rstdocs/_static/pdfstyle/rivtstyle.yaml"]
+    

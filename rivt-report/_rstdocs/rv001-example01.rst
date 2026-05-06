@@ -1,9 +1,37 @@
-
-Example 1 - Single Doc | R Holland | 2026-05-05 - 11:03PM | v-1.0.0a10
-================================================================================
+.. |s| unicode:: 0xA0 
 
 
-[ 1i ] Summary
+
+.. |blklogo| image:: ../src/logo2.png
+   :height: 100px
+   :alt: logo
+
+
+
+.. header::
+    .. list-table::
+        :class: foottable2
+        :align: left
+        :widths: 84 16
+        
+        * - **Example 1 - Single Doc** - v1.0.0a10 |s| |s| |s| Sect: **###Section###**
+          - p. **###Page###** of ###Total### 
+
+   
+
+.. footer:: 
+    .. list-table::
+        :class: foottable2
+        :align: left
+        :widths: 84 22 16
+        
+        * - 2026-05-05 |s| |s| |s| **|** |s| |s| |s| R Holland        
+          - **rivt**        
+          - |blklogo|
+
+        
+
+**1i.**  **Summary**
 --------------------------------------------------------------------------------
  
 This rivt example calculates the maximum stress and deflection in a simply
@@ -13,7 +41,7 @@ report generating script).
  
 The example illustrates the use of some of the most common API functions,
 commands and tags. Further details are provided in the 
-rivt user manual, https://www.rivt.info .
+`rivt user manual <https://www.rivt.info>`_.
  
 The file may be formatted as a text, PDF or HTML doc by changing the type
 parameter in the PUBLISH command of the Doc API (rv.D) at the end
@@ -22,14 +50,15 @@ _published folder.
  
  
 
-[ 2i ] Load Combinations
+**2i.**  **Load Combinations**
 --------------------------------------------------------------------------------
  
 This is an inline table using the restructured text syntax. 
  
  
 
-Table 1: ASCE 7-05 Load Effects
+**Table 1**: ASCE 7-05 Load Effects
+
 ============= ================================================
 Equation No.    Load Combination
 ============= ================================================
@@ -41,7 +70,8 @@ Equation No.    Load Combination
 When an inline table is contained in a TABLE block it produces the same
 output as above and also writes the table to a CSV file.
  
-Table 2: ASCE 7-05 Load Effects (saved as csv in _stored folder)
+**Table 2**: ASCE 7-05 Load Effects (saved as csv in _stored folder)
+
 ============= ================================================ 
 Equation No.    Load Combination 
 ============= ================================================ 
@@ -53,22 +83,34 @@ Equation No.    Load Combination
  
  
 
-Fig. 1 - Beam Geometry  [file: beam1.png ] 
 
- 
- 
-┌  Eq-1 |   Maximum Bending Stress 
-│
-│          M₁
-│     σ₁ = ──
-│          S₁
-└
+.. image:: c:/git/rivt-example-01-git/rivt-report/src/beam1.png
+   :width: 75%
+   :align: center
 
+
+.. raw:: html 
+
+   <p align="center">Fig. 1 - Beam Geometry 
 
  
  
 
-[ 3v ] Loads and Geometry
+**[Eq.1]**
+
+.. code-block:: text 
+
+                M₁
+           σ₁ = ──
+                S₁
+
+
+
+
+ 
+ 
+
+**3v.**  **Loads and Geometry**
 --------------------------------------------------------------------------------
  
 Successive lines of value definitions are formatted as a table. Variable
@@ -76,7 +118,8 @@ values are defined with the define operator. The line tag [T] labels and
 numbers the table.
  
 
-Table 3: Define Unit Loads
+**Table 3**: Define Unit Loads
+
 ==========  ============  =============  =====================
 variable           value        [value]  description
 ==========  ============  =============  =====================
@@ -96,7 +139,7 @@ starting and ending line to be read from the file (0:0 means all lines).
 The num;non parameter specifies whether theimported table is numbered.
  
 
-Table 4: Beam Geometry [file: beam1.csv]
+**Table 4**: Beam Geometry [file: beam1.csv]
 
 ==========  ========  =========  =============
 variable       value    [value]  description
@@ -106,18 +149,21 @@ spn_1       16.00 ft     4.88 m  beam span
 ==========  ========  =========  =============
 
  
-Uniform Distributed Loads
+**Uniform Distributed Loads**
 
-┌  Eq-2 | dead load: ASCE7-05 2.3.2
-│
-│     dl_1 = 1.2*(D_4 + spc_1*(D_1 + D_2 + D_3))
-└
 
-========  =========  =======  ========  ========
-  D_2        D_3      spc_1     D_1       D_4
-========  =========  =======  ========  ========
-2.10 psf  10.00 psf  2.00 ft  3.80 psf  3.00 klf
-========  =========  =======  ========  ========
+**Eq. 2 |**  dead load: ASCE7-05 2.3.2
+
+.. code-block:: text 
+
+           dl_1 = 1.2*(D_4 + spc_1*(D_1 + D_2 + D_3))
+
+
+========  =======  =========  ========  ========
+  D_2      spc_1      D_3       D_4       D_1
+========  =======  =========  ========  ========
+2.10 psf  2.00 ft  10.00 psf  3.00 klf  3.80 psf
+========  =======  =========  ========  ========
 
 ========  ==========  =========================
  dl_1      [dl_1 ]            reference
@@ -125,16 +171,19 @@ Uniform Distributed Loads
 3.64 klf  53.09 kN_m  dead load: ASCE7-05 2.3.2
 ========  ==========  =========================
  
-┌  Eq-3 | live load: ASCE7-05 2.3.2
-│
-│     ll_1 = 1.6*L_1*spc_1
-└
 
-=========  =======
-   L_1      spc_1
-=========  =======
-40.00 psf  2.00 ft
-=========  =======
+**Eq. 3 |**  live load: ASCE7-05 2.3.2
+
+.. code-block:: text 
+
+           ll_1 = 1.6*L_1*spc_1
+
+
+=======  =========
+ spc_1      L_1
+=======  =========
+2.00 ft  40.00 psf
+=======  =========
 
 ========  =========  =========================
  ll_1      [ll_1 ]           reference
@@ -142,16 +191,19 @@ Uniform Distributed Loads
 0.13 klf  1.87 kN_m  live load: ASCE7-05 2.3.2
 ========  =========  =========================
  
-┌  Eq-4 | total load: ASCE7-05 2.3.2
-│
-│     omega_1 = dl_1 + ll_1
-└
 
-=============  ========
-    ll_1         dl_1
-=============  ========
-128.00 ft·psf  3.64 klf
-=============  ========
+**Eq. 4 |**  total load: ASCE7-05 2.3.2
+
+.. code-block:: text 
+
+           omega_1 = dl_1 + ll_1
+
+
+========  =============
+  dl_1        ll_1
+========  =============
+3.64 klf  128.00 ft·psf
+========  =============
 
 ==========  ============  ==========================
  omega_1     [omega_1 ]           reference
@@ -161,12 +213,12 @@ Uniform Distributed Loads
  
  
 
-[ 4v ] Beam Response
+**4v.**  **Beam Response**
 --------------------------------------------------------------------------------
  
  
 
-Table 5: Beam functions    [file: src/sectprop.py ]
+**Table 5**: Beam functions   **[file:** src/sectprop.py **]**
 
 ==========================  =====================================================
 Function                    Docstring
@@ -177,15 +229,18 @@ midspan_delta(ln, w, e, i)  mid-span deflection of simply supported beam with UD
 ==========================  =====================================================
 
  
-┌  Eq-5 | S-rectangle
-│
-│     section_1 = rectsect(b_1, h_1)
-└
+
+**Eq. 5 |**  S-rectangle
+
+.. code-block:: text 
+
+           section_1 = rectsect(b_1, h_1)
+
 
 ==========  ==========
-   h_1         b_1
+   b_1         h_1
 ==========  ==========
-18.00 inch  10.00 inch
+10.00 inch  18.00 inch
 ==========  ==========
 
 ============  ==============  ===========
@@ -195,15 +250,18 @@ midspan_delta(ln, w, e, i)  mid-span deflection of simply supported beam with UD
 ============  ==============  ===========
 
  
-┌  Eq-6 | I-rectangle
-│
-│     inertia_1 = rectinertia(b_1, h_1)
-└
+
+**Eq. 6 |**  I-rectangle
+
+.. code-block:: text 
+
+           inertia_1 = rectinertia(b_1, h_1)
+
 
 =========  =========
-   h_1        b_1
+   b_1        h_1
 =========  =========
-18.0 inch  10.0 inch
+10.0 inch  18.0 inch
 =========  =========
 
 ============  ==============  ===========
@@ -213,16 +271,19 @@ midspan_delta(ln, w, e, i)  mid-span deflection of simply supported beam with UD
 ============  ==============  ===========
 
  
-Bending Stress
+**Bending Stress**
 
  
-┌  Eq-7 | mid-span UDL moment
-│
-│                        2
-│           omega_1*spn_1 
-│     m_1 = --------------
-│                 8       
-└
+
+**Eq. 7 |**  mid-span UDL moment
+
+.. code-block:: text 
+
+                              2
+                 omega_1*spn_1 
+           m_1 = --------------
+                       8       
+
 
 =========  ========
  omega_1    spn_1
@@ -236,12 +297,15 @@ Bending Stress
 120.52 ftkip  163.40 mkN  mid-span UDL moment
 ============  ==========  ===================
  
-┌  Eq-8 | bending stress
-│
-│               m_1   
-│     fb_1 = ---------
-│            section_1
-└
+
+**Eq. 8 |**  bending stress
+
+.. code-block:: text 
+
+                     m_1   
+           fb_1 = ---------
+                  section_1
+
 
 =============  ===========
      m_1        section_1
@@ -255,10 +319,13 @@ Bending Stress
 2678.2 lb_in2  18.5 MPA   bending stress
 =============  =========  ==============
  
-┌  Eq-9 | stress ratio
-│
-│     fb_1 < 20000*lb_in2
-└
+
+**Eq.9 |** stress ratio
+
+.. code-block:: text 
+
+               fb_1 < 20000*lb_in2
+
 
 ========  ===============  ========  =======  ============
   fb_1     20000*lb_in2     ratio     check    reference
@@ -267,19 +334,22 @@ Bending Stress
 ========  ===============  ========  =======  ============
 
  
-Deflection
+**Deflection**
 
  
-┌  Eq-10 | mid-span deflection
-│
-│     delta_1 = midspan_delta(spn_1, omega_1, E_1, inertia_1)
-└
 
-========  =============  ============  =========
- spn_1      inertia_1        E_1        omega_1
-========  =============  ============  =========
-16.00 ft  4860.00 inch4  29000.00 ksi  3.77 klf
-========  =============  ============  =========
+**Eq. 10 |**  mid-span deflection
+
+.. code-block:: text 
+
+           delta_1 = midspan_delta(spn_1, omega_1, E_1, inertia_1)
+
+
+=============  ============  =========  ========
+  inertia_1        E_1        omega_1    spn_1
+=============  ============  =========  ========
+4860.00 inch4  29000.00 ksi  3.77 klf   16.00 ft
+=============  ============  =========  ========
 
 ==========  ============  ===================
  delta_1     [delta_1 ]        reference
