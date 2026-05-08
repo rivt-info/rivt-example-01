@@ -4,7 +4,7 @@ from pathlib import Path
 
 sys.path.append(str(Path(".").resolve()))
 
-project = "rv001-example01"
+project = "rv001-singledoc-example01"
 copyright = "-"
 author = "R Holland"
 release = "1.0.0a10"
@@ -69,7 +69,7 @@ favicons = [
 # source start file, target name, title, author, options
 # options: ('index', 'MyProject', 'My Project', 'Author Name', {"pdf_compressed": True})
 # More than one author : \r'Guido van Rossum\Fred L. Drake, Jr., editor'
-pdf_documents = [("rv001-example01", "rv001-example01", "Example 1 - Single Doc", 
+pdf_documents = [("rv001-singledoc-example01", "rv001-singledoc-example01", "Example 1 - Single Doc", 
             "R Holland")]
 # Label to use as a prefix for the subtitle on the cover page
 subtitle_prefix = "User Manual"
@@ -93,6 +93,8 @@ pdf_use_coverpage = True
 pdf_cover_template = "_templates/pdfcover.rst"
 # Show Table Of Contents at the beginning?
 pdf_use_toc = True
+# Page template name for "regular" pages
+pdf_page_template = 'mainPage'
 # How many levels deep should the table of contents be?
 pdf_toc_depth = 9999
 # Insert footnotes where they are defined 
@@ -109,8 +111,6 @@ pdf_fit_background_mode = "scale"
 pdf_repeat_table_rows = True
 # Enable smart quotes (1, 2 or 3) or disable by setting to 0
 pdf_smartquotes = 0
-# Page template name for "regular" pages
-pdf_page_template = 'mainPage'
 # verbosity level. 0 1 or 2
 # pdf_verbosity = 0
 # Documents to append as an appendix to all manuals.

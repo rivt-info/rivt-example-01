@@ -12,38 +12,37 @@ fontsAlias:
   fontSansBold: DejaVuSans-Bold
   fontSansBoldItalic: DejaVuSans-BoldOblique
   fontSansItalic: DejaVuSans-Oblique
-  size: letter
-  margin-bottom: 1cm
-  margin-top: 1cm
 pageSetup:
+  pageTop: 5mm
+  pagebottom: 5mm
   firstTemplate: coverPage
   height: null
-  margin-bottom: 1.0cm
+  margin-bottom: 4mm
   margin-gutter: 0cm
   margin-left: 1.5cm
   margin-right: 1.5cm
-  margin-top: 1.0cm
+  margin-top: 4mm
   size: letter
   spacing-footer: 10mm
   spacing-header: 10mm
   width: null
 pageTemplates:
   coverPage:
-    showFooter: False
-    showHeader: False
+    showFooter: true
+    showHeader: false
     underline: false
   mainPage:
     showFooter: True
     showHeader: True
   noHeaderTemplate:
-      frames: [["0%", "0%", "100%", "100%"]]
       showHeader: false
       showFooter: true
+      linkUnderline: false
 styles:
   base:
     alignment: TA_LEFT
-    allowOrphans: false
-    allowWidows: false
+    allowOrphans: true
+    allowWidows: true
     backColor: null
     borderColor: null
     borderPadding: 5
@@ -61,8 +60,8 @@ styles:
     leftIndent: 0
     parent: null
     rightIndent: 0
-    spaceAfter: 6
-    spaceBefore: 6
+    spaceAfter: 1
+    spaceBefore: 1
     strike: false
     textColor: black
     wordWrap: null
@@ -81,7 +80,7 @@ styles:
     alignment: TA_JUSTIFY
     hyphenation: true
     parent: normal
-    spaceBefore: 6
+    spaceBefore: 1
   align-center:
     alignment: TA_CENTER
     parent: bodytext
@@ -133,17 +132,37 @@ styles:
     parent: bodytext
   figure-legend:
     parent: bodytext
+  foottable2:
+    commands:
+    - - VALIGN
+      - - 0
+        - 0
+      - - -1
+        - -1
+      - MIDDLE
+    - - BOTTOMPADDING
+      - - 0
+        - 0
+      - - -1
+        - -1
+      - 0
+    - - TOPPADDING
+      - - 0
+        - 0
+      - - -1
+        - -1
+      - 0
   footer:
     alignment: TA_CENTER
     fontName: fontSans
   header:
     alignment: TA_RIGHT
-    fontName: fontSansBold
+    fontName: fontSans
   heading:
     keepWithNext: true
     parent: normal
-    spaceAfter: 6
-    spaceBefore: 20
+    spaceAfter: 1
+    spaceBefore: 10
     fontName: fontSerif
     textColor: "#222222"
   heading1:
@@ -236,26 +255,6 @@ styles:
     fontSize: 85%
     parent: title
     spaceBefore: 12
-  foottable2:
-    commands:
-    - - VALIGN
-      - - 0
-        - 0
-      - - -1
-        - -1
-      - MIDDLE
-    - - BOTTOMPADDING
-      - - 0
-        - 0
-      - - -1
-        - -1
-      - 0
-    - - TOPPADDING
-      - - 0
-        - 0
-      - - -1
-        - -1
-      - 0
   table:
     spaceBefore: 6
     spaceAfter: 6

@@ -2,7 +2,7 @@
 # %% import
 import rivtlib.rvapi as rv
 
-# rv setpublic: False ; true sets default "private"  header to "public"
+# rv setpublic: false ; true flips default header "private" to "public"
 # rv setwidth : 80 ; width of text output, default is 80 characters
 
 # %% rv.I("""Summary
@@ -27,22 +27,11 @@ rv.I("""Summary
 # %% rv.I("""Load Combinations
 rv.I("""Load Combinations 
 
-    This is an inline table using the restructured text syntax. 
-
     ## indented comments with double hashes will not appear in the doc
     ## The table is written in restructured text. The tag _[T] numbers the table.
 
-    ASCE 7-05 Load Effects _[T]
-    ============= ================================================
-    Equation No.    Load Combination
-    ============= ================================================
-    16-1           1.4(D+F)
-    16-2           1.2(D+F+T) + 1.6(L+H) + 0.5(Lr or S or R)
-    16-3           1.2(D+F+T) + 1.6(Lr or S or R) + (f1L or 0.8W)
-    ============= ================================================
-
-    When an inline table is contained in a TABLE block it produces the same
-    output as above and also writes the table to a CSV file.
+    An inline table contained in a TABLE block writes the 
+    table to a CSV file.
 
     _[[TABLE]]  ASCE 7-05 Load Effects (saved as csv in _stored folder)
     ============= ================================================
@@ -54,10 +43,8 @@ rv.I("""Load Combinations
     ============= ================================================
     _[[END]]
 
-    ## The IMAGE command inserts image file, caption, % scale, fig number option 
-
-    | IMAGE | beam1.png | Beam Geometry, 75, num
-
+    ## IMAGE command inserts image file - caption, % scale, num;nonum option 
+    | IMAGE | src/beam1.png | Beam Diagram, 60, num
     
     ##  The line tag [M] formats the equation using utf-8 text.
     σ1 = M1 / S1 _[M]  Maximum Bending Stress 
@@ -82,12 +69,12 @@ rv.V("""Loads and Geometry
     E_1 ==: 29000*ksi | ksi, MPA, 2 | modulus of elasticity 
     
 
-    The VALTABLE command reads variable values from the file in the _src
+    The VALTABLE command reads variable values from the file in the src
     folder. The text is used as the table title. The range specifies the
     starting and ending line to be read from the file (0:0 means all lines).
     The num;non parameter specifies whether theimported table is numbered.
 
-    | VALTABLE | beam1.csv | Beam Geometry, 0:0, num
+    | VALTABLE | src/beam1.csv | Beam Geometry, 0:0, num
 
     Uniform Distributed Loads _[B]
     dl_1 <=: 1.2 * (spc_1 * (D_1 + D_2 + D_3) + D_4) | klf, kN_m, 2 | dead load: ASCE7-05 2.3.2
@@ -102,6 +89,8 @@ rv.V("""Loads and Geometry
 rv.V("""Beam Response
 
 
+    | IMAGE2 | src/ss-beam2.png, src/ss-beam1.png | Moment,Deflection,50,50, num,num
+
     | PYTHON | src/sectprop.py | Beam functions
 
     section_1 :=: rectsect(b_1, h_1) | in3, cm3, 2 | S-rectangle
@@ -114,7 +103,7 @@ rv.V("""Beam Response
     
     fb_1 <=: m_1 / section_1 | lb_in2, MPA, 1 | bending stress 
 
-    fb_1 < 20000*lb_in2 | ksi, 2, OK, >> NOT OK | stress ratio 
+    fb_1 < 20000*lb_in2 | ksi, 2, **OK**, **>> NOT OK** | STRESS RATIO 
 
     Deflection _[B]
 
@@ -140,10 +129,12 @@ rv.D("""Publish Doc
     
     [layout]
     coverlogo = logo1.png
-    subtitle =  -
     runninglogo = logo2.png
     runningtext = rivt
+    subtitle =  -
     copyright = -
+    client = rivt user
+    projectnum = 0001
     pdf_pagesize = letter
     pdf_margins = 1in, 1in, 1in, 1in 
     pdf_link_underline = true
@@ -152,7 +143,7 @@ rv.D("""Publish Doc
     The rivt file may be published as a text, PDF or HTML doc by changing the
     type parameter to text, pdf or html. A README.txt file is always written to
     the rivt-report folder. Published files are found in the sub-folders of the
-    *_published* folder.
+    _published folder.
 
-    | PUBLISH | Example 1 - Single Doc | text
+    | PUBLISH | Example 1 - Single Doc | pdf
     """)

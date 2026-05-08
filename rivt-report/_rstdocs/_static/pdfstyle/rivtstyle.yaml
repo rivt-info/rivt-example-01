@@ -12,35 +12,36 @@ fontsAlias:
   fontSansBold: DejaVuSans-Bold
   fontSansBoldItalic: DejaVuSans-BoldOblique
   fontSansItalic: DejaVuSans-Oblique
-  size: letter
-  margin-bottom: 1cm
-  margin-top: 1cm
 pageSetup:
   firstTemplate: coverPage
   height: null
-  margin-bottom: 1.0cm
-  margin-gutter: 0cm
+  margin-bottom: 4mm
+  margin-gutter: 1mm
   margin-left: 1.5cm
   margin-right: 1.5cm
-  margin-top: 1.0cm
+  margin-top: 4mm
   size: letter
   spacing-footer: 10mm
   spacing-header: 10mm
   width: null
 pageTemplates:
   coverPage:
-    showFooter: False
-    showHeader: False
+    showFooter: true
+    showHeader: false
+    underline: false
+  noHead:
+    frames: [[0%,0%,100%,100%]]
+    showFooter: true
+    showHeader: false
     underline: false
   mainPage:
+    frames: [[0%,0%,100%,110%]]
     showFooter: True
     showHeader: True
-  noHeaderTemplate:
-      frames: [["0%", "0%", "100%", "100%"]]
-      showHeader: false
-      showFooter: true
 styles:
   base:
+    allowWidows: 2
+    allowOrphans: 2 
     alignment: TA_LEFT
     allowOrphans: false
     allowWidows: false
@@ -61,8 +62,8 @@ styles:
     leftIndent: 0
     parent: null
     rightIndent: 0
-    spaceAfter: 6
-    spaceBefore: 6
+    spaceAfter: 1
+    spaceBefore: 1
     strike: false
     textColor: black
     wordWrap: null
@@ -133,17 +134,33 @@ styles:
     parent: bodytext
   figure-legend:
     parent: bodytext
-  footer:
+  footer-box:
     alignment: TA_CENTER
     fontName: fontSans
-  header:
+    commands:
+      - - BOX
+        - - 0
+          - 0
+        - - -1
+          - -1
+        - 0.25
+        - white
+  header-box:
     alignment: TA_RIGHT
-    fontName: fontSansBold
+    fontName: fontSans
+    commands:
+      - - BOX
+        - - 0
+          - 0
+        - - -1
+          - -1
+        - 0.25
+        - white
   heading:
     keepWithNext: true
     parent: normal
-    spaceAfter: 6
-    spaceBefore: 20
+    spaceAfter: 1
+    spaceBefore: 10
     fontName: fontSerif
     textColor: "#222222"
   heading1:
@@ -236,50 +253,18 @@ styles:
     fontSize: 85%
     parent: title
     spaceBefore: 12
-  foottable2:
-    commands:
-    - - VALIGN
-      - - 0
-        - 0
-      - - -1
-        - -1
-      - MIDDLE
-    - - BOTTOMPADDING
-      - - 0
-        - 0
-      - - -1
-        - -1
-      - 0
-    - - TOPPADDING
-      - - 0
-        - 0
-      - - -1
-        - -1
-      - 0
   table:
-    spaceBefore: 6
-    spaceAfter: 6
-    parent: normal
-    alignment: TA_CENTER
+    alignment: TA_LEFT
+    spaceBefore: 3
+    spaceAfter: 3
     borderPadding: 5
     leftPadding: 6
     rightPadding: 6
     topPadding: 5
     bottomPadding: 5
+    background-color: white
+    alternate-row-background-color: lightgray
     commands:
-      - - VALIGN
-        - - 0
-          - 0
-        - - -1
-          - -1
-        - BOTTOM
-      - - INNERGRID
-        - - 0
-          - 0
-        - - -1
-          - -1
-        - 0.25
-        - black
       - - ROWBACKGROUNDS
         - - 0
           - 0
@@ -294,31 +279,9 @@ styles:
           - -1
         - 0.25
         - black
-      - - BOTTOMPADDING
-        - - 0
-          - 0
-        - - -1
-          - -1
-        - 5
-      - - TOPPADDING
-        - - 0
-          - 0
-        - - -1
-          - -1
-        - 5
-  table-body:
-    parent: normal
   table-heading:
-    alignment: TA_CENTER
-    borderPadding: 5
-    fontName: fontSansBold
-    valign: BOTTOM
-  table-title:
-    alignment: TA_CENTER
-    keepWithNext: false
-    parent: heading4
-    borderPadding: 5
-  tip:
+    alignment: TA_LEFT
+    tip:
     parent: admonition
   tip-heading:
     parent: admonition-heading

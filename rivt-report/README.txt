@@ -1,8 +1,4 @@
 
-Example 1 - Single Doc | R Holland | 2026-05-05 - 11:03PM | v-1.0.0a10
-================================================================================
-
-
 [ 1i ] Summary
 --------------------------------------------------------------------------------
  
@@ -25,23 +21,11 @@ _published folder.
 [ 2i ] Load Combinations
 --------------------------------------------------------------------------------
  
-This is an inline table using the restructured text syntax. 
  
+An inline table contained in a TABLE block writes the 
+table to a CSV file.
  
-
-Table 1: ASCE 7-05 Load Effects
-============= ================================================
-Equation No.    Load Combination
-============= ================================================
-16-1           1.4(D+F)
-16-2           1.2(D+F+T) + 1.6(L+H) + 0.5(Lr or S or R)
-16-3           1.2(D+F+T) + 1.6(Lr or S or R) + (f1L or 0.8W)
-============= ================================================
- 
-When an inline table is contained in a TABLE block it produces the same
-output as above and also writes the table to a CSV file.
- 
-Table 2: ASCE 7-05 Load Effects (saved as csv in _stored folder)
+Table 1: ASCE 7-05 Load Effects (saved as csv in _stored folder)
 ============= ================================================ 
 Equation No.    Load Combination 
 ============= ================================================ 
@@ -51,11 +35,9 @@ Equation No.    Load Combination
 ============= ================================================ 
 
  
- 
 
-Fig. 1 - Beam Geometry  [file: beam1.png ] 
+Fig. 1 - Beam Diagram  [file: src/beam1.png ] 
 
- 
  
 ┌  Eq-1 |   Maximum Bending Stress 
 │
@@ -76,33 +58,32 @@ values are defined with the define operator. The line tag [T] labels and
 numbers the table.
  
 
-Table 3: Define Unit Loads
+Table 2: Define Unit Loads
 ==========  ============  =============  =====================
-variable           value        [value]  description
+variable    value         [value]        description
 ==========  ============  =============  =====================
-D_1             3.80 psf       0.18 kPA  joists DL
-D_2             2.10 psf       0.10 kPA  plywood DL
-D_3            10.00 psf       0.48 kPA  partitions DL
-D_4             3.00 klf     43.78 kN_m  fixed machinery  DL
-L_1            40.00 psf       1.92 kPA  ASCE7-O5 LL
-b_1           10.00 inch      254.00 mm  beam width
-h_1           18.00 inch      457.20 mm  beam depth
+D_1         3.80 psf      0.18 kPA       joists DL
+D_2         2.10 psf      0.10 kPA       plywood DL
+D_3         10.00 psf     0.48 kPA       partitions DL
+D_4         3.00 klf      43.78 kN_m     fixed machinery  DL
+L_1         40.00 psf     1.92 kPA       ASCE7-O5 LL
+b_1         10.00 inch    254.00 mm      beam width
+h_1         18.00 inch    457.20 mm      beam depth
 E_1         29000.00 ksi  199947.96 MPA  modulus of elasticity
 ==========  ============  =============  ===================== 
  
-The VALTABLE command reads variable values from the file in the _src
+The VALTABLE command reads variable values from the file in the src
 folder. The text is used as the table title. The range specifies the
 starting and ending line to be read from the file (0:0 means all lines).
 The num;non parameter specifies whether theimported table is numbered.
  
 
-Table 4: Beam Geometry [file: beam1.csv]
-
+Table 3: Beam Geometry from file: src/beam1.csv
 ==========  ========  =========  =============
-variable       value    [value]  description
+variable    value     [value]    description
 ==========  ========  =========  =============
-spc_1        2.00 ft     0.61 m  beam spacing
-spn_1       16.00 ft     4.88 m  beam span
+spc_1       2.00 ft   0.61 m     beam spacing
+spn_1       16.00 ft  4.88 m     beam span
 ==========  ========  =========  =============
 
  
@@ -113,51 +94,45 @@ Uniform Distributed Loads
 │     dl_1 = 1.2*(D_4 + spc_1*(D_1 + D_2 + D_3))
 └
 
-========  =========  =======  ========  ========
-  D_2        D_3      spc_1     D_1       D_4
-========  =========  =======  ========  ========
-2.10 psf  10.00 psf  2.00 ft  3.80 psf  3.00 klf
-========  =========  =======  ========  ========
+====================  ====================  =============================
+**dl_1  = 3.64 klf**  [dl_1 ] = 53.09 kN_m  **dead load: ASCE7-05 2.3.2**
+====================  ====================  =============================
 
-========  ==========  =========================
- dl_1      [dl_1 ]            reference
-========  ==========  =========================
-3.64 klf  53.09 kN_m  dead load: ASCE7-05 2.3.2
-========  ==========  =========================
+========  ========  =========  ========  =======
+  D_4       D_1        D_3       D_2      spc_1
+========  ========  =========  ========  =======
+3.00 klf  3.80 psf  10.00 psf  2.10 psf  2.00 ft
+========  ========  =========  ========  =======
  
 ┌  Eq-3 | live load: ASCE7-05 2.3.2
 │
 │     ll_1 = 1.6*L_1*spc_1
 └
 
+====================  ===================  =============================
+**ll_1  = 0.13 klf**  [ll_1 ] = 1.87 kN_m  **live load: ASCE7-05 2.3.2**
+====================  ===================  =============================
+
 =========  =======
    L_1      spc_1
 =========  =======
 40.00 psf  2.00 ft
 =========  =======
-
-========  =========  =========================
- ll_1      [ll_1 ]           reference
-========  =========  =========================
-0.13 klf  1.87 kN_m  live load: ASCE7-05 2.3.2
-========  =========  =========================
  
 ┌  Eq-4 | total load: ASCE7-05 2.3.2
 │
 │     omega_1 = dl_1 + ll_1
 └
 
-=============  ========
-    ll_1         dl_1
-=============  ========
-128.00 ft·psf  3.64 klf
-=============  ========
+=======================  =======================  ==============================
+**omega_1  = 3.77 klf**  [omega_1 ] = 54.96 kN_m  **total load: ASCE7-05 2.3.2**
+=======================  =======================  ==============================
 
-==========  ============  ==========================
- omega_1     [omega_1 ]           reference
-==========  ============  ==========================
- 3.77 klf    54.96 kN_m   total load: ASCE7-05 2.3.2
-==========  ============  ==========================
+========  =============
+  dl_1        ll_1
+========  =============
+3.64 klf  128.00 ft·psf
+========  =============
  
  
 
@@ -165,8 +140,11 @@ Uniform Distributed Loads
 --------------------------------------------------------------------------------
  
  
+Fig. 2 - Moment  | Fig. 3 - Deflection  files: src/ss-beam2.png, src/ss-beam1.png
 
-Table 5: Beam functions    [file: src/sectprop.py ]
+ 
+
+Table 4: Beam functions from file: src/sectprop.py
 
 ==========================  =====================================================
 Function                    Docstring
@@ -177,40 +155,38 @@ midspan_delta(ln, w, e, i)  mid-span deflection of simply supported beam with UD
 ==========================  =====================================================
 
  
-┌  Eq-5 | S-rectangle
+┌ Eq-5: S-rectangle
 │
 │     section_1 = rectsect(b_1, h_1)
 └
 
+
 ==========  ==========
-   h_1         b_1
+   b_1         h_1
 ==========  ==========
-18.00 inch  10.00 inch
+10.00 inch  18.00 inch
 ==========  ==========
 
-============  ==============  ===========
- section_1     [section_1 ]    reference
-============  ==============  ===========
- 540.00 in3    8849.01 cm3    S-rectangle
-============  ==============  ===========
+===========================  ==========================  ===========
+**section_1  = 540.00 in3**  [section_1 ] = 8849.01 cm3  S-rectangle
+===========================  ==========================  ===========
 
  
-┌  Eq-6 | I-rectangle
+┌ Eq-6: I-rectangle
 │
 │     inertia_1 = rectinertia(b_1, h_1)
 └
 
+
 =========  =========
-   h_1        b_1
+   b_1        h_1
 =========  =========
-18.0 inch  10.0 inch
+10.0 inch  18.0 inch
 =========  =========
 
-============  ==============  ===========
- inertia_1     [inertia_1 ]    reference
-============  ==============  ===========
- 4860.0 in4    202288.5 cm4   I-rectangle
-============  ==============  ===========
+===========================  ===========================  ===========
+**inertia_1  = 4860.0 in4**  [inertia_1 ] = 202288.5 cm4  I-rectangle
+===========================  ===========================  ===========
 
  
 Bending Stress
@@ -224,17 +200,15 @@ Bending Stress
 │                 8       
 └
 
+=======================  ===================  =======================
+**m_1  = 120.52 ftkip**  [m_1 ] = 163.40 mkN  **mid-span UDL moment**
+=======================  ===================  =======================
+
 =========  ========
  omega_1    spn_1
 =========  ========
 3.77 klf   16.00 ft
 =========  ========
-
-============  ==========  ===================
-    m_1         [m_1 ]         reference
-============  ==========  ===================
-120.52 ftkip  163.40 mkN  mid-span UDL moment
-============  ==========  ===================
  
 ┌  Eq-8 | bending stress
 │
@@ -243,19 +217,17 @@ Bending Stress
 │            section_1
 └
 
+=========================  ==================  ==================
+**fb_1  = 2678.2 lb_in2**  [fb_1 ] = 18.5 MPA  **bending stress**
+=========================  ==================  ==================
+
 =============  ===========
      m_1        section_1
 =============  ===========
 120.5 ft2·klf  540.0 inch3
 =============  ===========
-
-=============  =========  ==============
-    fb_1        [fb_1 ]     reference
-=============  =========  ==============
-2678.2 lb_in2  18.5 MPA   bending stress
-=============  =========  ==============
  
-┌  Eq-9 | stress ratio
+┌  Eq-9 | STRESS RATIO
 │
 │     fb_1 < 20000*lb_in2
 └
@@ -263,29 +235,28 @@ Bending Stress
 ========  ===============  ========  =======  ============
   fb_1     20000*lb_in2     ratio     check    reference
 ========  ===============  ========  =======  ============
-2.68 ksi     20.00 ksi     0.133908    OK     stress ratio
+2.68 ksi     20.00 ksi     0.133908  **OK**   STRESS RATIO
 ========  ===============  ========  =======  ============
 
  
 Deflection
 
  
-┌  Eq-10 | mid-span deflection
+┌ Eq-10: mid-span deflection
 │
 │     delta_1 = midspan_delta(spn_1, omega_1, E_1, inertia_1)
 └
 
-========  =============  ============  =========
- spn_1      inertia_1        E_1        omega_1
-========  =============  ============  =========
-16.00 ft  4860.00 inch4  29000.00 ksi  3.77 klf
-========  =============  ============  =========
 
-==========  ============  ===================
- delta_1     [delta_1 ]        reference
-==========  ============  ===================
-0.04 inch     1.00 mm     mid-span deflection
-==========  ============  ===================
+============  =============  =========  ========
+    E_1         inertia_1     omega_1    spn_1
+============  =============  =========  ========
+29000.00 ksi  4860.00 inch4  3.77 klf   16.00 ft
+============  =============  =========  ========
+
+========================  ====================  ===================
+**delta_1  = 0.04 inch**  [delta_1 ] = 1.00 mm  mid-span deflection
+========================  ====================  ===================
 
  
  
