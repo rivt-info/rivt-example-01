@@ -139,3 +139,11 @@ hr {
     font-size: 100%;
     color: hwb(200 15% 27%);
 }
+
+.admonition {
+    border: none !important;
+}
+
+.admonition .admonition-title {
+    border: none !important;
+}

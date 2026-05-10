@@ -15,7 +15,7 @@
 
 .. class:: center
 
-    :big-text:`Example 1 - Single Doc`
+    :big-text:`Example 1 - rivt Doc`
 
 |
 |
@@ -26,7 +26,7 @@
 
 .. class:: center
 
-   Attn: **rivt user**
+   Attn: **user example**
 
 |
 

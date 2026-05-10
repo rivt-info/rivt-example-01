@@ -8,56 +8,60 @@
 
 
 
-.. header-box::
+.. header::
     .. list-table::
-        :class: foottable2
+        :class: header-box
         :align: left
         :widths: 90 10
         
-        * - **Example 1 - Single Doc** - v1.0.0a10 |s| |s| |s| Sect: **###Section###**
+        * - **Example 1 - rivt Doc** - v1.0.0a10 |s| |s| |s| Sect: **###Section###**
           - p. **###Page###**   
 
           
 
-.. footer-box:: 
+.. footer:: 
     .. list-table::
-        :class: foottable2
+        :class: footer-box
         :align: left
         :widths: 84 22 16
         
-        * - 2026-05-08 |s| |s| |s| **|** |s| |s| |s| R Holland        
+        * - 2026-05-10 |s| |s| |s| **|** |s| |s| |s| R Holland        
           - **rivt**        
           - |blklogo|
 
                   
 
-**1i.**  **Summary**
+
+**1i.** **Summary**
 --------------------------------------------------------------------------------
  
 This rivt example calculates the maximum stress and deflection in a simply
 supported, uniformly loaded beam. It also serves as an annotated example of
-a single doc with multiple sections (a single doc does not use the
-report generating script).
+a doc with multiple sections that is not part of a report.
  
 The example illustrates the use of some of the most common API functions,
 commands and tags. Further details are provided in the 
 `rivt user manual <https://www.rivt.info>`_.
  
 The file may be formatted as a text, PDF or HTML doc by changing the type
-parameter in the PUBLISH command of the Doc API (rv.D) at the end
-of the file. Published files are found in the respective sub-folders of the
-_published folder.
+parameter in the PUBLISH command of the Doc API (rv.D) at the end of the
+file. Published files are found in the sub-folders of the _published
+folder.
  
  
 
-**2i.**  **Load Combinations**
+
+
+------------
+
+**2i.** **Load Combinations**
 --------------------------------------------------------------------------------
  
  
-An inline table contained in a TABLE block writes the 
-table to a CSV file.
- 
-**Table 1**: ASCE 7-05 Load Effects (saved as csv in _stored folder)
+
+|
+
+**Table 1**: ASCE 7-05 Load Effects (saved as csv in _stored folder) 
 
 ============= ================================================ 
 Equation No.    Load Combination 
@@ -68,31 +72,13 @@ Equation No.    Load Combination
 ============= ================================================ 
 
  
-
-.. figure:: c:/git/rivt-example-01-git/rivt-report/src/beam1.png
-    :width: 60%
-    :align: center
-
-    Fig. 1 - Beam Diagram 
-    
-
  
 
-**[Eq.1]**
-
-.. code-block:: text 
-
-                M₁
-           σ₁ = ──
-                S₁
 
 
+------------
 
-
- 
- 
-
-**3v.**  **Loads and Geometry**
+**3v.** **Loads and Geometry**
 --------------------------------------------------------------------------------
  
 Successive lines of value definitions are formatted as a table. Variable
@@ -113,13 +99,13 @@ L_1         40.00 psf     1.92 kPA       ASCE7-O5 LL
 b_1         10.00 inch    254.00 mm      beam width
 h_1         18.00 inch    457.20 mm      beam depth
 E_1         29000.00 ksi  199947.96 MPA  modulus of elasticity
-==========  ============  =============  ===================== 
+==========  ============  =============  =====================
  
-The VALTABLE command reads variable values from the file in the src
-folder. The text is used as the table title. The range specifies the
+The VALTABLE command reads variable values from a file in the src
+folder. The description is used as the table title. The range specifies the
 starting and ending line to be read from the file (0:0 means all lines).
-The num;non parameter specifies whether theimported table is numbered.
  
+|
 
 **Table 3**: Beam Geometry from file: **src/beam1.csv**
 
@@ -130,91 +116,91 @@ spc_1       2.00 ft   0.61 m     beam spacing
 spn_1       16.00 ft  4.88 m     beam span
 ==========  ========  =========  =============
 
+
+ 
+
+.. figure:: c:/git/rivt-example-01-git/rivt-report/src/beam1.png
+    :width: 60%
+    :align: center
+
+    **Fig. 1** - Beam Diagram 
+    
+
  
 **Uniform Distributed Loads**
 
 
+
+|
 |
 
-**Eq. 2:**  dead load: ASCE7-05 2.3.2
+**Eq. 1:**  dead load, ASCE7-05 2.3.2
 
 .. code-block:: text 
 
-           dl_1 = 1.2*(D_4 + spc_1*(D_1 + D_2 + D_3))
+           dl₁ = 1.2⋅(D₄ + spc₁⋅(D₁ + D₂ + D₃))
 
+           dl₁ = 3.64 klf     [dl₁] = 53.09 kN_m    |   dead load, ASCE7-05 2.3.2
 
-====================  ====================  =============================
-**dl_1  = 3.64 klf**  [dl_1 ] = 53.09 kN_m  **dead load: ASCE7-05 2.3.2**
-====================  ====================  =============================
-
-========  ========  =========  ========  =======
-  D_4       D_1        D_3       D_2      spc_1
-========  ========  =========  ========  =======
-3.00 klf  3.80 psf  10.00 psf  2.10 psf  2.00 ft
-========  ========  =========  ========  =======
+============  ==========  ===================  =============  =========
+spc₁          D₂          D₄                   D₃             D₁
+============  ==========  ===================  =============  =========
+2.00 ft       2.10 psf    3.00 klf             10.00 psf      3.80 psf
+beam spacing  plywood DL  fixed machinery  DL  partitions DL  joists DL
+============  ==========  ===================  =============  =========
  
 
+
+|
 |
 
-**Eq. 3:**  live load: ASCE7-05 2.3.2
+**Eq. 2:**  live load: ASCE7-05 2.3.2
 
 .. code-block:: text 
 
-           ll_1 = 1.6*L_1*spc_1
+           ll₁ = 1.6⋅L₁⋅spc₁
 
+           ll₁ = 0.13 klf     [ll₁] = 1.87 kN_m    |   live load: ASCE7-05 2.3.2
 
-====================  ===================  =============================
-**ll_1  = 0.13 klf**  [ll_1 ] = 1.87 kN_m  **live load: ASCE7-05 2.3.2**
-====================  ===================  =============================
-
-=========  =======
-   L_1      spc_1
-=========  =======
-40.00 psf  2.00 ft
-=========  =======
+============  ===========
+spc₁          L₁
+============  ===========
+2.00 ft       40.00 psf
+beam spacing  ASCE7-O5 LL
+============  ===========
  
 
+
+|
 |
 
-**Eq. 4:**  total load: ASCE7-05 2.3.2
+**Eq. 3:**  total load: ASCE7-05 2.3.2
 
 .. code-block:: text 
 
-           omega_1 = dl_1 + ll_1
+           ω₁ = dl₁ + ll₁
 
+           ω₁ = 3.77 klf     [ω₁] = 54.96 kN_m    |   total load: ASCE7-05 2.3.2
 
-=======================  =======================  ==============================
-**omega_1  = 3.77 klf**  [omega_1 ] = 54.96 kN_m  **total load: ASCE7-05 2.3.2**
-=======================  =======================  ==============================
-
-========  =============
-  dl_1        ll_1
-========  =============
-3.64 klf  128.00 ft·psf
-========  =============
+=========================  =========================
+dl₁                        ll₁
+=========================  =========================
+3.64 klf                   128.00 ft·psf
+dead load, ASCE7-05 2.3.2  live load: ASCE7-05 2.3.2
+=========================  =========================
  
  
 
-**4v.**  **Beam Response**
+
+
+------------
+
+**4v.** **Beam Response**
 --------------------------------------------------------------------------------
  
- 
-
-.. list-table::
-    :widths: 50 50
-    :header-rows: 0
-
-    * - .. figure:: c:/git/rivt-example-01-git/rivt-report/src/ss-beam2.png
-            :width: 100%
-
-            Moment
-     
-      - .. figure:: c:/git/rivt-example-01-git/rivt-report/src/ss-beam1.png
-            :width: 100%
-            
-            Deflection
-                     
-
+The following lines import the beam geometry from an external file, 
+calculate section properties from imported functions and calculate 
+the maximum moment, bending stress and mid-span deflection. 
  
 
 **Table 4**: Beam functions from file: **src/sectprop.py**
@@ -229,127 +215,165 @@ midspan_delta(ln, w, e, i)  mid-span deflection of simply supported beam with UD
 ==========================  =====================================================
 
  
+|
 
-**Eq. 5:**  S-rectangle
-
-.. code-block:: text 
-
-           section_1 = rectsect(b_1, h_1)
-
-
-==========  ==========
-   b_1         h_1
-==========  ==========
-10.00 inch  18.00 inch
-==========  ==========
-
-===========================  ==========================  ===========
-**section_1  = 540.00 in3**  [section_1 ] = 8849.01 cm3  S-rectangle
-===========================  ==========================  ===========
-
- 
-
-**Eq. 6:**  I-rectangle
+**Eq. 4:**  rectangle - S
 
 .. code-block:: text 
 
-           inertia_1 = rectinertia(b_1, h_1)
+           section₁ = rectsect(b₁, h₁)
 
 
-=========  =========
-   b_1        h_1
-=========  =========
-10.0 inch  18.0 inch
-=========  =========
+==========  ==========
+   h_1         b_1
+==========  ==========
+18.00 inch  10.00 inch
+==========  ==========
 
-===========================  ===========================  ===========
-**inertia_1  = 4860.0 in4**  [inertia_1 ] = 202288.5 cm4  I-rectangle
-===========================  ===========================  ===========
+.. class:: table-no-split
+
+===========================  ==========================  =============
+**section_1  = 540.00 in3**  [section_1 ] = 8849.01 cm3  rectangle - S
+===========================  ==========================  =============
 
  
-**Bending Stress**
+|
+
+**Eq. 5:**  rectangle - I
+
+.. code-block:: text 
+
+           inertia₁ = rectinertia(b₁, h₁)
+
+
+=========  =========
+   h_1        b_1
+=========  =========
+18.0 inch  10.0 inch
+=========  =========
+
+.. class:: table-no-split
+
+===========================  ===========================  =============
+**inertia_1  = 4860.0 in4**  [inertia_1 ] = 202288.5 cm4  rectangle - I
+===========================  ===========================  =============
+
+ 
+ 
+
+|
+
+
+**Eq.6**
+
+.. code-block:: text 
+
+                M₁
+           σ₁ = ──
+                S₁
+
+
+
 
  
 
+
+|
 |
 
 **Eq. 7:**  mid-span UDL moment
 
 .. code-block:: text 
 
-                              2
-                 omega_1*spn_1 
-           m_1 = --------------
-                       8       
+                       2
+                ω₁⋅spn₁ 
+           m₁ = ────────
+                   8    
 
+           m₁ = 120.52 ftkip     [m₁] = 163.40 mkN    |   mid-span UDL moment
 
-=======================  ===================  =======================
-**m_1  = 120.52 ftkip**  [m_1 ] = 163.40 mkN  **mid-span UDL moment**
-=======================  ===================  =======================
-
-=========  ========
- omega_1    spn_1
-=========  ========
-3.77 klf   16.00 ft
-=========  ========
+==========================  =========
+ω₁                          spn₁
+==========================  =========
+3.77 klf                    16.00 ft
+total load: ASCE7-05 2.3.2  beam span
+==========================  =========
  
+
 
 |
+|
 
-**Eq. 8:**  bending stress
-
-.. code-block:: text 
-
-                     m_1   
-           fb_1 = ---------
-                  section_1
-
-
-=========================  ==================  ==================
-**fb_1  = 2678.2 lb_in2**  [fb_1 ] = 18.5 MPA  **bending stress**
-=========================  ==================  ==================
-
-=============  ===========
-     m_1        section_1
-=============  ===========
-120.5 ft2·klf  540.0 inch3
-=============  ===========
- 
-
-**Eq.9 |** STRESS RATIO
+**Eq. 8:**  bending Stress
 
 .. code-block:: text 
 
-               fb_1 < 20000*lb_in2
+                    m₁   
+           fb₁ = ────────
+                 section₁
+
+           fb₁ = 2678.2 lb_in2     [fb₁] = 18.5 MPA    |   bending Stress
+
+===================  =============
+m₁                   section₁
+===================  =============
+120.5 ft2·klf        540.0 inch3
+mid-span UDL moment  rectangle - S
+===================  =============
+ 
+|
+
+**Eq.9:** stress ratio
+
+.. code-block:: text 
+
+               fb₁ < 20000⋅psqin
 
 
-========  ===============  ========  =======  ============
-  fb_1     20000*lb_in2     ratio     check    reference
-========  ===============  ========  =======  ============
-2.68 ksi     20.00 ksi     0.133908  **OK**   STRESS RATIO
-========  ===============  ========  =======  ============
+========  ==============  ========  =======  ============
+  fb_1     20000*psqin     ratio     check    reference
+========  ==============  ========  =======  ============
+2.68 ksi    20.00 ksi     0.133908  **OK**   stress ratio
+========  ==============  ========  =======  ============
 
  
-**Deflection**
-
- 
+|
 
 **Eq. 10:**  mid-span deflection
 
 .. code-block:: text 
 
-           delta_1 = midspan_delta(spn_1, omega_1, E_1, inertia_1)
+           δ₁ = midspan_δ(spn₁, ω₁, E₁, inertia₁)
 
 
-============  =============  =========  ========
-    E_1         inertia_1     omega_1    spn_1
-============  =============  =========  ========
-29000.00 ksi  4860.00 inch4  3.77 klf   16.00 ft
-============  =============  =========  ========
+=========  ============  =============  ========
+ omega_1       E_1         inertia_1     spn_1
+=========  ============  =============  ========
+3.77 klf   29000.00 ksi  4860.00 inch4  16.00 ft
+=========  ============  =============  ========
+
+.. class:: table-no-split
 
 ========================  ====================  ===================
 **delta_1  = 0.04 inch**  [delta_1 ] = 1.00 mm  mid-span deflection
 ========================  ====================  ===================
+
+ 
+
+.. list-table::
+    :widths: 46 54
+    :header-rows: 0
+
+    * - .. figure:: c:/git/rivt-example-01-git/rivt-report/src/ss-beam2.png
+            :width: 100%
+
+            **Fig. 2 -** Moment Diagram 
+     
+      - .. figure:: c:/git/rivt-example-01-git/rivt-report/src/ss-beam1.png
+            :width: 100%
+            
+            **Fig. 3 -** Deflection Diagram 
+                     
 
  
  
