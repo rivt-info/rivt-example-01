@@ -363,6 +363,4 @@ styles:
     parent: admonition
   warning-heading:
     parent: admonition-heading
-classes:
-  table-no-split:
-    keep-with-next: true
+

@@ -52,7 +52,7 @@ rv.V("""Loads and Geometry
     D_1 ==: 3.8*psf | psf, kPA, 2 | joists DL         
     D_2 ==: 2.1*psf | psf, kPA, 2 | plywood DL          
     D_3 ==: 10.0*psf | psf, kPA, 2 | partitions DL       
-    D_4 ==: 2*1.5*klf |klf, kN_m, 2 | fixed machinery  DL
+    D_4 ==: 2*1.5*klf |klf, kN_m, 2 | fixed machinery DL
     L_1 ==: 40*psf | psf, kPA, 2 | ASCE7-O5 LL
     b_1 ==: 10*inch | inch, mm, 2 | beam width
     h_1 ==: 18*inch | inch, mm, 2 | beam depth
@@ -67,12 +67,12 @@ rv.V("""Loads and Geometry
     ## The IMAGE command inserts an image file with caption, % scale, num;non option 
     | IMAGE | src/beam1.png | Beam Diagram, 60, num
 
-    Uniform Distributed Loads _[B]
-    dl_1 <=: 1.2 * (spc_1 * (D_1 + D_2 + D_3) + D_4) | klf, kN_m, 2 | dead load, ASCE7-05 2.3.2
+    Uniform Distributed Loads _[C]
+    dl_1 <=: 1.2 * (spc_1 * (D_1 + D_2 + D_3) + D_4) | klf, kN_m, 2 | dead load [ASCE7-05 2.3.2]
 
-    ll_1 <=: 1.6 * spc_1 * L_1 | klf, kN_m, 2 | live load: ASCE7-05 2.3.2
+    ll_1 <=: 1.6 * spc_1 * L_1 | klf, kN_m, 2 | live load [ASCE7-05 2.3.2]
     
-    omega_1 <=: dl_1 + ll_1 | klf, kN_m, 2 | total load: ASCE7-05 2.3.2
+    omega_1 <=: dl_1 + ll_1 | klf, kN_m, 2 | total load [ASCE7-05 2.3.2]
     
     """)
 

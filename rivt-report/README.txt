@@ -48,7 +48,7 @@ variable    value         [value]        description
 D_1         3.80 psf      0.18 kPA       joists DL
 D_2         2.10 psf      0.10 kPA       plywood DL
 D_3         10.00 psf     0.48 kPA       partitions DL
-D_4         3.00 klf      43.78 kN_m     fixed machinery  DL
+D_4         3.00 klf      43.78 kN_m     fixed machinery DL
 L_1         40.00 psf     1.92 kPA       ASCE7-O5 LL
 b_1         10.00 inch    254.00 mm      beam width
 h_1         18.00 inch    457.20 mm      beam depth
@@ -74,22 +74,22 @@ spn_1       16.00 ft  4.88 m     beam span
 **Fig. 1** - Beam Diagram  [file: src/beam1.png ] 
 
  
-Uniform Distributed Loads
+                           Uniform Distributed Loads                            
 
 
-┌  Eq-1 | dead load, ASCE7-05 2.3.2
+┌  Eq-1 | dead load [ASCE7-05 2.3.2]
 │
 │     dl₁ = 1.2⋅(D₄ + spc₁⋅(D₁ + D₂ + D₃))
 └
-============  ==========  ===================  =============  =========
-spc₁          D₂          D₄                   D₃             D₁
-============  ==========  ===================  =============  =========
-2.00 ft       2.10 psf    3.00 klf             10.00 psf      3.80 psf
-beam spacing  plywood DL  fixed machinery  DL  partitions DL  joists DL
-============  ==========  ===================  =============  =========
+==================  ============  =============  =========  ==========
+D₄                  spc₁          D₃             D₁         D₂
+==================  ============  =============  =========  ==========
+3.00 klf            2.00 ft       10.00 psf      3.80 psf   2.10 psf
+fixed machinery DL  beam spacing  partitions DL  joists DL  plywood DL
+==================  ============  =============  =========  ==========
  
 
-┌  Eq-2 | live load: ASCE7-05 2.3.2
+┌  Eq-2 | live load [ASCE7-05 2.3.2]
 │
 │     ll₁ = 1.6⋅L₁⋅spc₁
 └
@@ -101,16 +101,16 @@ beam spacing  ASCE7-O5 LL
 ============  ===========
  
 
-┌  Eq-3 | total load: ASCE7-05 2.3.2
+┌  Eq-3 | total load [ASCE7-05 2.3.2]
 │
 │     ω₁ = dl₁ + ll₁
 └
-=========================  =========================
-dl₁                        ll₁
-=========================  =========================
-3.64 klf                   128.00 ft·psf
-dead load, ASCE7-05 2.3.2  live load: ASCE7-05 2.3.2
-=========================  =========================
+==========================  ==========================
+dl₁                         ll₁
+==========================  ==========================
+3.64 klf                    128.00 ft·psf
+dead load [ASCE7-05 2.3.2]  live load [ASCE7-05 2.3.2]
+==========================  ==========================
  
  
 
@@ -185,12 +185,12 @@ midspan_delta(ln, w, e, i)  mid-span deflection of simply supported beam with UD
 │     m₁ = ────────
 │             8    
 └
-==========================  =========
-ω₁                          spn₁
-==========================  =========
-3.77 klf                    16.00 ft
-total load: ASCE7-05 2.3.2  beam span
-==========================  =========
+===========================  =========
+ω₁                           spn₁
+===========================  =========
+3.77 klf                     16.00 ft
+total load [ASCE7-05 2.3.2]  beam span
+===========================  =========
  
 
 ┌  Eq-8 | bending Stress

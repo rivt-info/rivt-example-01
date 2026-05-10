@@ -94,7 +94,7 @@ variable    value         [value]        description
 D_1         3.80 psf      0.18 kPA       joists DL
 D_2         2.10 psf      0.10 kPA       plywood DL
 D_3         10.00 psf     0.48 kPA       partitions DL
-D_4         3.00 klf      43.78 kN_m     fixed machinery  DL
+D_4         3.00 klf      43.78 kN_m     fixed machinery DL
 L_1         40.00 psf     1.92 kPA       ASCE7-O5 LL
 b_1         10.00 inch    254.00 mm      beam width
 h_1         18.00 inch    457.20 mm      beam depth
@@ -127,67 +127,74 @@ spn_1       16.00 ft  4.88 m     beam span
     
 
  
+
+.. rst-class:: align-center
+
 **Uniform Distributed Loads**
 
 
 
-|
+
 |
 
-**Eq. 1:**  dead load, ASCE7-05 2.3.2
+
+**Eq. 1:**  dead load [ASCE7-05 2.3.2]
 
 .. code-block:: text 
 
            dl₁ = 1.2⋅(D₄ + spc₁⋅(D₁ + D₂ + D₃))
 
-           dl₁ = 3.64 klf     [dl₁] = 53.09 kN_m    |   dead load, ASCE7-05 2.3.2
+           dl₁ = 3.64 klf     [dl₁] = 53.09 kN_m   | dead load [ASCE7-05 2.3.2]
 
-============  ==========  ===================  =============  =========
-spc₁          D₂          D₄                   D₃             D₁
-============  ==========  ===================  =============  =========
-2.00 ft       2.10 psf    3.00 klf             10.00 psf      3.80 psf
-beam spacing  plywood DL  fixed machinery  DL  partitions DL  joists DL
-============  ==========  ===================  =============  =========
+           D₄                  spc₁          D₃             D₁         D₂
+           ——————————————————  ————————————  —————————————  —————————  ——————————
+           3.00 klf            2.00 ft       10.00 psf      3.80 psf   2.10 psf
+           fixed machinery DL  beam spacing  partitions DL  joists DL  plywood DL
+           ——————————————————  ————————————  —————————————  —————————  ——————————
+
+
  
 
 
 |
-|
 
-**Eq. 2:**  live load: ASCE7-05 2.3.2
+
+**Eq. 2:**  live load [ASCE7-05 2.3.2]
 
 .. code-block:: text 
 
            ll₁ = 1.6⋅L₁⋅spc₁
 
-           ll₁ = 0.13 klf     [ll₁] = 1.87 kN_m    |   live load: ASCE7-05 2.3.2
+           ll₁ = 0.13 klf     [ll₁] = 1.87 kN_m   | live load [ASCE7-05 2.3.2]
 
-============  ===========
-spc₁          L₁
-============  ===========
-2.00 ft       40.00 psf
-beam spacing  ASCE7-O5 LL
-============  ===========
+           spc₁          L₁
+           ————————————  ———————————
+           2.00 ft       40.00 psf
+           beam spacing  ASCE7-O5 LL
+           ————————————  ———————————
+
+
  
 
 
 |
-|
 
-**Eq. 3:**  total load: ASCE7-05 2.3.2
+
+**Eq. 3:**  total load [ASCE7-05 2.3.2]
 
 .. code-block:: text 
 
            ω₁ = dl₁ + ll₁
 
-           ω₁ = 3.77 klf     [ω₁] = 54.96 kN_m    |   total load: ASCE7-05 2.3.2
+           ω₁ = 3.77 klf     [ω₁] = 54.96 kN_m   | total load [ASCE7-05 2.3.2]
 
-=========================  =========================
-dl₁                        ll₁
-=========================  =========================
-3.64 klf                   128.00 ft·psf
-dead load, ASCE7-05 2.3.2  live load: ASCE7-05 2.3.2
-=========================  =========================
+           dl₁                         ll₁
+           ——————————————————————————  ——————————————————————————
+           3.64 klf                    128.00 ft·psf
+           dead load [ASCE7-05 2.3.2]  live load [ASCE7-05 2.3.2]
+           ——————————————————————————  ——————————————————————————
+
+
  
  
 
@@ -230,8 +237,6 @@ midspan_delta(ln, w, e, i)  mid-span deflection of simply supported beam with UD
 18.00 inch  10.00 inch
 ==========  ==========
 
-.. class:: table-no-split
-
 ===========================  ==========================  =============
 **section_1  = 540.00 in3**  [section_1 ] = 8849.01 cm3  rectangle - S
 ===========================  ==========================  =============
@@ -251,8 +256,6 @@ midspan_delta(ln, w, e, i)  mid-span deflection of simply supported beam with UD
 =========  =========
 18.0 inch  10.0 inch
 =========  =========
-
-.. class:: table-no-split
 
 ===========================  ===========================  =============
 **inertia_1  = 4860.0 in4**  [inertia_1 ] = 202288.5 cm4  rectangle - I
@@ -279,7 +282,7 @@ midspan_delta(ln, w, e, i)  mid-span deflection of simply supported beam with UD
 
 
 |
-|
+
 
 **Eq. 7:**  mid-span UDL moment
 
@@ -290,19 +293,20 @@ midspan_delta(ln, w, e, i)  mid-span deflection of simply supported beam with UD
            m₁ = ────────
                    8    
 
-           m₁ = 120.52 ftkip     [m₁] = 163.40 mkN    |   mid-span UDL moment
+           m₁ = 120.52 ftkip     [m₁] = 163.40 mkN   | mid-span UDL moment
 
-==========================  =========
-ω₁                          spn₁
-==========================  =========
-3.77 klf                    16.00 ft
-total load: ASCE7-05 2.3.2  beam span
-==========================  =========
+           ω₁                           spn₁
+           ———————————————————————————  —————————
+           3.77 klf                     16.00 ft
+           total load [ASCE7-05 2.3.2]  beam span
+           ———————————————————————————  —————————
+
+
  
 
 
 |
-|
+
 
 **Eq. 8:**  bending Stress
 
@@ -312,14 +316,15 @@ total load: ASCE7-05 2.3.2  beam span
            fb₁ = ────────
                  section₁
 
-           fb₁ = 2678.2 lb_in2     [fb₁] = 18.5 MPA    |   bending Stress
+           fb₁ = 2678.2 lb_in2     [fb₁] = 18.5 MPA   | bending Stress
 
-===================  =============
-m₁                   section₁
-===================  =============
-120.5 ft2·klf        540.0 inch3
-mid-span UDL moment  rectangle - S
-===================  =============
+           m₁                   section₁
+           ———————————————————  —————————————
+           120.5 ft2·klf        540.0 inch3
+           mid-span UDL moment  rectangle - S
+           ———————————————————  —————————————
+
+
  
 |
 
@@ -351,8 +356,6 @@ mid-span UDL moment  rectangle - S
 =========  ============  =============  ========
 3.77 klf   29000.00 ksi  4860.00 inch4  16.00 ft
 =========  ============  =============  ========
-
-.. class:: table-no-split
 
 ========================  ====================  ===================
 **delta_1  = 0.04 inch**  [delta_1 ] = 1.00 mm  mid-span deflection
