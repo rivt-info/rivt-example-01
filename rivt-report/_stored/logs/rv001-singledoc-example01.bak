@@ -2,15 +2,19 @@
 # %% import
 import rivtlib.rvapi as rv
 
-# rv setpublic: false; true flips default header "private" to "public"
-# rv setwidth: 80; width of text output, default is 80 characters
+# rv setpublic=false
+# true flips the default header from "private" to "public"
+# rv setwidth=80
+# set width of text output and docs, default is 80 characters)
+# rv addtag=false
+# true adds the API tag to each section number)
 
 # %% rv.I("""Summary
 rv.I("""Summary  
 
-    This rivt example calculates the maximum stress and deflection in a simply
-    supported, uniformly loaded beam. It also serves as an annotated example of
-    a doc with multiple sections that is not part of a report.
+    This rivt file example calculates the maximum stress and deflection in a
+    simply supported, uniformly loaded beam. It also serves as an annotated
+    example of a doc with multiple sections that is not part of a report.
 
     The example illustrates the use of some of the most common API functions,
     commands and tags. Further details are provided in the 
@@ -56,7 +60,8 @@ rv.V("""Loads and Geometry
     L_1 ==: 40*psf | psf, kPA, 2 | ASCE7-O5 LL
     b_1 ==: 10*inch | inch, mm, 2 | beam width
     h_1 ==: 18*inch | inch, mm, 2 | beam depth
-    E_1 ==: 29000*ksi | ksi, MPA, 2 | modulus of elasticity 
+    E_1 ==: 29000*ksi | ksi, MPA, 2 | modulus of elasticity
+    Fb_1 ==: 20000*psqin | psqin, MPA, 2 | allowable stress   
     
     The VALTABLE command reads variable values from a file in the src
     folder. The description is used as the table title. The range specifies the
@@ -89,7 +94,8 @@ rv.V("""Beam Response
 
     inertia_1 :=: rectinertia(b_1, h_1) | in4, cm4, 1 | rectangle - I
 
-    
+    | IMAGE2 | src/ss-beam2.png, src/ss-beam1.png | Moment Diagram, Deflection Diagram,46,54,num,num
+
     ##  The line tag [M] formats the equation using utf-8 text.
     σ1 = M1 / S1 _[M]  Maximum Bending Stress 
         
@@ -97,11 +103,9 @@ rv.V("""Beam Response
     
     fb_1 <=: m_1 / section_1 | psqin, MPA, 1 | bending Stress 
 
-    fb_1 < 20000*psqin | ksi, 2, **OK**, **>> NOT OK** | stress ratio 
+    fb_1 < Fb_1 | ksi, 2, OK, >>> NOT OK | stress ratio 
 
     delta_1 :=: midspan_delta(spn_1, omega_1, E_1, inertia_1) | inch, mm, 2 | mid-span deflection
-
-    | IMAGE2 | src/ss-beam2.png, src/ss-beam1.png | Moment Diagram, Deflection Diagram,46,54,num,num
 
     """)
 
@@ -122,10 +126,10 @@ rv.D("""Publish Doc
     fork1_license = https://opensource.org/license/mit/
     
     [layout]
-    addtype = true
+    addtag = true
     coverlogo = logo1.png
     runninglogo = logo2.png
-    runningtext = rivt
+    runninglabel = rivt
     subtitle =  -
     copyright = -
     client = user example
@@ -133,6 +137,7 @@ rv.D("""Publish Doc
     pdf_pagesize = letter
     pdf_margins = 1in, 1in, 1in, 1in 
     pdf_link_underline = true
+    text_width = 80
     _[[END]]
     
     The rivt file may be published as a text, PDF or HTML doc by changing the

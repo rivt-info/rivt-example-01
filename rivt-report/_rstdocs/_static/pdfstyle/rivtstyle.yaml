@@ -165,14 +165,14 @@ styles:
     fontName: fontSerif
     textColor: "#222222"
   heading1:
-    fontSize: 110%
+    fontSize: 120%
     parent: heading
     fontName: fontSansBold
     underlineColor: black
     underlineWidth: 1
     underlineOffset: 5
   heading2:
-    fontSize: 105%
+    fontSize: 110%
     parent: heading
     fontName: fontSansBold
     underlineColor: black
@@ -263,8 +263,8 @@ styles:
     spaceBefore: 12
   table:
     alignment: TA_LEFT
-    spaceBefore: 3
-    spaceAfter: 3
+    spaceBefore: 1
+    spaceAfter: 1
     borderPadding: 5
     leftPadding: 6
     rightPadding: 6
