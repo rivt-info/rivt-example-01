@@ -17,6 +17,8 @@
             ]
         }
     ],
+    "notebook.markup.fontSize": 13,
+    "notebook.output.fontSize": 13,
     "python.terminal.activateEnvironment": true,
     "python.defaultInterpreterPath": "C:/Users/rhh2/Python314",
     "editor.colorDecoratorsActivatedOn": "clickAndHover",

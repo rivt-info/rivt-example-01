@@ -7,7 +7,7 @@ sys.path.append(str(Path(".").resolve()))
 project = "rv001-singledoc-example01"
 copyright = "-"
 author = "R Holland"
-release = "1.0.0a10"
+release = "1.0.0a11"
 
 extensions = [
     "sphinx.ext.githubpages",

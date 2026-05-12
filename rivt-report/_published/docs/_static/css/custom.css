@@ -33,6 +33,10 @@ html {
     text-align: right;
 }
 
+.align-center {
+    text-align: center;
+}
+
 .topic-title {
     font-weight: normal;
     font-size: 1em;

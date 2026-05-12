@@ -1,25 +1,31 @@
-05-10 21:37  rv001-singledoc-example01   INFO     Doc start
-05-10 21:37  rv001-singledoc-example01   INFO     rivtlib version: 1.0.0a5
-05-10 21:37  rv001-singledoc-example01   INFO     rivt backup : c:\git\rivt-example-01-git\rivt-report\_stored\logs\rv001-singledoc-example01.bak
-05-10 21:37  rv001-singledoc-example01   INFO     Summary  
-05-10 21:37  rv001-singledoc-example01   INFO     SECTION 1 - type I
-05-10 21:37  rv001-singledoc-example01   INFO     tag : _[U]
-05-10 21:37  rv001-singledoc-example01   INFO     Load Combinations 
-05-10 21:37  rv001-singledoc-example01   INFO     SECTION 2 - type I
-05-10 21:37  rv001-singledoc-example01   INFO     tag : _[[TABLE]]
-05-10 21:37  rv001-singledoc-example01   INFO     Loads and Geometry 
-05-10 21:37  rv001-singledoc-example01   INFO     SECTION 3 - type V
-05-10 21:37  rv001-singledoc-example01   INFO     tag : _[T]
-05-10 21:37  rv001-singledoc-example01   INFO     command : VALTABLE
-05-10 21:37  rv001-singledoc-example01   INFO     command : IMAGE
-05-10 21:37  rv001-singledoc-example01   DEBUG    STREAM b'IHDR' 16 13
-05-10 21:37  rv001-singledoc-example01   DEBUG    STREAM b'pHYs' 41 9
-05-10 21:37  rv001-singledoc-example01   DEBUG    STREAM b'IDAT' 62 8192
-05-10 21:37  rv001-singledoc-example01   INFO     tag : _[C]
-05-10 21:37  rv001-singledoc-example01   INFO     Beam Response
-05-10 21:37  rv001-singledoc-example01   INFO     SECTION 4 - type V
-05-10 21:37  rv001-singledoc-example01   INFO     command : PYTHON
-05-10 21:37  rv001-singledoc-example01   INFO     command : IMAGE2
-05-10 21:37  rv001-singledoc-example01   INFO     tag : _[M]
-05-10 21:37  rv001-singledoc-example01   INFO     SECTION : Publish Doc 
-05-10 21:37  rv001-singledoc-example01   INFO     block tag : METADATA]]
+05-11 23:26  rv001-singledoc-example01   INFO     Doc start
+05-11 23:26  rv001-singledoc-example01   INFO     rivtlib version: 1.0.0a5
+05-11 23:26  rv001-singledoc-example01   INFO     rivt backup : c:\git\rivt-example-01-git\rivt-report\_stored\logs\rv001-singledoc-example01.bak
+05-11 23:26  rv001-singledoc-example01   INFO     Summary  
+05-11 23:26  rv001-singledoc-example01   INFO     SECTION 1 - type I
+05-11 23:26  rv001-singledoc-example01   INFO     tag : _[U]
+05-11 23:26  rv001-singledoc-example01   INFO     Load Combinations 
+05-11 23:26  rv001-singledoc-example01   INFO     SECTION 2 - type I
+05-11 23:26  rv001-singledoc-example01   INFO     tag : _[[TABLE]]
+05-11 23:26  rv001-singledoc-example01   INFO     Loads and Geometry 
+05-11 23:26  rv001-singledoc-example01   INFO     SECTION 3 - type V
+05-11 23:26  rv001-singledoc-example01   INFO     tag : _[T]
+05-11 23:26  rv001-singledoc-example01   INFO     command : VALTABLE
+05-11 23:26  rv001-singledoc-example01   INFO     command : IMAGE
+05-11 23:26  rv001-singledoc-example01   DEBUG    STREAM b'IHDR' 16 13
+05-11 23:26  rv001-singledoc-example01   DEBUG    STREAM b'pHYs' 41 9
+05-11 23:26  rv001-singledoc-example01   DEBUG    STREAM b'IDAT' 62 8192
+05-11 23:26  rv001-singledoc-example01   INFO     tag : _[C]
+05-11 23:26  rv001-singledoc-example01   INFO     Beam Response
+05-11 23:26  rv001-singledoc-example01   INFO     SECTION 4 - type V
+05-11 23:26  rv001-singledoc-example01   INFO     command : PYTHON
+05-11 23:26  rv001-singledoc-example01   INFO     command : IMAGE2
+05-11 23:26  rv001-singledoc-example01   DEBUG    STREAM b'IHDR' 16 13
+05-11 23:26  rv001-singledoc-example01   DEBUG    STREAM b'pHYs' 41 9
+05-11 23:26  rv001-singledoc-example01   DEBUG    STREAM b'IDAT' 62 7479
+05-11 23:26  rv001-singledoc-example01   DEBUG    STREAM b'IHDR' 16 13
+05-11 23:26  rv001-singledoc-example01   DEBUG    STREAM b'pHYs' 41 9
+05-11 23:26  rv001-singledoc-example01   DEBUG    STREAM b'IDAT' 62 8192
+05-11 23:26  rv001-singledoc-example01   INFO     tag : _[M]
+05-11 23:26  rv001-singledoc-example01   INFO     SECTION : Publish Doc 
+05-11 23:26  rv001-singledoc-example01   INFO     block tag : METADATA]]
