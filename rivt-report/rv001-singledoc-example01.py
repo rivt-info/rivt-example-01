@@ -125,13 +125,13 @@ rv.D("""Publish Doc
     fork1_license = https://opensource.org/license/mit/
     
     [layout]
-    coverlogo = logo1.png
-    runninglogo = logo2.png
+    coverlogo = src/logo1.png
+    runninglogo = src/logo2.png
     runninglabel = rivt
     subtitle =  -
     copyright = -
     client = user example
-    projectnum = 0001
+    projectref = proj. 0001
     pdf_pagesize = letter
     pdf_margins = 1in, 1in, 1in, 1in 
     pdf_link_underline = true
@@ -143,5 +143,5 @@ rv.D("""Publish Doc
     the rivt and _rivt-public folders. Published files are found in sub-folders
     of the _published folder.
 
-    | PUBLISH | Example 1 - rivt Doc | html
+    | PUBLISH | Example 1 - rivt Doc | pdf
     """)

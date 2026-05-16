@@ -32,19 +32,19 @@
 
 .. class:: center
 
-   project: **0001**
+   project: **proj. 0001**
 
    
-   
+
 .. raw:: pdf
 
    PageBreak noHead
-     
-
+   
 
 .. raw:: pdf
 
    PageBreak mainPage
+   SetPageCounter 1
 
    
 

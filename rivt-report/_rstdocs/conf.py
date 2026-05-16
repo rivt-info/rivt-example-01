@@ -33,7 +33,7 @@ html_title = " "
 html_theme = "pydata_sphinx_theme"
 html_context = {"default_mode": "dark"}
 html_sidebars = {"**": ["sidebar-nav-bs.html"]}
-html_static_path = ["_static", "_static/img", "../src"]
+html_static_path = ["_static", "_static/img", "../"]
 html_css_files = ["css/custom.css"]
 html_theme_options = {
     "pygments_light_style": "tango",
@@ -49,8 +49,8 @@ html_theme_options = {
     "footer_end": ["rv-date"],
     "logo": {
             "text": "rivt",
-        "image_dark": "logo2.png",
-        "image_light": "logo2.png",
+        "image_dark": "src/logo2.png",
+        "image_light": "src/logo2.png",
     },
 }
 favicons = [
@@ -100,7 +100,7 @@ pdf_toc_depth = 9999
 # Insert footnotes where they are defined 
 pdf_inline_footnotes = False
 # If false, no index is generated.
-pdf_use_index = True
+pdf_use_index = False
 # If false, no modindex is generated.
 pdf_use_modindex = False
 # Add section number to section references

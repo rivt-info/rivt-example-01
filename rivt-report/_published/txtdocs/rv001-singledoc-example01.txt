@@ -1,9 +1,9 @@
 
-Example 1 - rivt Doc | R Holland | 2026-05-11 - 12:24PM | v-1.0.0a11
+Example 1 - rivt Doc | R Holland | 2026-05-15 - 03:57PM | v-1.0.0a11
 ================================================================================
 
 
-[ 1 ] Summary
+0-1.1 Summary
 --------------------------------------------------------------------------------
  
 This rivt file example calculates the maximum stress and deflection in a
@@ -21,9 +21,8 @@ folder.
  
  
 
-[ 2 ] Load Combinations
+0-1.2 Load Combinations
 --------------------------------------------------------------------------------
- 
  
 Table 1: ASCE 7-05 Load Effects (saved as csv in _stored folder)
 ============= ================================================ 
@@ -37,7 +36,7 @@ Equation No.    Load Combination
  
  
 
-[ 3 ] Loads and Geometry
+0-1.3 Loads and Geometry
 --------------------------------------------------------------------------------
  
 Successive value definitions are formatted as a table. Variable
@@ -87,19 +86,25 @@ Fig. 1 -  [file: src/beam1.png ]
 │
 │     dl₁ = 1.2⋅(D₄ + spc₁⋅(D₁ + D₂ + D₃))
 └
-=============  ==========  =========  ==================  ============
-D₃             D₂          D₁         D₄                  spc₁
-=============  ==========  =========  ==================  ============
-10.00 psf      2.10 psf    3.80 psf   3.00 klf            2.00 ft
-—————          —————       —————      —————               —————
-partitions DL  plywood DL  joists DL  fixed machinery DL  beam spacing
-=============  ==========  =========  ==================  ============
+
+dl₁ = 3.64 klf    [dl₁] = 53.09 kN_m  | Dead load [ASCE7-05 2.3.2]
+
+==================  =============  =========  ==========  ============
+D₄                  D₃             D₁         D₂          spc₁
+==================  =============  =========  ==========  ============
+3.00 klf            10.00 psf      3.80 psf   2.10 psf    2.00 ft
+—————               —————          —————      —————       —————
+fixed machinery DL  partitions DL  joists DL  plywood DL  beam spacing
+==================  =============  =========  ==========  ============
  
 
 ┌  Eq-2 | Live load [ASCE7-05 2.3.2]
 │
 │     ll₁ = 1.6⋅L₁⋅spc₁
 └
+
+ll₁ = 0.13 klf    [ll₁] = 1.87 kN_m  | Live load [ASCE7-05 2.3.2]
+
 ===========  ============
 L₁           spc₁
 ===========  ============
@@ -113,18 +118,20 @@ ASCE7-O5 LL  beam spacing
 │
 │     ω₁ = dl₁ + ll₁
 └
-===================  ===================
-ll₁                  dl₁
-===================  ===================
-128.00 ft·psf        3.64 klf
-—————                —————
-Live load [ASCE7-05  Dead load [ASCE7-05
-2.3.2]               2.3.2]
-===================  ===================
+
+ω₁ = 3.77 klf    [ω₁] = 54.96 kN_m  | Total load [ASCE7-05 2.3.2]
+
+==========================  ==========================
+ll₁                         dl₁
+==========================  ==========================
+128.00 ft·psf               3.64 klf
+—————                       —————
+Live load [ASCE7-05 2.3.2]  Dead load [ASCE7-05 2.3.2]
+==========================  ==========================
  
  
 
-[ 4 ] Beam Response
+0-1.4 Beam Response
 --------------------------------------------------------------------------------
  
 The following lines import the beam geometry from an external file, 
@@ -147,12 +154,15 @@ midspan_delta(ln, w, e, i)  mid-span deflection of simply supported beam with UD
 │
 │     section₁ = rectsect(b₁, h₁)
 └
+
+section₁ = 540.00 in3   [section₁] = 8849.01 cm3  | rectangle - S (sectprop.py)
+
 ==========  ==========
-h₁          b₁
+b₁          h₁
 ==========  ==========
-18.00 inch  10.00 inch
+10.00 inch  18.00 inch
 —————       —————
-beam depth  beam width
+beam width  beam depth
 ==========  ==========
  
 
@@ -160,12 +170,15 @@ beam depth  beam width
 │
 │     inertia₁ = rectinertia(b₁, h₁)
 └
+
+inertia₁ = 4860.0 in4   [inertia₁] = 202288.5 cm4  | rectangle - I (sectprop.py)
+
 ==========  ==========
-h₁          b₁
+b₁          h₁
 ==========  ==========
-18.0 inch   10.0 inch
+10.0 inch   18.0 inch
 —————       —————
-beam depth  beam width
+beam width  beam depth
 ==========  ==========
  
           ----------------------------------------
@@ -191,14 +204,16 @@ files: src/ss-beam2.png, src/ss-beam1.png
 │     m₁ = ────────
 │             8    
 └
-====================  =========
-ω₁                    spn₁
-====================  =========
-3.77 klf              16.00 ft
-—————                 —————
-Total load [ASCE7-05  beam span
-2.3.2]                -
-====================  =========
+
+m₁ = 120.52 ftkip    [m₁] = 163.40 mkN  | Mid-span UDL moment
+
+===========================  =========
+ω₁                           spn₁
+===========================  =========
+3.77 klf                     16.00 ft
+—————                        —————
+Total load [ASCE7-05 2.3.2]  beam span
+===========================  =========
  
 
 ┌  Eq-8 | Bending stress
@@ -207,25 +222,27 @@ Total load [ASCE7-05  beam span
 │     fb₁ = ────────
 │           section₁
 └
-=============  ===================
-section₁       m₁
-=============  ===================
-540.0 inch3    120.5 ft2·klf
-—————          —————
-rectangle - S  Mid-span UDL moment
-(sectprop.py)  -
-=============  ===================
+
+fb₁ = 2678.2 lb_in2    [fb₁] = 18.5 MPA  | Bending stress
+
+===================  ===========================
+m₁                   section₁
+===================  ===========================
+120.5 ft2·klf        540.0 inch3
+—————                —————
+Mid-span UDL moment  rectangle - S (sectprop.py)
+===================  ===========================
  
 ┌  Eq-9 | Stress ratio
 │
 │     fb_1 < Fb_1
 └
 
-▮ ========  =========  ========  =======  ============
-▮ fb₁       Fb₁        ratio     check    reference
-▮ ========  =========  ========  =======  ============
-▮ 2.68 ksi  20.00 ksi  0.133908  OK       Stress ratio
-▮ ========  =========  ========  =======  ============
+▮  ========  =========  ===========  =======  ============
+▮  fb₁       Fb₁        ratio L/R    check    reference
+▮  ========  =========  ===========  =======  ============
+▮  2.68 ksi  20.00 ksi  0.133908     OK       Stress ratio
+▮  ========  =========  ===========  =======  ============
 
 
  
@@ -234,13 +251,15 @@ rectangle - S  Mid-span UDL moment
 │
 │     δ₁ = midspan_δ(spn₁, ω₁, E₁, inertia₁)
 └
-====================  =============  =====================  =========
-ω₁                    inertia₁       E₁                     spn₁
-====================  =============  =====================  =========
-3.77 klf              4860.00 inch4  29000.00 ksi           16.00 ft
-—————                 —————          —————                  —————
-Total load [ASCE7-05  rectangle - I  modulus of elasticity  beam span
-2.3.2]                (sectprop.py)  -                      -
-====================  =============  =====================  =========
+
+δ₁ = 0.04 inch   [δ₁] = 1.00 mm  | mid-span deflection (sectprop.py)
+
+=====================  ===========================  ===========================  =========
+E₁                     inertia₁                     ω₁                           spn₁
+=====================  ===========================  ===========================  =========
+29000.00 ksi           4860.00 inch4                3.77 klf                     16.00 ft
+—————                  —————                        —————                        —————
+modulus of elasticity  rectangle - I (sectprop.py)  Total load [ASCE7-05 2.3.2]  beam span
+=====================  ===========================  ===========================  =========
  
  
