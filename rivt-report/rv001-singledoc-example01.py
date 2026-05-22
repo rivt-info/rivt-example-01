@@ -2,12 +2,15 @@
 # %% import
 import rivtlib.rvapi as rv
 
-# rv setwidth = 80
-# sets width of text output - default 80 characters
-# rv setpublic = false
-# if true all rivt file section headings are flipped to public - default private
-# rv addtag = false
-# if true an API tag is added to each section number - default false
+# The following settings are only needed if defaults are changed:
+# (a leading hash and trailing semicolon are required)
+# rv setwidth = 80  ; set width of text output (default 80 characters)
+#
+# The following settings run with the Doc API and rivt-report.py script:
+# rv setprivate = true ; if false, default heading changed to public (default true)
+# rv notag = true ; if false API, tag is added to section number (default true)
+# rv keepfiles = true ; if false, remove files in the folders with leading "_" (default true)
+# rv updateconfig = true ; if false, do not update the config files (default true)
 
 # %% rv.I("""Summary
 rv.I("""Summary  
@@ -61,14 +64,14 @@ rv.V("""Loads and Geometry
     E_1 ==: 29000 * ksi | ksi, MPA, 2 | modulus of elasticity
     Fb_1 ==: 20000 * psqin | psqin, MPA, 2 | allowable stress   
     
-    The VALTABLE command reads variable values from a file in the src
+    The VALTABLE command reads variable values from a file in the rvsrc
     folder. The description is used as the table title. The range specifies the
     starting and ending line to be read from the file (0:0 means all lines).
 
-    | VALTABLE | src/beam1.csv | Beam Geometry, 0:0
+    | VALTABLE | rvsrc/beam1.csv | Beam Geometry, 0:0
 
     ## The IMAGE command inserts an image file with caption, % scale, num;non option 
-    | IMAGE | src/beam1.png | Beam Diagram, 60, num
+    | IMAGE | rvsrc/beam1.png | Beam Diagram, 60, num
 
     Uniform Distributed Loads _[C]
     dl_1 <=: 1.2 * (spc_1 * (D_1 + D_2 + D_3) + D_4) | klf, kN_m, 2 | Dead load [ASCE7-05 2.3.2]
@@ -86,13 +89,13 @@ rv.V("""Beam Response
     calculate section properties from imported functions and calculate 
     the maximum moment, bending stress and mid-span deflection. 
 
-    | PYTHON | src/sectprop.py | Beam functions
+    | PYTHON | rvsrc/sectprop.py | Beam functions
 
     section_1 :=: rectsect(b_1, h_1) | in3, cm3, 2 | rectangle - S (sectprop.py)
 
     inertia_1 :=: rectinertia(b_1, h_1) | in4, cm4, 1 | rectangle - I (sectprop.py)
 
-    | IMAGE2 | src/ss-beam2.png, src/ss-beam1.png | Moment diagram, Deflection diagram,46,54,num,num
+    | IMAGE2 | rvsrc/ss-beam2.png, rvsrc/ss-beam1.png | Moment diagram, Deflection diagram,46,54,num,num
 
     ##  The line tag [M] formats the equation using utf-8 text.
     σ1 = M1 / S1 _[M]  Maximum bending stress  formula
@@ -111,6 +114,16 @@ rv.V("""Beam Response
 # %% rv.D("""Publish Doc
 rv.D("""Publish Doc 
     
+    A rivt file may be published as a text, PDF or HTML doc by changing the
+    PUBLISH type parameter to text, pdf or html. The PUBLISH command follows the
+    METADATA block. 
+    
+    Published files are found in sub-folders of the _published folder. A text
+    version of the doc or report is is always written to the rivt and
+    _rivt-public folders as a README.txt file which is displayed on the
+    first page of a GitHub repo. 
+    
+    
     _[[METADATA]] 
     [doc]
     authors = R Holland
@@ -124,26 +137,22 @@ rv.D("""Publish Doc
     fork1_license = https://opensource.org/license/mit/
     
     [layout]
-    coverlogo = src/logo1.png
+    coverlogo = rvsrc/logo1.png
     coverlogo_size = 50
-    runninglogo = src/logo2.png
+    runninglogo = rvsrc/logo2.png
     runninglabel = rivt
-    subtitle =  -
-    copyright = -
-    client = user example
+    title = UDL Beam
+    subtitle =  Example 1 - rivt Doc  
+    copyright = --
+    client = Attn: User Example
     projectref = proj. 0001
     pdf_pagesize = letter
     pdf_margins = 1in, 1in, 1in, 1in 
     pdf_link_underline = true
     text_width = 80
-    clear_published = true
     _[[END]]
     
-    The rivt file may be published as a text, PDF or HTML doc by changing the
-    type parameter to text, pdf or html. A README.txt file is always written to
-    the rivt and _rivt-public folders. Published files are found in sub-folders
-    of the _published folder.
 
-    | PUBLISH | Example 1 - rivt Doc | html
+    | PUBLISH | Example 1 - rivt Doc | pdf
 
     """)

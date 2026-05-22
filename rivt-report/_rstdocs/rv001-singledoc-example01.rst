@@ -1,9 +1,38 @@
-**| D.0 |** Example 1 - rivt Doc
-================================================================================
+.. |s| unicode:: 0xA0 
 
 
 
-**1.1** Summary
+.. |blklogo| image:: ../rvsrc/logo2.png
+   :height: 100px
+   :alt: logo
+
+
+
+.. header::
+    .. list-table::
+        :class: header-box
+        :align: left
+        :widths: 90 10
+        
+        * - **|D.0|** Example 1 - rivt Doc - v1.0.0a11 |s| |s| |s| |s|  **###Section###**
+          - p. **###Page###**   
+
+          
+
+.. footer:: 
+    .. list-table::
+        :class: footer-box
+        :align: left
+        :widths: 84 22 16
+        
+        * - 2026-05-21 |s| |s| |s| **|** |s| |s| |s| R Holland        
+          - **rivt**        
+          - |blklogo|
+
+                  
+
+
+**01.1** Summary
 --------------------------------------------------------------------------------
  
 This rivt file example calculates the maximum stress and deflection in a
@@ -24,13 +53,13 @@ parameter in the PUBLISH command at the end of each rivt file (Doc-API
 
 ------------
 
-**1.2** Load Combinations
+**01.2** Load Combinations
 --------------------------------------------------------------------------------
  
 
 |
 
-**Table 1**: ASCE 7-05 Load Effects (t001-1.csv) 
+**Table 1**: ASCE 7-05 Load Effects (stored: t001-1.csv) 
 
 ============= ================================================ 
 Equation No.    Load Combination 
@@ -47,7 +76,7 @@ Equation No.    Load Combination
 
 ------------
 
-**1.3** Loads and Geometry
+**01.3** Loads and Geometry
 --------------------------------------------------------------------------------
  
 Successive value definitions are formatted as a table. Variable
@@ -72,13 +101,13 @@ E_1         29000.00 ksi     199947.96 MPA  modulus of elasticity
 Fb_1        20000.00 lb_in2  137.90 MPA     allowable stress
 ==========  ===============  =============  =====================
  
-The VALTABLE command reads variable values from a file in the src
+The VALTABLE command reads variable values from a file in the rvsrc
 folder. The description is used as the table title. The range specifies the
 starting and ending line to be read from the file (0:0 means all lines).
  
 |
 
-**Table 3**: Beam Geometry (src/beam1.csv)
+**Table 3**: Beam Geometry (rvsrc/beam1.csv)
 
 ==========  ========  =========  =============
 variable    value     [value]    description
@@ -90,7 +119,7 @@ spn_1       16.00 ft  4.88 m     beam span
 
  
 
-.. figure:: c:/git/rivt-example-01-git/rivt-report/src/beam1.png
+.. figure:: c:/git/rivt-example-01-git/rivt-report/rvsrc/beam1.png
     :width: 60%
     :align: center
 
@@ -116,12 +145,12 @@ spn_1       16.00 ft  4.88 m     beam span
 
            dl₁ = 3.64 klf     [dl₁] = 53.09 kN_m   | Dead load [ASCE7-05 2.3.2]
 
-           D₃             D₂          spc₁          D₁         D₄
-           —————————————  ——————————  ————————————  —————————  ——————————————————
-           10.00 psf      2.10 psf    2.00 ft       3.80 psf   3.00 klf
-           —————          —————       —————         —————      —————
-           partitions DL  plywood DL  beam spacing  joists DL  fixed machinery DL
-           —————————————  ——————————  ————————————  —————————  ——————————————————
+           spc₁          D₄                  D₁         D₃             D₂
+           ————————————  ——————————————————  —————————  —————————————  ——————————
+           2.00 ft       3.00 klf            3.80 psf   10.00 psf      2.10 psf
+           —————         —————               —————      —————          —————
+           beam spacing  fixed machinery DL  joists DL  partitions DL  plywood DL
+           ————————————  ——————————————————  —————————  —————————————  ——————————
 
 
  
@@ -175,7 +204,7 @@ spn_1       16.00 ft  4.88 m     beam span
 
 ------------
 
-**1.4** Beam Response
+**01.4** Beam Response
 --------------------------------------------------------------------------------
  
 The following lines import the beam geometry from an external file, 
@@ -183,7 +212,7 @@ calculate section properties from imported functions and calculate
 the maximum moment, bending stress and mid-span deflection. 
  
 
-**Table 4**: Beam functions (src/sectprop.py)
+**Table 4**: Beam functions (rvsrc/sectprop.py)
 
 
 ==========================  =====================================================
@@ -208,11 +237,11 @@ midspan_delta(ln, w, e, i)  mid-span deflection of simply supported beam with UD
 
            section₁ = 540.00 in3     [section₁] = 8849.01 cm3   | rectangle - S (sectprop.py)
 
-           b₁          h₁
+           h₁          b₁
            ——————————  ——————————
-           10.00 inch  18.00 inch
+           18.00 inch  10.00 inch
            —————       —————
-           beam width  beam depth
+           beam depth  beam width
            ——————————  ——————————
 
 
@@ -230,11 +259,11 @@ midspan_delta(ln, w, e, i)  mid-span deflection of simply supported beam with UD
 
            inertia₁ = 4860.0 in4     [inertia₁] = 202288.5 cm4   | rectangle - I (sectprop.py)
 
-           b₁          h₁
+           h₁          b₁
            ——————————  ——————————
-           10.0 inch   18.0 inch
+           18.0 inch   10.0 inch
            —————       —————
-           beam width  beam depth
+           beam depth  beam width
            ——————————  ——————————
 
 
@@ -244,12 +273,12 @@ midspan_delta(ln, w, e, i)  mid-span deflection of simply supported beam with UD
     :widths: 46 54
     :header-rows: 0
 
-    * - .. figure:: c:/git/rivt-example-01-git/rivt-report/src/ss-beam2.png
+    * - .. figure:: c:/git/rivt-example-01-git/rivt-report/rvsrc/ss-beam2.png
             :width: 100%
 
             **Fig. 2 -** Moment diagram 
      
-      - .. figure:: c:/git/rivt-example-01-git/rivt-report/src/ss-beam1.png
+      - .. figure:: c:/git/rivt-example-01-git/rivt-report/rvsrc/ss-beam1.png
             :width: 100%
             
             **Fig. 3 -** Deflection diagram 
@@ -311,12 +340,12 @@ midspan_delta(ln, w, e, i)  mid-span deflection of simply supported beam with UD
 
            fb₁ = 2678.2 lb_in2     [fb₁] = 18.5 MPA   | Bending stress
 
-           m₁                   section₁
-           ———————————————————  ———————————————————————————
-           120.5 ft2·klf        540.0 inch3
-           —————                —————
-           Mid-span UDL moment  rectangle - S (sectprop.py)
-           ———————————————————  ———————————————————————————
+           section₁                     m₁
+           ———————————————————————————  ———————————————————
+           540.0 inch3                  120.5 ft2·klf
+           —————                        —————
+           rectangle - S (sectprop.py)  Mid-span UDL moment
+           ———————————————————————————  ———————————————————
 
 
  

@@ -1,10 +1,17 @@
 
-.. role:: big-text
+.. role:: btext
+   :class: big-text
+
+.. role:: mtext
+    :class: medium-text
+
+.. role:: stext
+    :class: small-text
 
 |
 |
         
-.. image:: ../src/logo1.png
+.. image:: ../rvsrc/logo1.png
    :width: 50%
    :align: center
 
@@ -15,7 +22,9 @@
 
 .. class:: center
 
-    :big-text:`Example 1 - rivt Doc`
+    :btext:`UDL Beam`
+
+    :mtext:`Example 1 - rivt Doc`
 
 |
 |
@@ -26,13 +35,13 @@
 
 .. class:: center
 
-   Attn: **user example**
+   :mtext:`Attn: User Example`
 
 |
 
 .. class:: center
 
-   project: **proj. 0001**
+   :stext:`proj. 0001`
 
    
 

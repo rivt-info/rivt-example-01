@@ -72,9 +72,17 @@ styles:
   tableofcontents:
     parent: normal
   big-text:
-    fontSize: 150%
+    fontSize: 175%
     parent: base
-    fontName: fontSansBold
+    fontName: fontSans
+  medium-text:
+    fontSize: 125%
+    parent: base
+    fontName: fontSans
+  small-text:
+    fontSize: 125%
+    parent: base
+    fontName: fontSans 
   blockquote:
     leftIndent: 20
     parent: bodytext

@@ -4,9 +4,9 @@ from pathlib import Path
 
 sys.path.append(str(Path(".").resolve()))
 
-project = "rv001-singledoc-example01"
+project = "Example 1 - rivt Doc"
 copyright = "-"
-author = "R Holland"
+author = "self.R Holland"
 release = "1.0.0a11"
 
 extensions = [
@@ -49,8 +49,8 @@ html_theme_options = {
     "footer_end": ["rv-date"],
     "logo": {
             "text": "rivt",
-        "image_dark": "src/logo2.png",
-        "image_light": "src/logo2.png",
+        "image_dark": "rvsrc/logo2.png",
+        "image_light": "rvsrc/logo2.png",
     },
 }
 favicons = [

@@ -35,7 +35,7 @@ endobj
 endobj
 5 0 obj
 <<
-/Border [ 0 0 0 ] /Contents () /Dest [ 15 0 R /XYZ 48.51969 733.078 0 ] /Rect [ 51.35433 718.555 118.4544 729.355 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 15 0 R /XYZ 48.51969 733.078 0 ] /Rect [ 51.35433 718.555 124.7166 729.355 ] /Subtype /Link /Type /Annot
 >>
 endobj
 6 0 obj
@@ -45,27 +45,27 @@ endobj
 endobj
 7 0 obj
 <<
-/Border [ 0 0 0 ] /Contents () /Dest [ 15 0 R /XYZ 48.51969 578.7715 0 ] /Rect [ 51.35433 701.755 167.5062 712.555 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 15 0 R /XYZ 48.51969 590.7715 0 ] /Rect [ 51.35433 701.755 173.7684 712.555 ] /Subtype /Link /Type /Annot
 >>
 endobj
 8 0 obj
 <<
-/Border [ 0 0 0 ] /Contents () /Dest [ 15 0 R /XYZ 48.51969 578.7715 0 ] /Rect [ 557.2181 702.43 563.4803 713.23 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 15 0 R /XYZ 48.51969 590.7715 0 ] /Rect [ 557.2181 702.43 563.4803 713.23 ] /Subtype /Link /Type /Annot
 >>
 endobj
 9 0 obj
 <<
-/Border [ 0 0 0 ] /Contents () /Dest [ 15 0 R /XYZ 48.51969 412.465 0 ] /Rect [ 51.35433 684.955 175.1746 695.755 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 15 0 R /XYZ 48.51969 424.465 0 ] /Rect [ 51.35433 684.955 181.4369 695.755 ] /Subtype /Link /Type /Annot
 >>
 endobj
 10 0 obj
 <<
-/Border [ 0 0 0 ] /Contents () /Dest [ 15 0 R /XYZ 48.51969 412.465 0 ] /Rect [ 557.2181 685.63 563.4803 696.43 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 15 0 R /XYZ 48.51969 424.465 0 ] /Rect [ 557.2181 685.63 563.4803 696.43 ] /Subtype /Link /Type /Annot
 >>
 endobj
 11 0 obj
 <<
-/Border [ 0 0 0 ] /Contents () /Dest [ 19 0 R /XYZ 48.51969 555.5315 0 ] /Rect [ 51.35433 668.155 150.8641 678.955 ] /Subtype /Link /Type /Annot
+/Border [ 0 0 0 ] /Contents () /Dest [ 19 0 R /XYZ 48.51969 555.5315 0 ] /Rect [ 51.35433 668.155 157.1263 678.955 ] /Subtype /Link /Type /Annot
 >>
 endobj
 12 0 obj
@@ -2862,7 +2862,7 @@ endobj
 endobj
 46 0 obj
 <<
-/Author () /CreationDate (D:20260518170607-07'00') /Creator (\(unspecified\)) /Keywords () /ModDate (D:20260518170607-07'00') /Producer (ReportLab PDF Library - \(opensource\)) 
+/Author () /CreationDate (D:20260521224440-07'00') /Creator (\(unspecified\)) /Keywords () /ModDate (D:20260521224440-07'00') /Producer (ReportLab PDF Library - \(opensource\)) 
   /Subject (\(unspecified\)) /Title () /Trapped /False
 >>
 endobj
@@ -2873,22 +2873,22 @@ endobj
 endobj
 48 0 obj
 <<
-/Dest [ 15 0 R /XYZ 48.51969 733.078 0 ] /Next 49 0 R /Parent 47 0 R /Title (1.1 Summary)
+/Dest [ 15 0 R /XYZ 48.51969 733.078 0 ] /Next 49 0 R /Parent 47 0 R /Title (01.1 Summary)
 >>
 endobj
 49 0 obj
 <<
-/Dest [ 15 0 R /XYZ 48.51969 578.7715 0 ] /Next 50 0 R /Parent 47 0 R /Prev 48 0 R /Title (1.2 Load Combinations)
+/Dest [ 15 0 R /XYZ 48.51969 590.7715 0 ] /Next 50 0 R /Parent 47 0 R /Prev 48 0 R /Title (01.2 Load Combinations)
 >>
 endobj
 50 0 obj
 <<
-/Dest [ 15 0 R /XYZ 48.51969 412.465 0 ] /Next 51 0 R /Parent 47 0 R /Prev 49 0 R /Title (1.3 Loads and Geometry)
+/Dest [ 15 0 R /XYZ 48.51969 424.465 0 ] /Next 51 0 R /Parent 47 0 R /Prev 49 0 R /Title (01.3 Loads and Geometry)
 >>
 endobj
 51 0 obj
 <<
-/Dest [ 19 0 R /XYZ 48.51969 555.5315 0 ] /Parent 47 0 R /Prev 50 0 R /Title (1.4 Beam Response)
+/Dest [ 19 0 R /XYZ 48.51969 555.5315 0 ] /Parent 47 0 R /Prev 50 0 R /Title (01.4 Beam Response)
 >>
 endobj
 52 0 obj
@@ -2898,7 +2898,7 @@ endobj
 endobj
 53 0 obj
 <<
-/Length 2682
+/Length 2748
 >>
 stream
 1 0 0 1 0 0 cm 
@@ -2960,84 +2960,93 @@ q
 1 0 0 1 48.51969 463.0014 cm
 q
 0 0 0 rg
-BT 1 0 0 1 0 -1 Tm 182.2175 0 Td /F2+0 13 Tf 12 TL (Example 1 - rivt Doc) Tj T* -182.2175 0 Td ET
+BT 1 0 0 1 0 -3 Tm 216.5745 0 Td /F1+0 15 Tf 12 TL (UDL Beam) Tj T* -216.5745 0 Td ET
 Q
 Q
 q
-1 0 0 1 48.51969 456.0014 cm
+1 0 0 1 48.51969 445.0014 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 1 Tm 199.9002 0 Td /F1+0 11 Tf 12 TL (Example 1 - rivt Doc) Tj T* -199.9002 0 Td ET
+Q
 Q
 q
-1 0 0 1 48.51969 444.0014 cm
+1 0 0 1 48.51969 438.0014 cm
+Q
+q
+1 0 0 1 48.51969 426.0014 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 3 Tm /F1+0 9 Tf 12 TL ( ) Tj T* ET
 Q
 Q
 q
-1 0 0 1 48.51969 431.0014 cm
+1 0 0 1 48.51969 413.0014 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 3 Tm /F1+0 9 Tf 12 TL ( ) Tj T* ET
 Q
 Q
 q
-1 0 0 1 48.51969 418.0014 cm
+1 0 0 1 48.51969 400.0014 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 3 Tm /F1+0 9 Tf 12 TL ( ) Tj T* ET
 Q
 Q
 q
-1 0 0 1 48.51969 405.0014 cm
+1 0 0 1 48.51969 387.0014 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 3 Tm /F1+0 9 Tf 12 TL ( ) Tj T* ET
 Q
 Q
 q
-1 0 0 1 48.51969 392.0014 cm
+1 0 0 1 48.51969 374.0014 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 3 Tm /F1+0 9 Tf 12 TL ( ) Tj T* ET
 Q
 Q
 q
-1 0 0 1 48.51969 379.0014 cm
+1 0 0 1 48.51969 361.0014 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 3 Tm /F1+0 9 Tf 12 TL ( ) Tj T* ET
 Q
-Q
-q
-1 0 0 1 48.51969 377.0014 cm
 Q
 q
 1 0 0 1 48.51969 359.0014 cm
+Q
 q
-BT 1 0 0 1 0 3 Tm 209.4414 0 Td 12 TL 0 0 0 rg /F1+0 9 Tf 12 TL (Attn: ) Tj /F2+0 9 Tf 12 TL (user example) Tj T* -209.4414 0 Td ET
+1 0 0 1 48.51969 341.0014 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 1 Tm 202.7549 0 Td /F1+0 11 Tf 12 TL (Attn: User Example) Tj T* -202.7549 0 Td ET
 Q
 Q
 q
-1 0 0 1 48.51969 352.0014 cm
+1 0 0 1 48.51969 334.0014 cm
 Q
 q
-1 0 0 1 48.51969 340.0014 cm
+1 0 0 1 48.51969 322.0014 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 3 Tm /F1+0 9 Tf 12 TL ( ) Tj T* ET
 Q
 Q
 q
-1 0 0 1 48.51969 338.0014 cm
-Q
-q
 1 0 0 1 48.51969 320.0014 cm
+Q
 q
-BT 1 0 0 1 0 3 Tm 211.5244 0 Td 12 TL 0 0 0 rg /F1+0 9 Tf 12 TL (project: ) Tj /F2+0 9 Tf 12 TL (proj. 0001) Tj T* -211.5244 0 Td ET
+1 0 0 1 48.51969 302.0014 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 1 Tm 227.9238 0 Td /F1+0 11 Tf 12 TL (proj. 0001) Tj T* -227.9238 0 Td ET
 Q
 Q
 q
-1 0 0 1 48.51969 319.0014 cm
+1 0 0 1 48.51969 301.0014 cm
 Q
 q
 1 0 0 1 42.51969 30.33858 cm
@@ -3049,7 +3058,7 @@ q
 q
 1 0 0 1 6 3 cm
 q
-BT 1 0 0 1 0 3 Tm 12 TL 0 0 0 rg /F1+0 9 Tf 12 TL (2026-05-18       ) Tj /F2+0 9 Tf 12 TL (|) Tj /F1+0 9 Tf 12 TL (       R Holland) Tj T* ET
+BT 1 0 0 1 0 3 Tm 12 TL 0 0 0 rg /F1+0 9 Tf 12 TL (2026-05-21       ) Tj /F2+0 9 Tf 12 TL (|) Tj /F1+0 9 Tf 12 TL (       R Holland) Tj T* ET
 Q
 Q
 q
@@ -3089,7 +3098,7 @@ endstream
 endobj
 54 0 obj
 <<
-/Length 2153
+/Length 2156
 >>
 stream
 1 0 0 1 0 0 cm 
@@ -3107,8 +3116,8 @@ q
 1 0 0 1 0 53.4 cm
 q
 0 .4 .6 RG
-n 0 .675 m 67.1001 .675 l S
-BT 1 0 0 1 0 1.8 Tm 10.8 TL 0 .4 .6 rg /F2+0 9 Tf 10.8 TL (1.1 Summary) Tj T* ET
+n 0 .675 m 73.3623 .675 l S
+BT 1 0 0 1 0 1.8 Tm 10.8 TL 0 .4 .6 rg /F2+0 9 Tf 10.8 TL (01.1 Summary) Tj T* ET
 Q
 Q
 q
@@ -3124,8 +3133,8 @@ q
 1 0 0 1 0 36.6 cm
 q
 0 .4 .6 RG
-n 0 .675 m 116.1519 .675 l S
-BT 1 0 0 1 0 1.8 Tm 10.8 TL 0 .4 .6 rg /F2+0 9 Tf 10.8 TL (1.2 Load Combinations) Tj T* ET
+n 0 .675 m 122.4141 .675 l S
+BT 1 0 0 1 0 1.8 Tm 10.8 TL 0 .4 .6 rg /F2+0 9 Tf 10.8 TL (01.2 Load Combinations) Tj T* ET
 Q
 Q
 q
@@ -3141,8 +3150,8 @@ q
 1 0 0 1 0 19.8 cm
 q
 0 .4 .6 RG
-n 0 .675 m 123.8203 .675 l S
-BT 1 0 0 1 0 1.8 Tm 10.8 TL 0 .4 .6 rg /F2+0 9 Tf 10.8 TL (1.3 Loads and Geometry) Tj T* ET
+n 0 .675 m 130.0825 .675 l S
+BT 1 0 0 1 0 1.8 Tm 10.8 TL 0 .4 .6 rg /F2+0 9 Tf 10.8 TL (01.3 Loads and Geometry) Tj T* ET
 Q
 Q
 q
@@ -3158,8 +3167,8 @@ q
 1 0 0 1 0 3 cm
 q
 0 .4 .6 RG
-n 0 .675 m 99.50977 .675 l S
-BT 1 0 0 1 0 1.8 Tm 10.8 TL 0 .4 .6 rg /F2+0 9 Tf 10.8 TL (1.4 Beam Response) Tj T* ET
+n 0 .675 m 105.772 .675 l S
+BT 1 0 0 1 0 1.8 Tm 10.8 TL 0 .4 .6 rg /F2+0 9 Tf 10.8 TL (01.4 Beam Response) Tj T* ET
 Q
 Q
 q
@@ -3188,7 +3197,7 @@ q
 q
 1 0 0 1 6 3 cm
 q
-BT 1 0 0 1 0 3 Tm 12 TL 0 0 0 rg /F1+0 9 Tf 12 TL (2026-05-18       ) Tj /F2+0 9 Tf 12 TL (|) Tj /F1+0 9 Tf 12 TL (       R Holland) Tj T* ET
+BT 1 0 0 1 0 3 Tm 12 TL 0 0 0 rg /F1+0 9 Tf 12 TL (2026-05-21       ) Tj /F2+0 9 Tf 12 TL (|) Tj /F1+0 9 Tf 12 TL (       R Holland) Tj T* ET
 Q
 Q
 q
@@ -3228,14 +3237,14 @@ endstream
 endobj
 55 0 obj
 <<
-/Length 10739
+/Length 11903
 >>
 stream
 1 0 0 1 0 0 cm 
 q
 1 0 0 1 48.51969 720.118 cm
 q
-BT 1 0 0 1 0 2.16 Tm 12.96 TL .133333 .133333 .133333 rg /F2+0 10.8 Tf 12.96 TL (1.1 Summary) Tj T* ET
+BT 1 0 0 1 0 2.16 Tm 12.96 TL .133333 .133333 .133333 rg /F2+0 10.8 Tf 12.96 TL (01.1 Summary) Tj T* ET
 Q
 Q
 q
@@ -3254,46 +3263,46 @@ BT 1 0 0 1 0 15 Tm .2363 Tw 12 TL 0 0 0 rg /F1+0 9 Tf 12 TL (The example illustr
 Q
 Q
 q
-1 0 0 1 48.51969 618.118 cm
+1 0 0 1 48.51969 630.118 cm
 q
-BT 1 0 0 1 0 27 Tm .151197 Tw 12 TL 0 0 0 rg /F1+0 9 Tf 12 TL (The file may be formatted as a text, PDF or HTML doc by changing the type parameter in the PUBLISH command) Tj T* 0 Tw 1.058008 Tw (in the Doc-API ) Tj /F3+0 9 Tf 12 TL (\(rv.D\)) Tj /F1+0 9 Tf 12 TL ( at the end of each rivt file. Published files are found in the sub-folders of the ) Tj /F3+0 9 Tf 12 TL (_published) Tj  T* 0 Tw /F1+0 9 Tf 12 TL (folder.) Tj T* ET
+BT 1 0 0 1 0 15 Tm .151197 Tw 12 TL 0 0 0 rg /F1+0 9 Tf 12 TL (The file may be formatted as a text, PDF or HTML doc by changing the type parameter in the PUBLISH command) Tj T* 0 Tw (at the end of each rivt file \(Doc-API ) Tj /F3+0 9 Tf 12 TL (rv.D) Tj /F1+0 9 Tf 12 TL (\). Published files are found in the ) Tj /F3+0 9 Tf 12 TL (_published) Tj /F1+0 9 Tf 12 TL ( folder.) Tj T* ET
 Q
 Q
 q
-1 0 0 1 48.51969 588.7715 cm
+1 0 0 1 48.51969 600.7715 cm
 0 0 0 RG
 n 0 14.17323 m 512.126 14.17323 l S
 Q
 q
-1 0 0 1 48.51969 565.8115 cm
+1 0 0 1 48.51969 577.8115 cm
 q
-BT 1 0 0 1 0 2.16 Tm 12.96 TL .133333 .133333 .133333 rg /F2+0 10.8 Tf 12.96 TL (1.2 Load Combinations) Tj T* ET
+BT 1 0 0 1 0 2.16 Tm 12.96 TL .133333 .133333 .133333 rg /F2+0 10.8 Tf 12.96 TL (01.2 Load Combinations) Tj T* ET
 Q
+Q
+q
+1 0 0 1 48.51969 570.8115 cm
 Q
 q
 1 0 0 1 48.51969 558.8115 cm
-Q
-q
-1 0 0 1 48.51969 546.8115 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 3 Tm /F1+0 9 Tf 12 TL ( ) Tj T* ET
 Q
 Q
 q
-1 0 0 1 48.51969 544.8115 cm
+1 0 0 1 48.51969 556.8115 cm
 Q
 q
-1 0 0 1 48.51969 526.8115 cm
+1 0 0 1 48.51969 538.8115 cm
 q
-BT 1 0 0 1 0 3 Tm 12 TL 0 0 0 rg /F2+0 9 Tf 12 TL (Table 1) Tj /F1+0 9 Tf 12 TL (: ASCE 7-05 Load Effects \(saved as csv in _stored folder\)) Tj T* ET
+BT 1 0 0 1 0 3 Tm 12 TL 0 0 0 rg /F2+0 9 Tf 12 TL (Table 1) Tj /F1+0 9 Tf 12 TL (: ASCE 7-05 Load Effects \(stored: t001-1.csv\)) Tj T* ET
 Q
 Q
 q
-1 0 0 1 48.51969 524.8115 cm
+1 0 0 1 48.51969 536.8115 cm
 Q
 q
-1 0 0 1 48.51969 452.8115 cm
+1 0 0 1 48.51969 464.8115 cm
 q
 1 1 1 rg
 n 0 72 512.126 -18 re f*
@@ -3384,37 +3393,37 @@ Q
 Q
 Q
 q
-1 0 0 1 48.51969 451.8115 cm
+1 0 0 1 48.51969 463.8115 cm
 Q
 q
-1 0 0 1 48.51969 422.465 cm
+1 0 0 1 48.51969 434.465 cm
 0 0 0 RG
 n 0 14.17323 m 512.126 14.17323 l S
 Q
 q
-1 0 0 1 48.51969 399.505 cm
+1 0 0 1 48.51969 411.505 cm
 q
-BT 1 0 0 1 0 2.16 Tm 12.96 TL .133333 .133333 .133333 rg /F2+0 10.8 Tf 12.96 TL (1.3 Loads and Geometry) Tj T* ET
+BT 1 0 0 1 0 2.16 Tm 12.96 TL .133333 .133333 .133333 rg /F2+0 10.8 Tf 12.96 TL (01.3 Loads and Geometry) Tj T* ET
 Q
 Q
 q
-1 0 0 1 48.51969 369.505 cm
+1 0 0 1 48.51969 381.505 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 15 Tm .541657 Tw /F1+0 9 Tf 12 TL (Successive value definitions are formatted as a table. Variable values are defined with the define operator. The) Tj T* 0 Tw (line tag [T] labels and numbers the table.) Tj T* ET
 Q
 Q
 q
-1 0 0 1 48.51969 351.505 cm
+1 0 0 1 48.51969 363.505 cm
 q
 BT 1 0 0 1 0 3 Tm 12 TL 0 0 0 rg /F2+0 9 Tf 12 TL (Table 2) Tj /F1+0 9 Tf 12 TL (: Define Unit Loads) Tj T* ET
 Q
 Q
 q
-1 0 0 1 48.51969 349.505 cm
+1 0 0 1 48.51969 361.505 cm
 Q
 q
-1 0 0 1 48.51969 169.505 cm
+1 0 0 1 48.51969 181.505 cm
 q
 1 1 1 rg
 n 0 180 512.126 -18 re f*
@@ -3749,36 +3758,130 @@ Q
 Q
 Q
 q
-1 0 0 1 48.51969 168.505 cm
+1 0 0 1 48.51969 180.505 cm
 Q
 q
-1 0 0 1 48.51969 138.505 cm
+1 0 0 1 48.51969 150.505 cm
 q
 0 0 0 rg
-BT 1 0 0 1 0 15 Tm .551424 Tw /F1+0 9 Tf 12 TL (The VALTABLE command reads variable values from a file in the src folder. The description is used as the table) Tj T* 0 Tw (title. The range specifies the starting and ending line to be read from the file \(0:0 means all lines\).) Tj T* ET
+BT 1 0 0 1 0 15 Tm .076352 Tw /F1+0 9 Tf 12 TL (The VALTABLE command reads variable values from a file in the rvsrc folder. The description is used as the table) Tj T* 0 Tw (title. The range specifies the starting and ending line to be read from the file \(0:0 means all lines\).) Tj T* ET
 Q
+Q
+q
+1 0 0 1 48.51969 143.505 cm
 Q
 q
 1 0 0 1 48.51969 131.505 cm
-Q
-q
-1 0 0 1 48.51969 119.505 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 3 Tm /F1+0 9 Tf 12 TL ( ) Tj T* ET
 Q
 Q
 q
-1 0 0 1 48.51969 117.505 cm
+1 0 0 1 48.51969 129.505 cm
 Q
 q
-1 0 0 1 48.51969 99.50504 cm
+1 0 0 1 48.51969 111.505 cm
 q
-BT 1 0 0 1 0 3 Tm 12 TL 0 0 0 rg /F2+0 9 Tf 12 TL (Table 3) Tj /F1+0 9 Tf 12 TL (: Beam Geometry from file: ) Tj /F2+0 9 Tf 12 TL (src/beam1.csv) Tj T* ET
+BT 1 0 0 1 0 3 Tm 12 TL 0 0 0 rg /F2+0 9 Tf 12 TL (Table 3) Tj /F1+0 9 Tf 12 TL (: Beam Geometry \(rvsrc/beam1.csv\)) Tj T* ET
 Q
 Q
 q
-1 0 0 1 48.51969 97.50504 cm
+1 0 0 1 48.51969 109.505 cm
+Q
+q
+1 0 0 1 48.51969 73.50504 cm
+q
+1 1 1 rg
+n 0 36 512.126 -18 re f*
+.878431 .878431 .878431 rg
+n 0 18 512.126 -18 re f*
+.772549 .819608 .772549 rg
+n 0 36 512.126 -18 re f*
+0 0 0 rg
+q
+1 0 0 1 6 21 cm
+q
+.772549 .819608 .772549 rg
+n 0 0 116.0315 12 re f*
+Q
+q
+0 0 0 rg
+BT 1 0 0 1 0 3 Tm /F4+0 9 Tf 12 TL (variable) Tj T* ET
+Q
+Q
+q
+1 0 0 1 134.0315 21 cm
+q
+.772549 .819608 .772549 rg
+n 0 0 90.4252 12 re f*
+Q
+q
+0 0 0 rg
+BT 1 0 0 1 0 3 Tm /F4+0 9 Tf 12 TL (value) Tj T* ET
+Q
+Q
+q
+1 0 0 1 236.4567 21 cm
+q
+.772549 .819608 .772549 rg
+n 0 0 103.2283 12 re f*
+Q
+q
+0 0 0 rg
+BT 1 0 0 1 0 3 Tm /F4+0 9 Tf 12 TL ([value]) Tj T* ET
+Q
+Q
+q
+1 0 0 1 351.685 21 cm
+q
+.772549 .819608 .772549 rg
+n 0 0 154.4409 12 re f*
+Q
+q
+0 0 0 rg
+BT 1 0 0 1 0 3 Tm /F4+0 9 Tf 12 TL (description) Tj T* ET
+Q
+Q
+0 0 0 rg
+q
+1 0 0 1 6 3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 3 Tm /F1+0 9 Tf 12 TL (spc_1) Tj T* ET
+Q
+Q
+q
+1 0 0 1 134.0315 3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 3 Tm /F1+0 9 Tf 12 TL (2.00 ft) Tj T* ET
+Q
+Q
+q
+1 0 0 1 236.4567 3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 3 Tm /F1+0 9 Tf 12 TL (0.61 m) Tj T* ET
+Q
+Q
+q
+1 0 0 1 351.685 3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 3 Tm /F1+0 9 Tf 12 TL (beam spacing) Tj T* ET
+Q
+Q
+q
+1 J
+1 j
+0 0 0 RG
+.25 w
+n 0 36 m 512.126 36 l S
+n 0 0 m 0 36 l S
+n 512.126 0 m 512.126 36 l S
+Q
+Q
 Q
 q
 1 0 0 1 42.51969 779.6614 cm
@@ -3790,7 +3893,7 @@ q
 q
 1 0 0 1 6 3 cm
 q
-BT 1 0 0 1 0 3 Tm 12 TL 0 0 0 rg /F2+0 9 Tf 12 TL (|D.0|) Tj /F1+0 9 Tf 12 TL ( Example 1 - rivt Doc - v1.0.0a11         ) Tj /F2+0 9 Tf 12 TL (1.1 Summary) Tj T* ET
+BT 1 0 0 1 0 3 Tm 12 TL 0 0 0 rg /F2+0 9 Tf 12 TL (|D.0|) Tj /F1+0 9 Tf 12 TL ( Example 1 - rivt Doc - v1.0.0a11         ) Tj /F2+0 9 Tf 12 TL (01.1 Summary) Tj T* ET
 Q
 Q
 q
@@ -3849,7 +3952,7 @@ q
 q
 1 0 0 1 6 3 cm
 q
-BT 1 0 0 1 0 3 Tm 12 TL 0 0 0 rg /F1+0 9 Tf 12 TL (2026-05-18       ) Tj /F2+0 9 Tf 12 TL (|) Tj /F1+0 9 Tf 12 TL (       R Holland) Tj T* ET
+BT 1 0 0 1 0 3 Tm 12 TL 0 0 0 rg /F1+0 9 Tf 12 TL (2026-05-21       ) Tj /F2+0 9 Tf 12 TL (|) Tj /F1+0 9 Tf 12 TL (       R Holland) Tj T* ET
 Q
 Q
 q
@@ -3889,24 +3992,22 @@ endstream
 endobj
 56 0 obj
 <<
-/Length 6560
+/Length 6210
 >>
 stream
 1 0 0 1 0 0 cm 
 q
-1 0 0 1 51.35433 679.078 cm
+1 0 0 1 51.35433 697.078 cm
 q
 1 1 1 rg
-n 0 54 512.126 -18 re f*
-.878431 .878431 .878431 rg
 n 0 36 512.126 -18 re f*
 1 1 1 rg
 n 0 18 512.126 -18 re f*
 .772549 .819608 .772549 rg
-n 0 54 512.126 -18 re f*
+n 0 36 512.126 -18 re f*
 0 0 0 rg
 q
-1 0 0 1 6 39 cm
+1 0 0 1 6 21 cm
 q
 .772549 .819608 .772549 rg
 n 0 0 116.0315 12 re f*
@@ -3917,7 +4018,7 @@ BT 1 0 0 1 0 3 Tm /F4+0 9 Tf 12 TL (variable) Tj T* ET
 Q
 Q
 q
-1 0 0 1 134.0315 39 cm
+1 0 0 1 134.0315 21 cm
 q
 .772549 .819608 .772549 rg
 n 0 0 90.4252 12 re f*
@@ -3928,7 +4029,7 @@ BT 1 0 0 1 0 3 Tm /F4+0 9 Tf 12 TL (value) Tj T* ET
 Q
 Q
 q
-1 0 0 1 236.4567 39 cm
+1 0 0 1 236.4567 21 cm
 q
 .772549 .819608 .772549 rg
 n 0 0 103.2283 12 re f*
@@ -3939,7 +4040,7 @@ BT 1 0 0 1 0 3 Tm /F4+0 9 Tf 12 TL ([value]) Tj T* ET
 Q
 Q
 q
-1 0 0 1 351.685 39 cm
+1 0 0 1 351.685 21 cm
 q
 .772549 .819608 .772549 rg
 n 0 0 154.4409 12 re f*
@@ -3950,34 +4051,6 @@ BT 1 0 0 1 0 3 Tm /F4+0 9 Tf 12 TL (description) Tj T* ET
 Q
 Q
 0 0 0 rg
-q
-1 0 0 1 6 21 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 3 Tm /F1+0 9 Tf 12 TL (spc_1) Tj T* ET
-Q
-Q
-q
-1 0 0 1 134.0315 21 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 3 Tm /F1+0 9 Tf 12 TL (2.00 ft) Tj T* ET
-Q
-Q
-q
-1 0 0 1 236.4567 21 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 3 Tm /F1+0 9 Tf 12 TL (0.61 m) Tj T* ET
-Q
-Q
-q
-1 0 0 1 351.685 21 cm
-q
-0 0 0 rg
-BT 1 0 0 1 0 3 Tm /F1+0 9 Tf 12 TL (beam spacing) Tj T* ET
-Q
-Q
 q
 1 0 0 1 6 3 cm
 q
@@ -4011,21 +4084,23 @@ q
 1 j
 0 0 0 RG
 .25 w
-n 0 54 m 512.126 54 l S
+n 0 36 m 512.126 36 l S
+n 0 18 m 0 36 l S
+n 0 0 m 0 18 l S
+n 512.126 18 m 512.126 36 l S
+n 512.126 0 m 512.126 18 l S
 n 0 0 m 512.126 0 l S
-n 0 0 m 0 54 l S
-n 512.126 0 m 512.126 54 l S
 Q
 Q
+Q
+q
+1 0 0 1 51.35433 696.078 cm
 Q
 q
 1 0 0 1 51.35433 678.078 cm
 Q
 q
-1 0 0 1 51.35433 660.078 cm
-Q
-q
-1 0 0 1 51.35433 519.537 cm
+1 0 0 1 51.35433 537.537 cm
 q
 0 0 0 rg
 q
@@ -4046,35 +4121,35 @@ Q
 Q
 Q
 q
-1 0 0 1 51.35433 507.537 cm
+1 0 0 1 51.35433 525.537 cm
 Q
 q
-1 0 0 1 51.35433 489.537 cm
+1 0 0 1 51.35433 507.537 cm
 q
 BT 1 0 0 1 0 3 Tm 188.9585 0 Td 12 TL 0 0 0 rg /F2+0 9 Tf 12 TL (Uniform Distributed Loads) Tj T* -188.9585 0 Td ET
 Q
 Q
 q
-1 0 0 1 51.35433 482.537 cm
+1 0 0 1 51.35433 500.537 cm
 Q
 q
-1 0 0 1 51.35433 470.537 cm
+1 0 0 1 51.35433 488.537 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 3 Tm /F1+0 9 Tf 12 TL ( ) Tj T* ET
 Q
 Q
 q
-1 0 0 1 51.35433 468.537 cm
+1 0 0 1 51.35433 486.537 cm
 Q
 q
-1 0 0 1 51.35433 450.537 cm
+1 0 0 1 51.35433 468.537 cm
 q
 BT 1 0 0 1 0 3 Tm 12 TL 0 0 0 rg /F2+0 9 Tf 12 TL (Eq. 1:) Tj /F1+0 9 Tf 12 TL ( Dead load [ASCE7-05 2.3.2]) Tj T* ET
 Q
 Q
 q
-1 0 0 1 51.35433 311.337 cm
+1 0 0 1 51.35433 329.337 cm
 q
 q
 1 0 0 1 0 0 cm
@@ -4088,33 +4163,33 @@ n -6 -6 510.926 132 re B*
 Q
 q
 0 0 0 rg
-BT 1 0 0 1 0 111 Tm /F4+0 9 Tf 12 TL (dl\001 = 1.2\002\(D\003 + spc\001\002\(D\001 + D\004 + D\005\)\)) Tj T*  T* (dl\001 = 3.64 klf     [dl\001] = 53.09 kN_m   | Dead load [ASCE7-05 2.3.2]) Tj T*  T* (spc\001          D\005             D\001         D\004          D\003) Tj T* (\006\006\006\006\006\006\006\006\006\006\006\006  \006\006\006\006\006\006\006\006\006\006\006\006\006  \006\006\006\006\006\006\006\006\006  \006\006\006\006\006\006\006\006\006\006  \006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006) Tj T* (2.00 ft       10.00 psf      3.80 psf   2.10 psf    3.00 klf) Tj T* (\006\006\006\006\006         \006\006\006\006\006          \006\006\006\006\006      \006\006\006\006\006       \006\006\006\006\006) Tj T* (beam spacing  partitions DL  joists DL  plywood DL  fixed machinery DL) Tj T* (\006\006\006\006\006\006\006\006\006\006\006\006  \006\006\006\006\006\006\006\006\006\006\006\006\006  \006\006\006\006\006\006\006\006\006  \006\006\006\006\006\006\006\006\006\006  \006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006) Tj T* ET
+BT 1 0 0 1 0 111 Tm /F4+0 9 Tf 12 TL (dl\001 = 1.2\002\(D\003 + spc\001\002\(D\001 + D\004 + D\005\)\)) Tj T*  T* (dl\001 = 3.64 klf     [dl\001] = 53.09 kN_m   | Dead load [ASCE7-05 2.3.2]) Tj T*  T* (spc\001          D\003                  D\001         D\005             D\004) Tj T* (\006\006\006\006\006\006\006\006\006\006\006\006  \006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006  \006\006\006\006\006\006\006\006\006  \006\006\006\006\006\006\006\006\006\006\006\006\006  \006\006\006\006\006\006\006\006\006\006) Tj T* (2.00 ft       3.00 klf            3.80 psf   10.00 psf      2.10 psf) Tj T* (\006\006\006\006\006         \006\006\006\006\006               \006\006\006\006\006      \006\006\006\006\006          \006\006\006\006\006) Tj T* (beam spacing  fixed machinery DL  joists DL  partitions DL  plywood DL) Tj T* (\006\006\006\006\006\006\006\006\006\006\006\006  \006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006  \006\006\006\006\006\006\006\006\006  \006\006\006\006\006\006\006\006\006\006\006\006\006  \006\006\006\006\006\006\006\006\006\006) Tj T* ET
 Q
 Q
 Q
 Q
 Q
 q
-1 0 0 1 51.35433 299.337 cm
+1 0 0 1 51.35433 317.337 cm
 Q
 q
-1 0 0 1 51.35433 287.337 cm
+1 0 0 1 51.35433 305.337 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 3 Tm /F1+0 9 Tf 12 TL ( ) Tj T* ET
 Q
 Q
 q
-1 0 0 1 51.35433 285.337 cm
+1 0 0 1 51.35433 303.337 cm
 Q
 q
-1 0 0 1 51.35433 267.337 cm
+1 0 0 1 51.35433 285.337 cm
 q
 BT 1 0 0 1 0 3 Tm 12 TL 0 0 0 rg /F2+0 9 Tf 12 TL (Eq. 2:) Tj /F1+0 9 Tf 12 TL ( Live load [ASCE7-05 2.3.2]) Tj T* ET
 Q
 Q
 q
-1 0 0 1 51.35433 128.137 cm
+1 0 0 1 51.35433 146.137 cm
 q
 q
 1 0 0 1 0 0 cm
@@ -4135,20 +4210,20 @@ Q
 Q
 Q
 q
-1 0 0 1 51.35433 116.137 cm
+1 0 0 1 51.35433 134.137 cm
 Q
 q
-1 0 0 1 51.35433 104.137 cm
+1 0 0 1 51.35433 122.137 cm
 q
 0 0 0 rg
 BT 1 0 0 1 0 3 Tm /F1+0 9 Tf 12 TL ( ) Tj T* ET
 Q
 Q
 q
-1 0 0 1 51.35433 102.137 cm
+1 0 0 1 51.35433 120.137 cm
 Q
 q
-1 0 0 1 51.35433 84.13697 cm
+1 0 0 1 51.35433 102.137 cm
 q
 BT 1 0 0 1 0 3 Tm 12 TL 0 0 0 rg /F2+0 9 Tf 12 TL (Eq. 3:) Tj /F1+0 9 Tf 12 TL ( Total load [ASCE7-05 2.3.2]) Tj T* ET
 Q
@@ -4163,7 +4238,7 @@ q
 q
 1 0 0 1 6 3 cm
 q
-BT 1 0 0 1 0 3 Tm 12 TL 0 0 0 rg /F2+0 9 Tf 12 TL (|D.0|) Tj /F1+0 9 Tf 12 TL ( Example 1 - rivt Doc - v1.0.0a11         ) Tj /F2+0 9 Tf 12 TL (1.1 Summary) Tj T* ET
+BT 1 0 0 1 0 3 Tm 12 TL 0 0 0 rg /F2+0 9 Tf 12 TL (|D.0|) Tj /F1+0 9 Tf 12 TL ( Example 1 - rivt Doc - v1.0.0a11         ) Tj /F2+0 9 Tf 12 TL (01.1 Summary) Tj T* ET
 Q
 Q
 q
@@ -4222,7 +4297,7 @@ q
 q
 1 0 0 1 6 3 cm
 q
-BT 1 0 0 1 0 3 Tm 12 TL 0 0 0 rg /F1+0 9 Tf 12 TL (2026-05-18       ) Tj /F2+0 9 Tf 12 TL (|) Tj /F1+0 9 Tf 12 TL (       R Holland) Tj T* ET
+BT 1 0 0 1 0 3 Tm 12 TL 0 0 0 rg /F1+0 9 Tf 12 TL (2026-05-21       ) Tj /F2+0 9 Tf 12 TL (|) Tj /F1+0 9 Tf 12 TL (       R Holland) Tj T* ET
 Q
 Q
 q
@@ -4262,7 +4337,7 @@ endstream
 endobj
 57 0 obj
 <<
-/Length 6518
+/Length 6487
 >>
 stream
 1 0 0 1 0 0 cm 
@@ -4281,7 +4356,7 @@ n -6 -6 510.926 132 re B*
 Q
 q
 0 0 0 rg
-BT 1 0 0 1 0 111 Tm /F4+0 9 Tf 12 TL (\007\001 = dl\001 + ll\001) Tj T*  T* (\007\001 = 3.77 klf     [\007\001] = 54.96 kN_m   | Total load [ASCE7-05 2.3.2]) Tj T*  T* (dl\001                         ll\001) Tj T* (\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006  \006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006) Tj T* (3.64 klf                    128.00 ft\010psf) Tj T* (\006\006\006\006\006                       \006\006\006\006\006) Tj T* (Dead load [ASCE7-05 2.3.2]  Live load [ASCE7-05 2.3.2]) Tj T* (\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006  \006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006) Tj T* ET
+BT 1 0 0 1 0 111 Tm /F4+0 9 Tf 12 TL (\007\001 = dl\001 + ll\001) Tj T*  T* (\007\001 = 3.77 klf     [\007\001] = 54.96 kN_m   | Total load [ASCE7-05 2.3.2]) Tj T*  T* (ll\001                         dl\001) Tj T* (\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006  \006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006) Tj T* (128.00 ft\010psf               3.64 klf) Tj T* (\006\006\006\006\006                       \006\006\006\006\006) Tj T* (Live load [ASCE7-05 2.3.2]  Dead load [ASCE7-05 2.3.2]) Tj T* (\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006  \006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006) Tj T* ET
 Q
 Q
 Q
@@ -4295,7 +4370,7 @@ Q
 q
 1 0 0 1 48.51969 542.5715 cm
 q
-BT 1 0 0 1 0 2.16 Tm 12.96 TL .133333 .133333 .133333 rg /F2+0 10.8 Tf 12.96 TL (1.4 Beam Response) Tj T* ET
+BT 1 0 0 1 0 2.16 Tm 12.96 TL .133333 .133333 .133333 rg /F2+0 10.8 Tf 12.96 TL (01.4 Beam Response) Tj T* ET
 Q
 Q
 q
@@ -4308,7 +4383,7 @@ Q
 q
 1 0 0 1 48.51969 494.5715 cm
 q
-BT 1 0 0 1 0 3 Tm 12 TL 0 0 0 rg /F2+0 9 Tf 12 TL (Table 4) Tj /F1+0 9 Tf 12 TL (: Beam functions from file: ) Tj /F2+0 9 Tf 12 TL (src/sectprop.py) Tj T* ET
+BT 1 0 0 1 0 3 Tm 12 TL 0 0 0 rg /F2+0 9 Tf 12 TL (Table 4) Tj /F1+0 9 Tf 12 TL (: Beam functions \(rvsrc/sectprop.py\)) Tj T* ET
 Q
 Q
 q
@@ -4442,7 +4517,7 @@ n -6 -6 510.926 132 re B*
 Q
 q
 0 0 0 rg
-BT 1 0 0 1 0 111 Tm /F4+0 9 Tf 12 TL (section\001 = rectsect\(b\001, h\001\)) Tj T*  T* (section\001 = 540.00 in3     [section\001] = 8849.01 cm3   | rectangle - S \(sectprop.py\)) Tj T*  T* (b\001          h\001) Tj T* (\006\006\006\006\006\006\006\006\006\006  \006\006\006\006\006\006\006\006\006\006) Tj T* (10.00 inch  18.00 inch) Tj T* (\006\006\006\006\006       \006\006\006\006\006) Tj T* (beam width  beam depth) Tj T* (\006\006\006\006\006\006\006\006\006\006  \006\006\006\006\006\006\006\006\006\006) Tj T* ET
+BT 1 0 0 1 0 111 Tm /F4+0 9 Tf 12 TL (section\001 = rectsect\(b\001, h\001\)) Tj T*  T* (section\001 = 540.00 in3     [section\001] = 8849.01 cm3   | rectangle - S \(sectprop.py\)) Tj T*  T* (h\001          b\001) Tj T* (\006\006\006\006\006\006\006\006\006\006  \006\006\006\006\006\006\006\006\006\006) Tj T* (18.00 inch  10.00 inch) Tj T* (\006\006\006\006\006       \006\006\006\006\006) Tj T* (beam depth  beam width) Tj T* (\006\006\006\006\006\006\006\006\006\006  \006\006\006\006\006\006\006\006\006\006) Tj T* ET
 Q
 Q
 Q
@@ -4482,7 +4557,7 @@ n -6 -6 510.926 108 re B*
 Q
 q
 0 0 0 rg
-BT 1 0 0 1 0 87 Tm /F4+0 9 Tf 12 TL (inertia\001 = rectinertia\(b\001, h\001\)) Tj T*  T* (inertia\001 = 4860.0 in4     [inertia\001] = 202288.5 cm4   | rectangle - I \(sectprop.py\)) Tj T*  T* (b\001          h\001) Tj T* (\006\006\006\006\006\006\006\006\006\006  \006\006\006\006\006\006\006\006\006\006) Tj T* (10.0 inch   18.0 inch) Tj T* (\006\006\006\006\006       \006\006\006\006\006) Tj T* ET
+BT 1 0 0 1 0 87 Tm /F4+0 9 Tf 12 TL (inertia\001 = rectinertia\(b\001, h\001\)) Tj T*  T* (inertia\001 = 4860.0 in4     [inertia\001] = 202288.5 cm4   | rectangle - I \(sectprop.py\)) Tj T*  T* (h\001          b\001) Tj T* (\006\006\006\006\006\006\006\006\006\006  \006\006\006\006\006\006\006\006\006\006) Tj T* (18.0 inch   10.0 inch) Tj T* (\006\006\006\006\006       \006\006\006\006\006) Tj T* ET
 Q
 Q
 Q
@@ -4498,7 +4573,7 @@ q
 q
 1 0 0 1 6 3 cm
 q
-BT 1 0 0 1 0 3 Tm 12 TL 0 0 0 rg /F2+0 9 Tf 12 TL (|D.0|) Tj /F1+0 9 Tf 12 TL ( Example 1 - rivt Doc - v1.0.0a11         ) Tj /F2+0 9 Tf 12 TL (1.4 Beam Response) Tj T* ET
+BT 1 0 0 1 0 3 Tm 12 TL 0 0 0 rg /F2+0 9 Tf 12 TL (|D.0|) Tj /F1+0 9 Tf 12 TL ( Example 1 - rivt Doc - v1.0.0a11         ) Tj /F2+0 9 Tf 12 TL (01.4 Beam Response) Tj T* ET
 Q
 Q
 q
@@ -4557,7 +4632,7 @@ q
 q
 1 0 0 1 6 3 cm
 q
-BT 1 0 0 1 0 3 Tm 12 TL 0 0 0 rg /F1+0 9 Tf 12 TL (2026-05-18       ) Tj /F2+0 9 Tf 12 TL (|) Tj /F1+0 9 Tf 12 TL (       R Holland) Tj T* ET
+BT 1 0 0 1 0 3 Tm 12 TL 0 0 0 rg /F1+0 9 Tf 12 TL (2026-05-21       ) Tj /F2+0 9 Tf 12 TL (|) Tj /F1+0 9 Tf 12 TL (       R Holland) Tj T* ET
 Q
 Q
 q
@@ -4597,7 +4672,7 @@ endstream
 endobj
 58 0 obj
 <<
-/Length 5313
+/Length 5314
 >>
 stream
 1 0 0 1 0 0 cm 
@@ -4616,7 +4691,7 @@ n -6 -6 510.926 36 re B*
 Q
 q
 0 0 0 rg
-BT 1 0 0 1 0 15 Tm /F4+0 9 Tf 12 TL (beam width  beam depth) Tj T* (\006\006\006\006\006\006\006\006\006\006  \006\006\006\006\006\006\006\006\006\006) Tj T* ET
+BT 1 0 0 1 0 15 Tm /F4+0 9 Tf 12 TL (beam depth  beam width) Tj T* (\006\006\006\006\006\006\006\006\006\006  \006\006\006\006\006\006\006\006\006\006) Tj T* ET
 Q
 Q
 Q
@@ -4830,7 +4905,7 @@ q
 q
 1 0 0 1 6 3 cm
 q
-BT 1 0 0 1 0 3 Tm 12 TL 0 0 0 rg /F2+0 9 Tf 12 TL (|D.0|) Tj /F1+0 9 Tf 12 TL ( Example 1 - rivt Doc - v1.0.0a11         ) Tj /F2+0 9 Tf 12 TL (1.4 Beam Response) Tj T* ET
+BT 1 0 0 1 0 3 Tm 12 TL 0 0 0 rg /F2+0 9 Tf 12 TL (|D.0|) Tj /F1+0 9 Tf 12 TL ( Example 1 - rivt Doc - v1.0.0a11         ) Tj /F2+0 9 Tf 12 TL (01.4 Beam Response) Tj T* ET
 Q
 Q
 q
@@ -4889,7 +4964,7 @@ q
 q
 1 0 0 1 6 3 cm
 q
-BT 1 0 0 1 0 3 Tm 12 TL 0 0 0 rg /F1+0 9 Tf 12 TL (2026-05-18       ) Tj /F2+0 9 Tf 12 TL (|) Tj /F1+0 9 Tf 12 TL (       R Holland) Tj T* ET
+BT 1 0 0 1 0 3 Tm 12 TL 0 0 0 rg /F1+0 9 Tf 12 TL (2026-05-21       ) Tj /F2+0 9 Tf 12 TL (|) Tj /F1+0 9 Tf 12 TL (       R Holland) Tj T* ET
 Q
 Q
 q
@@ -4929,7 +5004,7 @@ endstream
 endobj
 59 0 obj
 <<
-/Length 5271
+/Length 5272
 >>
 stream
 1 0 0 1 0 0 cm 
@@ -5027,7 +5102,7 @@ n -6 -6 510.926 132 re B*
 Q
 q
 0 0 0 rg
-BT 1 0 0 1 0 111 Tm /F4+0 9 Tf 12 TL (\014\001 = midspan_\014\(spn\001, \007\001, E\001, inertia\001\)) Tj T*  T* (\014\001 = 0.04 inch     [\014\001] = 1.00 mm   | mid-span deflection \(sectprop.py\)) Tj T*  T* (E\001                     inertia\001                     \007\001                           spn\001) Tj T* (\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006  \006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006  \006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006  \006\006\006\006\006\006\006\006\006) Tj T* (29000.00 ksi           4860.00 inch4                3.77 klf                     16.00 ft) Tj T* (\006\006\006\006\006                  \006\006\006\006\006                        \006\006\006\006\006                        \006\006\006\006\006) Tj T* (modulus of elasticity  rectangle - I \(sectprop.py\)  Total load [ASCE7-05 2.3.2]  beam span) Tj T* (\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006  \006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006  \006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006  \006\006\006\006\006\006\006\006\006) Tj T* ET
+BT 1 0 0 1 0 111 Tm /F4+0 9 Tf 12 TL (\014\001 = midspan_\014\(spn\001, \007\001, E\001, inertia\001\)) Tj T*  T* (\014\001 = 0.04 inch     [\014\001] = 1.00 mm   | mid-span deflection \(sectprop.py\)) Tj T*  T* (E\001                     \007\001                           inertia\001                     spn\001) Tj T* (\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006  \006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006  \006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006  \006\006\006\006\006\006\006\006\006) Tj T* (29000.00 ksi           3.77 klf                     4860.00 inch4                16.00 ft) Tj T* (\006\006\006\006\006                  \006\006\006\006\006                        \006\006\006\006\006                        \006\006\006\006\006) Tj T* (modulus of elasticity  Total load [ASCE7-05 2.3.2]  rectangle - I \(sectprop.py\)  beam span) Tj T* (\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006  \006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006  \006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006\006  \006\006\006\006\006\006\006\006\006) Tj T* ET
 Q
 Q
 Q
@@ -5043,7 +5118,7 @@ q
 q
 1 0 0 1 6 3 cm
 q
-BT 1 0 0 1 0 3 Tm 12 TL 0 0 0 rg /F2+0 9 Tf 12 TL (|D.0|) Tj /F1+0 9 Tf 12 TL ( Example 1 - rivt Doc - v1.0.0a11         ) Tj /F2+0 9 Tf 12 TL (1.4 Beam Response) Tj T* ET
+BT 1 0 0 1 0 3 Tm 12 TL 0 0 0 rg /F2+0 9 Tf 12 TL (|D.0|) Tj /F1+0 9 Tf 12 TL ( Example 1 - rivt Doc - v1.0.0a11         ) Tj /F2+0 9 Tf 12 TL (01.4 Beam Response) Tj T* ET
 Q
 Q
 q
@@ -5102,7 +5177,7 @@ q
 q
 1 0 0 1 6 3 cm
 q
-BT 1 0 0 1 0 3 Tm 12 TL 0 0 0 rg /F1+0 9 Tf 12 TL (2026-05-18       ) Tj /F2+0 9 Tf 12 TL (|) Tj /F1+0 9 Tf 12 TL (       R Holland) Tj T* ET
+BT 1 0 0 1 0 3 Tm 12 TL 0 0 0 rg /F1+0 9 Tf 12 TL (2026-05-21       ) Tj /F2+0 9 Tf 12 TL (|) Tj /F1+0 9 Tf 12 TL (       R Holland) Tj T* ET
 Q
 Q
 q
@@ -5232,29 +5307,29 @@ xref
 0000228585 00000 n 
 0000228840 00000 n 
 0000228914 00000 n 
-0000229026 00000 n 
-0000229162 00000 n 
-0000229298 00000 n 
-0000229417 00000 n 
-0000229519 00000 n 
-0000232253 00000 n 
-0000234458 00000 n 
-0000245250 00000 n 
-0000251862 00000 n 
-0000258432 00000 n 
-0000263797 00000 n 
-0000269120 00000 n 
-0000269218 00000 n 
-0000269252 00000 n 
-0000269286 00000 n 
-0000269320 00000 n 
-0000269354 00000 n 
-0000269388 00000 n 
-0000269422 00000 n 
+0000229027 00000 n 
+0000229164 00000 n 
+0000229301 00000 n 
+0000229421 00000 n 
+0000229523 00000 n 
+0000232323 00000 n 
+0000234531 00000 n 
+0000246487 00000 n 
+0000252749 00000 n 
+0000259288 00000 n 
+0000264654 00000 n 
+0000269978 00000 n 
+0000270076 00000 n 
+0000270110 00000 n 
+0000270144 00000 n 
+0000270178 00000 n 
+0000270212 00000 n 
+0000270246 00000 n 
+0000270280 00000 n 
 trailer
 <<
 /ID 
-[<629246657f82d3dae7205a3d0611918c><629246657f82d3dae7205a3d0611918c>]
+[<421c9f2d9ee8a953078cb0b8e70d6af9><421c9f2d9ee8a953078cb0b8e70d6af9>]
 % ReportLab generated PDF document -- digest (opensource)
 
 /Info 46 0 R
@@ -5262,5 +5337,5 @@ trailer
 /Size 68
 >>
 startxref
-269456
+270314
 %%EOF
