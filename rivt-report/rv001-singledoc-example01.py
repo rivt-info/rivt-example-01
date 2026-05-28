@@ -2,16 +2,12 @@
 # %% import
 import rivtlib.rvapi as rv
 
-# The following settings are only needed if defaults need to be changed. A
-# leading hash and trailing semicolon are required. The set_width parameter
-# is evaluated at the beginning of the file. The remaining parameters are
-# evaluated with the PUBLISH command. Default values are provided.
-#
-# rv set_width = 80  ; character width of text output
-# rv private_heading = true ; if false, default heading changed to public
-# rv no_tag = true ; if false API, tag is added to section number
-# rv keep_files = true ; if false, remove files in folders with leading "_"
-# rv auto_cfg = true ; if false, do not update the config files
+# The following settings are needed if defaults (in parenthesis) need to
+# be changed. A leading hash (#) and trailing semicolon (;) are required.
+
+# rv set_width = 80  ; character width of text output (80)
+# rv no_tag = true ; if false, an API tag is added to section number (true)
+
 
 # %% rv.I("""Summary
 rv.I("""Summary  
@@ -124,7 +120,6 @@ rv.D("""Publish Doc
     _rivt-public folders as a README.txt file which is displayed on the
     first page of a GitHub repo. 
     
-    
     _[[METADATA]] 
     [doc]
     authors = R Holland
@@ -138,22 +133,25 @@ rv.D("""Publish Doc
     fork1_license = https://opensource.org/license/mit/
     
     [layout]
-    coverlogo = rvsrc/logo1.png
-    coverlogo_size = 50
-    runninglogo = rvsrc/logo2.png
-    runninglabel = rivt
     title = UDL Beam
     subtitle =  Example 1 - rivt Doc  
     copyright = --
     client = Attn: User Example
-    projectref = proj. 0001
+    coverlogo_size = 50
+    coverlogo = logo1.png
+    runninglogo = logo2.png
+    runninglabel = rivt
+    project_ref = proj. 0001
     pdf_pagesize = letter
     pdf_margins = 1in, 1in, 1in, 1in 
     pdf_link_underline = true
-    text_width = 80
+
+    [process]
+    private_heading = true ; if false, default heading changed to public
+    keep_files = true ; if false, files in folders with leading "_" are deleted
+    auto_cfg = true ; if false, config files are not updated from rivt file
     _[[END]]
     
-
-    | PUBLISH | Example 1 - rivt Doc | html
+    | PUBLISH | Example 1 - rivt Doc | pdf
 
     """)

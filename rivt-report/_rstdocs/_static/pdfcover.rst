@@ -11,7 +11,7 @@
 |
 |
         
-.. image:: ../rvsrc/logo1.png
+.. image:: ./_static/logo1.png
    :width: 50%
    :align: center
 
@@ -20,28 +20,28 @@
 |
 
 
-.. class:: center
-
-    :btext:`UDL Beam`
+.. rst-class:: center
 
     :mtext:`Example 1 - rivt Doc`
 
-|
-|
-|
-|
-|
-|
+    |
 
-.. class:: center
+    :btext:`UDL Beam`
 
-   :mtext:`Attn: User Example`
+    
+    |
+    |
+    |
+    |
+    |
+    |
 
-|
 
-.. class:: center
+    :mtext:`Attn: User Example`
 
-   :stext:`proj. 0001`
+    |
+
+    :stext:`proj. 0001`
 
    
 
@@ -55,6 +55,3 @@
    PageBreak mainPage
    SetPageCounter 1
 
-   
-
-      

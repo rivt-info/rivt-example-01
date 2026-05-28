@@ -1,9 +1,39 @@
-**| D.0 |** Example 1 - rivt Doc
-================================================================================
+.. |s| unicode:: 0xA0 
 
 
 
-**01.1** Summary
+.. |blklogo| image:: ./_static/logo2.png
+   :height: 100px
+   :alt: logo
+
+
+    
+.. header::
+    .. list-table::
+        :class: header-box
+        :align: left
+        :widths: 90 10
+        
+        * - **|D.0|** Example 1 - rivt Doc - v1.0.0a11 |s| |s| |s| |s|  **###Section###**
+          - p. **###Page###**   
+
+          
+
+.. footer:: 
+    .. list-table::
+        :class: footer-box
+        :align: left
+        :widths: 84 22 16
+        
+        * - 2026-05-28 |s| |s| |s| **|** |s| |s| |s| R Holland        
+          - **rivt**        
+          - |blklogo|
+
+
+                  
+
+
+**1.1** Summary
 --------------------------------------------------------------------------------
  
 This rivt file example calculates the maximum stress and deflection in a
@@ -24,7 +54,7 @@ parameter in the PUBLISH command at the end of each rivt file (Doc-API
 
 ------------
 
-**01.2** Load Combinations
+**1.2** Load Combinations
 --------------------------------------------------------------------------------
  
 
@@ -47,7 +77,7 @@ Equation No.    Load Combination
 
 ------------
 
-**01.3** Loads and Geometry
+**1.3** Loads and Geometry
 --------------------------------------------------------------------------------
  
 Successive value definitions are formatted as a table. Variable
@@ -116,12 +146,12 @@ spn_1       16.00 ft  4.88 m     beam span
 
            dl₁ = 3.64 klf     [dl₁] = 53.09 kN_m   | Dead load [ASCE7-05 2.3.2]
 
-           D₄                  spc₁          D₃             D₁         D₂
-           ——————————————————  ————————————  —————————————  —————————  ——————————
-           3.00 klf            2.00 ft       10.00 psf      3.80 psf   2.10 psf
-           —————               —————         —————          —————      —————
-           fixed machinery DL  beam spacing  partitions DL  joists DL  plywood DL
-           ——————————————————  ————————————  —————————————  —————————  ——————————
+           D₁         D₃             D₂          D₄                  spc₁
+           —————————  —————————————  ——————————  ——————————————————  ————————————
+           3.80 psf   10.00 psf      2.10 psf    3.00 klf            2.00 ft
+           —————      —————          —————       —————               —————
+           joists DL  partitions DL  plywood DL  fixed machinery DL  beam spacing
+           —————————  —————————————  ——————————  ——————————————————  ————————————
 
 
  
@@ -175,7 +205,7 @@ spn_1       16.00 ft  4.88 m     beam span
 
 ------------
 
-**01.4** Beam Response
+**1.4** Beam Response
 --------------------------------------------------------------------------------
  
 The following lines import the beam geometry from an external file, 
@@ -287,12 +317,12 @@ midspan_delta(ln, w, e, i)  mid-span deflection of simply supported beam with UD
 
            m₁ = 120.52 ftkip     [m₁] = 163.40 mkN   | Mid-span UDL moment
 
-           ω₁                           spn₁
-           ———————————————————————————  —————————
-           3.77 klf                     16.00 ft
-           —————                        —————
-           Total load [ASCE7-05 2.3.2]  beam span
-           ———————————————————————————  —————————
+           spn₁       ω₁
+           —————————  ———————————————————————————
+           16.00 ft   3.77 klf
+           —————      —————
+           beam span  Total load [ASCE7-05 2.3.2]
+           —————————  ———————————————————————————
 
 
  
@@ -349,12 +379,12 @@ midspan_delta(ln, w, e, i)  mid-span deflection of simply supported beam with UD
 
            δ₁ = 0.04 inch     [δ₁] = 1.00 mm   | mid-span deflection (sectprop.py)
 
-           ω₁                           spn₁       E₁                     inertia₁
-           ———————————————————————————  —————————  —————————————————————  ———————————————————————————
-           3.77 klf                     16.00 ft   29000.00 ksi           4860.00 inch4
-           —————                        —————      —————                  —————
-           Total load [ASCE7-05 2.3.2]  beam span  modulus of elasticity  rectangle - I (sectprop.py)
-           ———————————————————————————  —————————  —————————————————————  ———————————————————————————
+           spn₁       ω₁                           E₁                     inertia₁
+           —————————  ———————————————————————————  —————————————————————  ———————————————————————————
+           16.00 ft   3.77 klf                     29000.00 ksi           4860.00 inch4
+           —————      —————                        —————                  —————
+           beam span  Total load [ASCE7-05 2.3.2]  modulus of elasticity  rectangle - I (sectprop.py)
+           —————————  ———————————————————————————  —————————————————————  ———————————————————————————
 
 
  

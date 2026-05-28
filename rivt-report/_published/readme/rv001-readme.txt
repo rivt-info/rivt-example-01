@@ -1,30 +1,27 @@
 
-01.1  Summary
+--------------------------------------------------------------------------------
+Example 1 - rivt Doc | R Holland | v-1.0.0a11 | 2026-05-28 - 12:47AM
+--------------------------------------------------------------------------------
+
+
+1.1  Summary
 --------------------------------------------------------------------------------
  
-This rivt file example calculates the
-maximum stress and deflection in a
-simply supported, uniformly loaded beam.
-It also serves as an annotated
-example of a rivt doc with multiple
-sections that is not part of a report.
+This rivt file example calculates the maximum stress and deflection in a
+simply supported, uniformly loaded beam. It also serves as an annotated
+example of a rivt doc with multiple sections that is not part of a report.
  
-The example illustrates the use of some
-of the most common API functions,
-commands and tags. Further details are
-provided in the
+The example illustrates the use of some of the most common API functions,
+commands and tags. Further details are provided in the
 rivt user manual, https://www.rivt.info .
  
-The file may be formatted as a text, PDF
-or HTML doc by changing the type
-parameter in the PUBLISH command at the
-end of each rivt file (Doc-API
-*rv.D*). Published files are found in
-the *_published* folder.
+The file may be formatted as a text, PDF or HTML doc by changing the type
+parameter in the PUBLISH command at the end of each rivt file (Doc-API
+*rv.D*). Published files are found in the *_published* folder.
  
  
 
-01.2  Load Combinations
+1.2  Load Combinations
 --------------------------------------------------------------------------------
  
 Table 1: ASCE 7-05 Load Effects (stored: t001-1.csv)
@@ -39,13 +36,11 @@ Equation No.    Load Combination
  
  
 
-01.3  Loads and Geometry
+1.3  Loads and Geometry
 --------------------------------------------------------------------------------
  
-Successive value definitions are
-formatted as a table. Variable
-values are defined with the define
-operator. The line tag [T] labels and
+Successive value definitions are formatted as a table. Variable
+values are defined with the define operator. The line tag [T] labels and
 numbers the table.
  
 
@@ -64,12 +59,9 @@ E_1         29000.00 ksi     199947.96 MPA  modulus of elasticity
 Fb_1        20000.00 lb_in2  137.90 MPA     allowable stress
 ==========  ===============  =============  =====================
  
-The VALTABLE command reads variable
-values from a file in the rvsrc
-folder. The description is used as the
-table title. The range specifies the
-starting and ending line to be read from
-the file (0:0 means all lines).
+The VALTABLE command reads variable values from a file in the rvsrc
+folder. The description is used as the table title. The range specifies the
+starting and ending line to be read from the file (0:0 means all lines).
  
 
 Table 3: Beam Geometry (rvsrc/beam1.csv)
@@ -83,7 +75,7 @@ spn_1       16.00 ft  4.88 m     beam span
 
  
           ----------------------------------------
-Fig. 1 -  [file: rvsrc/beam1.png ] 
+Fig. 1 - Beam Diagram [file: rvsrc/beam1.png ] 
           ----------------------------------------
 
  
@@ -97,13 +89,13 @@ Fig. 1 -  [file: rvsrc/beam1.png ]
 
 dl₁ = 3.64 klf    [dl₁] = 53.09 kN_m  | Dead load [ASCE7-05 2.3.2]
 
-==================  ============  =============  =========  ==========
-D₄                  spc₁          D₃             D₁         D₂
-==================  ============  =============  =========  ==========
-3.00 klf            2.00 ft       10.00 psf      3.80 psf   2.10 psf
-—————               —————         —————          —————      —————
-fixed machinery DL  beam spacing  partitions DL  joists DL  plywood DL
-==================  ============  =============  =========  ==========
+=========  =============  ==========  ==================  ============
+D₁         D₃             D₂          D₄                  spc₁
+=========  =============  ==========  ==================  ============
+3.80 psf   10.00 psf      2.10 psf    3.00 klf            2.00 ft
+—————      —————          —————       —————               —————
+joists DL  partitions DL  plywood DL  fixed machinery DL  beam spacing
+=========  =============  ==========  ==================  ============
  
 
 ┌  Eq-2 | Live load [ASCE7-05 2.3.2]
@@ -139,15 +131,12 @@ Dead load [ASCE7-05 2.3.2]  Live load [ASCE7-05 2.3.2]
  
  
 
-01.4  Beam Response
+1.4  Beam Response
 --------------------------------------------------------------------------------
  
-The following lines import the beam
-geometry from an external file,
-calculate section properties from
-imported functions and calculate
-the maximum moment, bending stress and
-mid-span deflection.
+The following lines import the beam geometry from an external file,
+calculate section properties from imported functions and calculate
+the maximum moment, bending stress and mid-span deflection.
  
 
 Table 4: Beam functions (rvsrc/sectprop.py)
@@ -219,13 +208,13 @@ files: rvsrc/ss-beam2.png, rvsrc/ss-beam1.png
 
 m₁ = 120.52 ftkip    [m₁] = 163.40 mkN  | Mid-span UDL moment
 
-===========================  =========
-ω₁                           spn₁
-===========================  =========
-3.77 klf                     16.00 ft
-—————                        —————
-Total load [ASCE7-05 2.3.2]  beam span
-===========================  =========
+=========  ===========================
+spn₁       ω₁
+=========  ===========================
+16.00 ft   3.77 klf
+—————      —————
+beam span  Total load [ASCE7-05 2.3.2]
+=========  ===========================
  
 
 ┌  Eq-8 | Bending stress
@@ -266,12 +255,12 @@ Mid-span UDL moment  rectangle - S (sectprop.py)
 
 δ₁ = 0.04 inch   [δ₁] = 1.00 mm  | mid-span deflection (sectprop.py)
 
-===========================  =========  =====================  ===========================
-ω₁                           spn₁       E₁                     inertia₁
-===========================  =========  =====================  ===========================
-3.77 klf                     16.00 ft   29000.00 ksi           4860.00 inch4
-—————                        —————      —————                  —————
-Total load [ASCE7-05 2.3.2]  beam span  modulus of elasticity  rectangle - I (sectprop.py)
-===========================  =========  =====================  ===========================
+=========  ===========================  =====================  ===========================
+spn₁       ω₁                           E₁                     inertia₁
+=========  ===========================  =====================  ===========================
+16.00 ft   3.77 klf                     29000.00 ksi           4860.00 inch4
+—————      —————                        —————                  —————
+beam span  Total load [ASCE7-05 2.3.2]  modulus of elasticity  rectangle - I (sectprop.py)
+=========  ===========================  =====================  ===========================
  
  

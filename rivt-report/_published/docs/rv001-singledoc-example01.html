@@ -563,12 +563,12 @@ m₁ = ────────
 
 m₁ = 120.52 ftkip     [m₁] = 163.40 mkN   | Mid-span UDL moment
 
-ω₁                           spn₁
-———————————————————————————  —————————
-3.77 klf                     16.00 ft
-—————                        —————
-Total load [ASCE7-05 2.3.2]  beam span
-———————————————————————————  —————————
+spn₁       ω₁
+—————————  ———————————————————————————
+16.00 ft   3.77 klf
+—————      —————
+beam span  Total load [ASCE7-05 2.3.2]
+—————————  ———————————————————————————
 </pre></div>
 </div>
 <div class="line-block">
@@ -609,12 +609,12 @@ Mid-span UDL moment  rectangle - S (sectprop.py)
 
 δ₁ = 0.04 inch     [δ₁] = 1.00 mm   | mid-span deflection (sectprop.py)
 
-ω₁                           spn₁       E₁                     inertia₁
-———————————————————————————  —————————  —————————————————————  ———————————————————————————
-3.77 klf                     16.00 ft   29000.00 ksi           4860.00 inch4
-—————                        —————      —————                  —————
-Total load [ASCE7-05 2.3.2]  beam span  modulus of elasticity  rectangle - I (sectprop.py)
-———————————————————————————  —————————  —————————————————————  ———————————————————————————
+E₁                     spn₁       inertia₁                     ω₁
+—————————————————————  —————————  ———————————————————————————  ———————————————————————————
+29000.00 ksi           16.00 ft   4860.00 inch4                3.77 klf
+—————                  —————      —————                        —————
+modulus of elasticity  beam span  rectangle - I (sectprop.py)  Total load [ASCE7-05 2.3.2]
+—————————————————————  —————————  ———————————————————————————  ———————————————————————————
 </pre></div>
 </div>
 </section>
