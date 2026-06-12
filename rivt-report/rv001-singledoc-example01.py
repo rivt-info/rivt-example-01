@@ -2,11 +2,11 @@
 # %% import
 import rivtlib.rvapi as rv
 
-# The following settings are needed if defaults (in parenthesis) need to
-# be changed. A leading hash (#) and trailing semicolon (;) are required.
-
+# The following settings change defaults (shown n parenthesis) for each doc.
+# A leading hash (#) and trailing semicolon (;) are required.
 # rv set_width = 80  ; character width of text output (80)
-# rv no_tag = true ; if false, an API tag is added to section number (true)
+# rv no_tag = true ; if false, the API type is added to section number (true)
+# rv private = true ; if false, default section heading changed to public (private)
 
 
 # %% rv.I("""Summary
@@ -18,7 +18,7 @@ rv.I("""Summary
 
     The example illustrates the use of some of the most common API functions,
     commands and tags. Further details are provided in the 
-    _[U] rivt user manual, https://www.rivt.info].
+    _[U] rivt user manual, https://www.rivt.info |.
 
     The file may be formatted as a text, PDF or HTML doc by changing the type
     parameter in the PUBLISH command at the end of each rivt file (Doc-API
@@ -62,13 +62,13 @@ rv.V("""Loads and Geometry
     Fb_1 ==: 20000 * psqin | psqin, MPA, 2 | allowable stress   
     
     The VALTABLE command reads variable values from a file in the rvsrc
-    folder. The description is used as the table title. The range specifies the
-    starting and ending line to be read from the file (0:0 means all lines).
+    folder. The description is the table title, followed by the max
+    column width. 
 
-    | VALTABLE | rvsrc/beam1.csv | Beam Geometry, 0:0
+    | VALTABLE | rvsrc/beam1.csv | Beam Geometry, 40
 
     ## The IMAGE command inserts an image file with caption, % scale, num;non option 
-    | IMAGE | rvsrc/beam1.png | Beam Diagram, 60, num
+    | IMAGE | rvsrc/beam1.png | Beam Diagram, 60, num, not
 
     Uniform Distributed Loads _[C]
     dl_1 <=: 1.2 * (spc_1 * (D_1 + D_2 + D_3) + D_4) | klf, kN_m, 2 | Dead load [ASCE7-05 2.3.2]
@@ -95,7 +95,9 @@ rv.V("""Beam Response
     | IMAGE2 | rvsrc/ss-beam2.png, rvsrc/ss-beam1.png | Moment diagram, Deflection diagram,46,54,num,num
 
     ##  The line tag [M] formats the equation using utf-8 text.
-    σ1 = M1 / S1 _[M]  Maximum bending stress  formula
+    Maximum bending stress  formula _[B]
+    
+    σ1 = M1 / S1 _[M]  
         
     m_1 <=: omega_1 * spn_1**2 / 8 | ftkips, mkN, 2 | Mid-span UDL moment 
     
@@ -112,18 +114,19 @@ rv.V("""Beam Response
 rv.D("""Publish Doc 
     
     A rivt file may be published as a text, PDF or HTML doc by changing the
-    PUBLISH type parameter to text, pdf or html. The PUBLISH command follows the
-    METADATA block. 
+    PUBLISH type parameter to text, pdf or html. 
     
     Published files are found in sub-folders of the _published folder. A text
     version of the doc or report is is always written to the rivt and
     _rivt-public folders as a README.txt file which is displayed on the
     first page of a GitHub repo. 
     
+    | PUBLISH | Example 1 - rivt Doc | html
+    
     _[[METADATA]] 
     [doc]
     authors = R Holland
-    version = 1.0.0a11
+    version = 1.0.0a12
     repo = https://github.com/rivt-info/rivt-single-doc
     license = https://opensource.org/license/mit/
     copyright = -
@@ -137,6 +140,7 @@ rv.D("""Publish Doc
     subtitle =  Example 1 - rivt Doc  
     copyright = --
     client = Attn: User Example
+    coverpage = true
     coverlogo_size = 50
     coverlogo = logo1.png
     runninglogo = logo2.png
@@ -144,14 +148,13 @@ rv.D("""Publish Doc
     project_ref = proj. 0001
     pdf_pagesize = letter
     pdf_margins = 1in, 1in, 1in, 1in 
-    pdf_link_underline = true
+    pdf_link_underline = false
+    ;----- table of contents levels: = 1 shows subdivisions, = 2 includes sections. 
+    toc_level = 1
 
     [process]
-    private_heading = true ; if false, default heading changed to public
-    keep_files = true ; if false, files in folders with leading "_" are deleted
+    doc_verbose = true; if false, minimum output during doc processing
     auto_cfg = true ; if false, config files are not updated from rivt file
     _[[END]]
     
-    | PUBLISH | Example 1 - rivt Doc | text
-
     """)

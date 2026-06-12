@@ -2,9 +2,18 @@
 ================================================================================
 
 
+.. raw:: pdf
 
-**1.1** Summary
---------------------------------------------------------------------------------
+   PageBreak
+
+      
+
+
+
+.. _Summary:
+
+**0.1** | Summary
+================================================================================
  
 This rivt file example calculates the maximum stress and deflection in a
 simply supported, uniformly loaded beam. It also serves as an annotated
@@ -12,19 +21,22 @@ example of a rivt doc with multiple sections that is not part of a report.
  
 The example illustrates the use of some of the most common API functions,
 commands and tags. Further details are provided in the 
-`rivt user manual <https://www.rivt.info>`_.
+**<** `rivt user manual <https://www.rivt.info>`__ **>** .
  
 The file may be formatted as a text, PDF or HTML doc by changing the type
 parameter in the PUBLISH command at the end of each rivt file (Doc-API
-*rv.D*). Published files are found in the *_published* folder.
+rv.D). Published files are found in the _published* folder.
  
  
 
 
+--------------
 
-------------
 
-**1.2** Load Combinations
+
+.. _Load Combinations:
+
+**0.1 - 2** | Load Combinations
 --------------------------------------------------------------------------------
  
 
@@ -44,10 +56,13 @@ Equation No.    Load Combination
  
 
 
+--------------
 
-------------
 
-**1.3** Loads and Geometry
+
+.. _Loads and Geometry:
+
+**0.1 - 3** | Loads and Geometry
 --------------------------------------------------------------------------------
  
 Successive value definitions are formatted as a table. Variable
@@ -73,8 +88,8 @@ Fb_1        20000.00 lb_in2  137.90 MPA     allowable stress
 ==========  ===============  =============  =====================
  
 The VALTABLE command reads variable values from a file in the rvsrc
-folder. The description is used as the table title. The range specifies the
-starting and ending line to be read from the file (0:0 means all lines).
+folder. The description is the table title, followed by the max
+column width. 
  
 |
 
@@ -91,11 +106,12 @@ spn_1       16.00 ft  4.88 m     beam span
  
 
 .. figure:: c:/git/rivt-example-01-git/rivt-report/rvsrc/beam1.png
-    :width: 60%
-    :align: center
+   :width: 60%
+   :align: center
 
-    **Fig. 1** - Beam Diagram 
+   **Fig. 1** - Beam Diagram   
     
+
 
  
 
@@ -116,12 +132,12 @@ spn_1       16.00 ft  4.88 m     beam span
 
            dl₁ = 3.64 klf     [dl₁] = 53.09 kN_m   | Dead load [ASCE7-05 2.3.2]
 
-           spc₁          D₃             D₁         D₂          D₄
-           ————————————  —————————————  —————————  ——————————  ——————————————————
-           2.00 ft       10.00 psf      3.80 psf   2.10 psf    3.00 klf
-           —————         —————          —————      —————       —————
-           beam spacing  partitions DL  joists DL  plywood DL  fixed machinery DL
-           ————————————  —————————————  —————————  ——————————  ——————————————————
+           D₄                  D₁         D₂          D₃             spc₁
+           ——————————————————  —————————  ——————————  —————————————  ————————————
+           3.00 klf            3.80 psf   2.10 psf    10.00 psf      2.00 ft
+           —————               —————      —————       —————          —————
+           fixed machinery DL  joists DL  plywood DL  partitions DL  beam spacing
+           ——————————————————  —————————  ——————————  —————————————  ————————————
 
 
  
@@ -138,12 +154,12 @@ spn_1       16.00 ft  4.88 m     beam span
 
            ll₁ = 0.13 klf     [ll₁] = 1.87 kN_m   | Live load [ASCE7-05 2.3.2]
 
-           spc₁          L₁
-           ————————————  ———————————
-           2.00 ft       40.00 psf
-           —————         —————
-           beam spacing  ASCE7-O5 LL
-           ————————————  ———————————
+           L₁           spc₁
+           ———————————  ————————————
+           40.00 psf    2.00 ft
+           —————        —————
+           ASCE7-O5 LL  beam spacing
+           ———————————  ————————————
 
 
  
@@ -172,10 +188,13 @@ spn_1       16.00 ft  4.88 m     beam span
  
 
 
+--------------
 
-------------
 
-**1.4** Beam Response
+
+.. _Beam Response:
+
+**0.1 - 4** | Beam Response
 --------------------------------------------------------------------------------
  
 The following lines import the beam geometry from an external file, 
@@ -186,13 +205,14 @@ the maximum moment, bending stress and mid-span deflection.
 **Table 4**: Beam functions (rvsrc/sectprop.py)
 
 
-==========================  =====================================================
+==========================  ============================================
 Function                    Docstring
-==========================  =====================================================
+==========================  ============================================
 rectsect(b, d)              section modulus of rectangle
 rectinertia(b, d)           moment of inertia of rectangle
-midspan_delta(ln, w, e, i)  mid-span deflection of simply supported beam with UDL
-==========================  =====================================================
+midspan_delta(ln, w, e, i)  mid-span deflection of simply supported beam
+                            with UDL
+==========================  ============================================
 
  
 
@@ -208,11 +228,11 @@ midspan_delta(ln, w, e, i)  mid-span deflection of simply supported beam with UD
 
            section₁ = 540.00 in3     [section₁] = 8849.01 cm3   | rectangle - S (sectprop.py)
 
-           h₁          b₁
+           b₁          h₁
            ——————————  ——————————
-           18.00 inch  10.00 inch
+           10.00 inch  18.00 inch
            —————       —————
-           beam depth  beam width
+           beam width  beam depth
            ——————————  ——————————
 
 
@@ -230,11 +250,11 @@ midspan_delta(ln, w, e, i)  mid-span deflection of simply supported beam with UD
 
            inertia₁ = 4860.0 in4     [inertia₁] = 202288.5 cm4   | rectangle - I (sectprop.py)
 
-           h₁          b₁
+           b₁          h₁
            ——————————  ——————————
-           18.0 inch   10.0 inch
+           10.0 inch   18.0 inch
            —————       —————
-           beam depth  beam width
+           beam width  beam depth
            ——————————  ——————————
 
 
@@ -253,13 +273,18 @@ midspan_delta(ln, w, e, i)  mid-span deflection of simply supported beam with UD
             :width: 100%
             
             **Fig. 3 -** Deflection diagram 
+
                      
+
+ 
+**Maximum bending stress  formula**
+
 
  
 
 |
 
-**Eq.6:**  Maximum bending stress  formula
+**Eq.6:**  
 
 .. code-block:: text 
 
@@ -287,12 +312,12 @@ midspan_delta(ln, w, e, i)  mid-span deflection of simply supported beam with UD
 
            m₁ = 120.52 ftkip     [m₁] = 163.40 mkN   | Mid-span UDL moment
 
-           ω₁                           spn₁
-           ———————————————————————————  —————————
-           3.77 klf                     16.00 ft
-           —————                        —————
-           Total load [ASCE7-05 2.3.2]  beam span
-           ———————————————————————————  —————————
+           spn₁       ω₁
+           —————————  ———————————————————————————
+           16.00 ft   3.77 klf
+           —————      —————
+           beam span  Total load [ASCE7-05 2.3.2]
+           —————————  ———————————————————————————
 
 
  
@@ -311,29 +336,29 @@ midspan_delta(ln, w, e, i)  mid-span deflection of simply supported beam with UD
 
            fb₁ = 2678.2 lb_in2     [fb₁] = 18.5 MPA   | Bending stress
 
-           section₁                     m₁
-           ———————————————————————————  ———————————————————
-           540.0 inch3                  120.5 ft2·klf
-           —————                        —————
-           rectangle - S (sectprop.py)  Mid-span UDL moment
-           ———————————————————————————  ———————————————————
+           m₁                   section₁
+           ———————————————————  ———————————————————————————
+           120.5 ft2·klf        540.0 inch3
+           —————                —————
+           Mid-span UDL moment  rectangle - S (sectprop.py)
+           ———————————————————  ———————————————————————————
 
 
  
 
 |
+|
 
-
-**Eq. 9:**  Stress ratio
+**Eq.9:** Stress ratio
 
 .. code-block:: text 
 
   ▮ fb₁ < Fb₁
   ▮
-  ▮ fb₁       Fb₁        ratio L/R    check    reference
-  ▮ ————————  —————————  ———————————  ———————  ————————————
-  ▮ 2.68 ksi  20.00 ksi  0.133908     OK       Stress ratio
-  ▮ ————————  —————————  ———————————  ———————  ————————————
+  ▮ [1] fb₁    [2] Fb₁    ratio [1]/[2]    check    reference
+  ▮ —————————  —————————  ———————————————  ———————  ————————————
+  ▮ 2.68 ksi   20.00 ksi  0.13             OK       Stress ratio
+  ▮ —————————  —————————  ———————————————  ———————  ————————————
 
  
 
@@ -349,12 +374,12 @@ midspan_delta(ln, w, e, i)  mid-span deflection of simply supported beam with UD
 
            δ₁ = 0.04 inch     [δ₁] = 1.00 mm   | mid-span deflection (sectprop.py)
 
-           inertia₁                     E₁                     ω₁                           spn₁
-           ———————————————————————————  —————————————————————  ———————————————————————————  —————————
-           4860.00 inch4                29000.00 ksi           3.77 klf                     16.00 ft
-           —————                        —————                  —————                        —————
-           rectangle - I (sectprop.py)  modulus of elasticity  Total load [ASCE7-05 2.3.2]  beam span
-           ———————————————————————————  —————————————————————  ———————————————————————————  —————————
+           spn₁       inertia₁                     ω₁                           E₁
+           —————————  ———————————————————————————  ———————————————————————————  —————————————————————
+           16.00 ft   4860.00 inch4                3.77 klf                     29000.00 ksi
+           —————      —————                        —————                        —————
+           beam span  rectangle - I (sectprop.py)  Total load [ASCE7-05 2.3.2]  modulus of elasticity
+           —————————  ———————————————————————————  ———————————————————————————  —————————————————————
 
 
  

@@ -4,10 +4,10 @@ from pathlib import Path
 
 sys.path.append(str(Path(".").resolve()))
 
-project = "UDL Beam"
+project = "Example 1 - rivt Doc"
 copyright = "-"
 author = "self.R Holland"
-release = "1.0.0a11"
+release = "1.0.0a12"
 
 extensions = [
     "sphinx.ext.githubpages",
@@ -22,7 +22,7 @@ extensions = [
     "sphinx_new_tab_link",
     "rst2pdf.pdfbuilder",
 ]
-root_doc = "index"
+root_doc = "docindex"
 duration_write_json = ""
 html_show_sourcelink = False
 exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
