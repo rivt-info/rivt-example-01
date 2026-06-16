@@ -1,5 +1,7 @@
 #! python
 # %% import
+import rivtlib
+from rivtlib import rvapi
 import rivtlib.rvapi as rv
 
 # The following settings change defaults (shown n parenthesis) for each doc.
@@ -13,8 +15,9 @@ import rivtlib.rvapi as rv
 rv.I("""Summary  
 
     This rivt file example calculates the maximum stress and deflection in a
-    simply supported, uniformly loaded beam. It also serves as an annotated
-    example of a rivt doc with multiple sections that is not part of a report.
+    simply supported, uniformly loaded beam using E-B theory _[#]. It also
+    serves as an annotated example of a rivt doc with multiple sections that is
+    not part of a report.
 
     The example illustrates the use of some of the most common API functions,
     commands and tags. Further details are provided in the 
@@ -31,7 +34,7 @@ rv.I("""Load Combinations
 
     ## Indented comments with double hashes will not appear in the doc
     ## An inline table contained in a TABLE block is written to a CSV file. 
-    _[[TABLE]]  ASCE 7-05 Load Effects
+    _[[TABLE]]  ASCE 7-05 Load Effects _[#]
     ============= ================================================
     Equation No.    Load Combination
     ============= ================================================
@@ -46,9 +49,9 @@ rv.I("""Load Combinations
 # %% rv.V("""Loads and Geometry
 rv.V("""Loads and Geometry 
     
-    Successive value definitions are formatted as a table. Variable
-    values are defined with the define operator. The line tag [T] labels and
-    numbers the table.
+    Successive value definitions are formatted as a table. Variable values are
+    defined with the define operator. The line tag [T] labels and numbers the
+    table.
     
     Define Unit Loads _[T]
     D_1 ==: 3.8 * psf | psf, kPA, 2 | joists DL         
@@ -94,9 +97,9 @@ rv.V("""Beam Response
 
     | IMAGE2 | rvsrc/ss-beam2.png, rvsrc/ss-beam1.png | Moment diagram, Deflection diagram,46,54,num,num
 
-    ##  The line tag [M] formats the equation using utf-8 text.
-    Maximum bending stress  formula _[B]
+    Maximum bending stress formula _[B]
     
+    ##  The line tag [M] formats the equation using utf-8 text.
     σ1 = M1 / S1 _[M]  
         
     m_1 <=: omega_1 * spn_1**2 / 8 | ftkips, mkN, 2 | Mid-span UDL moment 
@@ -109,19 +112,27 @@ rv.V("""Beam Response
 
     """)
 
+rv.R("""doc notes | endnotes
+    "Euler–Bernoulli beam theory," Wikipedia, Wikimedia Foundation. [Online].
+    https://en.wikipedia.org/wiki/Euler%E2%80%93Bernoulli_beam_theory.
+    [Accessed: Jun. 15, 2026].
+
+    ASCE/SEI 7-05, Minimum Design Loads for Buildings and Other Structures,
+    American Society of Civil Engineers, 2005.
+    """)
 
 # %% rv.D("""Publish Doc
 rv.D("""Publish Doc 
     
-    A rivt file may be published as a text, PDF or HTML doc by changing the
-    PUBLISH type parameter to text, pdf or html. 
+    A rivt file may be published as a text, PDF or HTML doc by specifying the
+    PUBLISH type parameter as txt, pdf or html. 
     
     Published files are found in sub-folders of the _published folder. A text
     version of the doc or report is is always written to the rivt and
     _rivt-public folders as a README.txt file which is displayed on the
     first page of a GitHub repo. 
     
-    | PUBLISH | Example 1 - rivt Doc | html
+    | PUBLISH | Example 1 - rivt Doc | txt
     
     _[[METADATA]] 
     [doc]
@@ -149,7 +160,7 @@ rv.D("""Publish Doc
     pdf_pagesize = letter
     pdf_margins = 1in, 1in, 1in, 1in 
     pdf_link_underline = false
-    ;----- table of contents levels: = 1 shows subdivisions, = 2 includes sections. 
+    ; table of contents levels: =1 includes subdivisions, =2 includes sections
     toc_level = 1
 
     [process]

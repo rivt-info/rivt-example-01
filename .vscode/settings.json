@@ -524,4 +524,18 @@
     "python-envs.pythonProjects": [],
     "python.analysis.autoImportCompletions": false,
     "window.zoomLevel": 1,
+    "favorites.resources": [
+        {
+            "filePath": "rivt-report\\_published",
+            "group": "Default"
+        },
+        {
+            "filePath": "rivt-report\\_published\\docs",
+            "group": "Default"
+        },
+        {
+            "filePath": "rivt-report\\_published\\pdfdocs",
+            "group": "Default"
+        }
+    ],
 }
