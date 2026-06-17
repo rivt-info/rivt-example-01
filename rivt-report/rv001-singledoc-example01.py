@@ -134,7 +134,7 @@ rv.D("""Publish Doc
     _rivt-public folders as a README.txt file which is displayed on the
     first page of a GitHub repo. 
     
-    | PUBLISH | Example 1 - rivt Doc | html
+    | PUBLISH | Example 1 - rivt Doc | pdf
     
     _[[METADATA]] 
     [doc]
@@ -154,7 +154,7 @@ rv.D("""Publish Doc
     copyright = --
     client = Attn: User Example
     coverpage = true
-    coverlogo_size = 50
+    coverlogo_size = 30
     coverlogo = logo1.png
     runninglogo = logo2.png
     runninglabel = rivt

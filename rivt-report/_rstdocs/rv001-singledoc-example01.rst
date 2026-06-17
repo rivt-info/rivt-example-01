@@ -1,5 +1,103 @@
-**Example 1 - rivt Doc**
-================================================================================
+.. |s| unicode:: 0xA0 
+
+
+
+.. |blklogo| image:: ./_static/logo2.png
+   :height: 100px
+   :alt: logo
+
+
+    
+.. header::
+    .. list-table::
+        :class: header-box
+        :align: left
+        :widths: 90 10
+        
+        * - **Example 1 - rivt Doc** - v1.0.0a12 |s| |s| |s| |s|  **###Section###**
+          - p. **###Page###**   
+
+          
+
+.. footer:: 
+    .. list-table::
+        :class: footer-box
+        :align: left
+        :widths: 84 22 16
+        
+        * - 2026-06-17 |s| |s| |s| **|** |s| |s| |s| R Holland        
+          - **rivt**        
+          - |blklogo|
+
+
+                  
+
+.. role:: btext
+   :class: big-text
+
+.. role:: mtext
+    :class: medium-text
+
+.. role:: stext
+    :class: small-text
+
+|
+|
+        
+.. image:: _static/logo1.png
+   :width: 30%
+   :align: center
+
+|
+|
+|
+
+.. rst-class:: center
+
+    :mtext:`Example 1 - rivt Doc`
+
+|
+
+.. rst-class:: center
+
+    :btext:`Example 1 - rivt Doc`
+    
+|
+|
+|
+|
+|
+
+
+.. rst-class:: center
+
+    :mtext:`Attn: User Example`
+
+|
+
+.. rst-class:: center
+
+    :stext:`proj. 0001`
+
+   
+.. raw:: pdf
+
+   PageBreak noHead
+      
+**Example 1 - rivt Doc** - v1.0.0a12
+
+--------------------
+
+|
+
+.. contents:: Table of Contents
+  :depth: 1
+
+  
+.. raw:: pdf
+ 
+   PageBreak mainPage
+   SetPageCounter 1
 
 
 .. raw:: pdf
@@ -136,12 +234,12 @@ spn_1       16.00 ft  4.88 m     beam span
 
            dl₁ = 3.64 klf     [dl₁] = 53.09 kN_m   | Dead load [ASCE7-05 2.3.2]
 
-           D₄                  D₂          D₃             spc₁          D₁
-           ——————————————————  ——————————  —————————————  ————————————  —————————
-           3.00 klf            2.10 psf    10.00 psf      2.00 ft       3.80 psf
-           —————               —————       —————          —————         —————
-           fixed machinery DL  plywood DL  partitions DL  beam spacing  joists DL
-           ——————————————————  ——————————  —————————————  ————————————  —————————
+           D₃             spc₁          D₄                  D₂          D₁
+           —————————————  ————————————  ——————————————————  ——————————  —————————
+           10.00 psf      2.00 ft       3.00 klf            2.10 psf    3.80 psf
+           —————          —————         —————               —————       —————
+           partitions DL  beam spacing  fixed machinery DL  plywood DL  joists DL
+           —————————————  ————————————  ——————————————————  ——————————  —————————
 
 
  
@@ -158,12 +256,12 @@ spn_1       16.00 ft  4.88 m     beam span
 
            ll₁ = 0.13 klf     [ll₁] = 1.87 kN_m   | Live load [ASCE7-05 2.3.2]
 
-           L₁           spc₁
-           ———————————  ————————————
-           40.00 psf    2.00 ft
-           —————        —————
-           ASCE7-O5 LL  beam spacing
-           ———————————  ————————————
+           spc₁          L₁
+           ————————————  ———————————
+           2.00 ft       40.00 psf
+           —————         —————
+           beam spacing  ASCE7-O5 LL
+           ————————————  ———————————
 
 
  
@@ -180,11 +278,11 @@ spn_1       16.00 ft  4.88 m     beam span
 
            ω₁ = 3.77 klf     [ω₁] = 54.96 kN_m   | Total load [ASCE7-05 2.3.2]
 
-           ll₁                         dl₁
+           dl₁                         ll₁
            ——————————————————————————  ——————————————————————————
-           128.00 ft·psf               3.64 klf
+           3.64 klf                    128.00 ft·psf
            —————                       —————
-           Live load [ASCE7-05 2.3.2]  Dead load [ASCE7-05 2.3.2]
+           Dead load [ASCE7-05 2.3.2]  Live load [ASCE7-05 2.3.2]
            ——————————————————————————  ——————————————————————————
 
 
