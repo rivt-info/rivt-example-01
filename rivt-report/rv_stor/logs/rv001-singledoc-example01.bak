@@ -16,8 +16,8 @@ rv.I("""Summary
 
     This rivt file example calculates the maximum stress and deflection in a
     simply supported, uniformly loaded beam using E-B theory _[#]. It also
-    serves as an annotated example of a rivt doc with multiple sections that is
-    not part of a report.
+    serves as an annotated example of a single rivt doc with multiple sections
+    that is not part of a report.
 
     The example illustrates the use of some of the most common API functions,
     commands and tags. Further details are provided in the 
@@ -25,7 +25,7 @@ rv.I("""Summary
 
     The file may be formatted as a text, PDF or HTML doc by changing the type
     parameter in the PUBLISH command at the end of each rivt file (Doc-API
-    *rv.D*). Published files are found in the *_published* folder.
+    *rv.D*). Published files are found in the _published folder.
 
     """)
 
@@ -33,8 +33,11 @@ rv.I("""Summary
 rv.I("""Load Combinations 
 
     ## Indented comments with double hashes will not appear in the doc
-    ## An inline table contained in a TABLE block is written to a CSV file. 
-    _[[TABLE]]  ASCE 7-05 Load Effects _[#]
+    ## An inline table contained in a TABLE block is written to a CSV file.
+      
+    Dead and live loads effects are taken from ASCE 7-05 _[#]
+
+    _[[TABLE]]  Load Effects 
     ============= ================================================
     Equation No.    Load Combination
     ============= ================================================
@@ -71,7 +74,7 @@ rv.V("""Loads and Geometry
     | VALTABLE | rvsrc/beam1.csv | Beam Geometry, 40
 
     ## The IMAGE command inserts an image file with caption, % scale, num;non option 
-    | IMAGE | rvsrc/beam1.png | Beam Diagram, 60, num, not
+    | IMAGE | rvsrc/img/beam1.png | Beam Diagram, 60, num, not
 
     Uniform Distributed Loads _[C]
     dl_1 <=: 1.2 * (spc_1 * (D_1 + D_2 + D_3) + D_4) | klf, kN_m, 2 | Dead load [ASCE7-05 2.3.2]
@@ -95,7 +98,7 @@ rv.V("""Beam Response
 
     inertia_1 :=: rectinertia(b_1, h_1) | in4, cm4, 1 | rectangle - I (sectprop.py)
 
-    | IMAGE2 | rvsrc/ss-beam2.png, rvsrc/ss-beam1.png | Moment diagram, Deflection diagram,46,54,num,num
+    | IMAGE2 | rvsrc/img/ss-beam2.png, rvsrc/img/ss-beam1.png | Moment diagram, Deflection diagram,46,54,num,num
 
     Maximum bending stress formula _[B]
     
@@ -114,7 +117,7 @@ rv.V("""Beam Response
 
 rv.R("""doc notes | endnotes
     "Euler–Bernoulli beam theory," Wikipedia, Wikimedia Foundation. [Online].
-    https://en.wikipedia.org/wiki/Euler%E2%80%93Bernoulli_beam_theory.
+    https://en.wikipedia.org/wiki/Euler_Bernoulli_beam_theory. 
     [Accessed: Jun. 15, 2026].
 
     ASCE/SEI 7-05, Minimum Design Loads for Buildings and Other Structures,
@@ -132,7 +135,7 @@ rv.D("""Publish Doc
     _rivt-public folders as a README.txt file which is displayed on the
     first page of a GitHub repo. 
     
-    | PUBLISH | Example 1 - rivt Doc | txt
+    | PUBLISH | Example 1 - rivt Doc | html
     
     _[[METADATA]] 
     [doc]

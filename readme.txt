@@ -1,6 +1,6 @@
 
 --------------------------------------------------------------------------------
-| rivt | Example 1 - rivt Doc | R Holland | v-1.0.0a12 | 2026-06-15 - 11:33PM
+| rivt | Example 1 - rivt Doc | R Holland | v-1.0.0a12 | 2026-06-17 - 01:39AM
 --------------------------------------------------------------------------------
 
 
@@ -8,9 +8,9 @@
 ================================================================================
  
 This rivt file example calculates the maximum stress and deflection in a
-simply supported, uniformly loaded beam using E-B theory
-serves as an annotated example of a rivt doc with multiple sections that is
-not part of a report.
+simply supported, uniformly loaded beam using E-B theory  [1]_ . It also
+serves as an annotated example of a single rivt doc with multiple sections
+that is not part of a report.
  
 The example illustrates the use of some of the most common API functions,
 commands and tags. Further details are provided in the
@@ -18,14 +18,17 @@ rivt user manual <https://www.rivt.info> .
  
 The file may be formatted as a text, PDF or HTML doc by changing the type
 parameter in the PUBLISH command at the end of each rivt file (Doc-API
-rv.D). Published files are found in the _published* folder.
+rv.D). Published files are found in the _published folder.
  
  
 
 0.1 - 2 | Load Combinations
 --------------------------------------------------------------------------------
  
-Table 1: ASCE 7-05 Load Effects _[#] (stored: t001-1.csv)
+ 
+Dead and live loads effects are taken from ASCE 7-05  [2]_ 
+ 
+Table 1: Load Effects (stored: t001-1.csv)
 ============= ================================================ 
 Equation No.    Load Combination 
 ============= ================================================ 
@@ -76,7 +79,7 @@ spn_1       16.00 ft  4.88 m     beam span
 
  
           ----------------------------------------
-Fig. 1 - Beam Diagram [file: rvsrc/beam1.png  ]
+Fig. 1 - Beam Diagram [file: rvsrc/img/beam1.png  ]
           ----------------------------------------
 
  
@@ -90,13 +93,13 @@ Fig. 1 - Beam Diagram [file: rvsrc/beam1.png  ]
 
 dl₁ = 3.64 klf    [dl₁] = 53.09 kN_m  | Dead load [ASCE7-05 2.3.2]
 
-==========  =========  ==================  ============  =============
-D₂          D₁         D₄                  spc₁          D₃
-==========  =========  ==================  ============  =============
-2.10 psf    3.80 psf   3.00 klf            2.00 ft       10.00 psf
-—————       —————      —————               —————         —————
-plywood DL  joists DL  fixed machinery DL  beam spacing  partitions DL
-==========  =========  ==================  ============  =============
+==================  ==========  =============  ============  =========
+D₄                  D₂          D₃             spc₁          D₁
+==================  ==========  =============  ============  =========
+3.00 klf            2.10 psf    10.00 psf      2.00 ft       3.80 psf
+—————               —————       —————          —————         —————
+fixed machinery DL  plywood DL  partitions DL  beam spacing  joists DL
+==================  ==========  =============  ============  =========
  
 
 ┌  Eq-2 | Live load [ASCE7-05 2.3.2]
@@ -123,11 +126,11 @@ ASCE7-O5 LL  beam spacing
 ω₁ = 3.77 klf    [ω₁] = 54.96 kN_m  | Total load [ASCE7-05 2.3.2]
 
 ==========================  ==========================
-dl₁                         ll₁
+ll₁                         dl₁
 ==========================  ==========================
-3.64 klf                    128.00 ft·psf
+128.00 ft·psf               3.64 klf
 —————                       —————
-Dead load [ASCE7-05 2.3.2]  Live load [ASCE7-05 2.3.2]
+Live load [ASCE7-05 2.3.2]  Dead load [ASCE7-05 2.3.2]
 ==========================  ==========================
  
  
@@ -161,11 +164,11 @@ midspan_delta(ln, w, e, i)  mid-span deflection of simply supported beam
 section₁ = 540.00 in3   [section₁] = 8849.01 cm3  | rectangle - S (sectprop.py)
 
 ==========  ==========
-h₁          b₁
+b₁          h₁
 ==========  ==========
-18.00 inch  10.00 inch
+10.00 inch  18.00 inch
 —————       —————
-beam depth  beam width
+beam width  beam depth
 ==========  ==========
  
 
@@ -177,16 +180,16 @@ beam depth  beam width
 inertia₁ = 4860.0 in4   [inertia₁] = 202288.5 cm4  | rectangle - I (sectprop.py)
 
 ==========  ==========
-h₁          b₁
+b₁          h₁
 ==========  ==========
-18.0 inch   10.0 inch
+10.0 inch   18.0 inch
 —————       —————
-beam depth  beam width
+beam width  beam depth
 ==========  ==========
  
           ----------------------------------------
 Fig. 2 - Moment diagram  | Fig. 3 - Deflection diagram 
-files: rvsrc/ss-beam2.png, rvsrc/ss-beam1.png 
+files: rvsrc/img/ss-beam2.png, rvsrc/img/ss-beam1.png 
           ----------------------------------------
 
 
@@ -215,13 +218,13 @@ Maximum bending stress formula
 
 m₁ = 120.52 ftkip    [m₁] = 163.40 mkN  | Mid-span UDL moment
 
-===========================  =========
-ω₁                           spn₁
-===========================  =========
-3.77 klf                     16.00 ft
-—————                        —————
-Total load [ASCE7-05 2.3.2]  beam span
-===========================  =========
+=========  ===========================
+spn₁       ω₁
+=========  ===========================
+16.00 ft   3.77 klf
+—————      —————
+beam span  Total load [ASCE7-05 2.3.2]
+=========  ===========================
  
 
 ┌  Eq-8 | Bending stress
@@ -233,13 +236,13 @@ Total load [ASCE7-05 2.3.2]  beam span
 
 fb₁ = 2678.2 lb_in2    [fb₁] = 18.5 MPA  | Bending stress
 
-===================  ===========================
-m₁                   section₁
-===================  ===========================
-120.5 ft2·klf        540.0 inch3
-—————                —————
-Mid-span UDL moment  rectangle - S (sectprop.py)
-===================  ===========================
+===========================  ===================
+section₁                     m₁
+===========================  ===================
+540.0 inch3                  120.5 ft2·klf
+—————                        —————
+rectangle - S (sectprop.py)  Mid-span UDL moment
+===========================  ===================
  
 ┌  Eq-9 | Stress ratio
 │
@@ -262,29 +265,22 @@ Mid-span UDL moment  rectangle - S (sectprop.py)
 
 δ₁ = 0.04 inch   [δ₁] = 1.00 mm  | mid-span deflection (sectprop.py)
 
-=====================  ===========================  ===========================  =========
-E₁                     ω₁                           inertia₁                     spn₁
-=====================  ===========================  ===========================  =========
-29000.00 ksi           3.77 klf                     4860.00 inch4                16.00 ft
-—————                  —————                        —————                        —————
-modulus of elasticity  Total load [ASCE7-05 2.3.2]  rectangle - I (sectprop.py)  beam span
-=====================  ===========================  ===========================  =========
+=========  =====================  ===========================  ===========================
+spn₁       E₁                     ω₁                           inertia₁
+=========  =====================  ===========================  ===========================
+16.00 ft   29000.00 ksi           3.77 klf                     4860.00 inch4
+—————      —————                  —————                        —————
+beam span  modulus of elasticity  Total load [ASCE7-05 2.3.2]  rectangle - I (sectprop.py)
+=========  =====================  ===========================  ===========================
  
  
 
 --------------------------------------------------------------------------------
 
-[1] " E u l e r – B e r n o u l l i   b e a m   t h e o r y , "   W i k i p e d i a ,   W i k i m e d i a   F o u n d a t i o n .   [ O n l i n e ] .
+[1] "Euler–Bernoulli beam theory," Wikipedia, Wikimedia Foundation.
+[Online].https://en.wikipedia.org/wiki/Euler_Bernoulli_beam_theory.[Accessed:
+Jun. 15, 2026].
 
-[2] h t t p s : / / e n . w i k i p e d i a . o r g / w i k i / E u l e r % E 2 % 8 0 % 9 3 B e r n o u l l i _ b e a m _ t h e o r y .
-
-[3] [ A c c e s s e d :   J u n .   1 5 ,   2 0 2 6 ] .
-
-[4] 
-
-[5] A S C E / S E I   7 - 0 5 ,   M i n i m u m   D e s i g n   L o a d s   f o r   B u i l d i n g s   a n d   O t h e r   S t r u c t u r e s ,
-
-[6] A m e r i c a n   S o c i e t y   o f   C i v i l   E n g i n e e r s ,   2 0 0 5 .
-
-[7] 
+[2] ASCE/SEI 7-05, Minimum Design Loads for Buildings and Other
+Structures,American Society of Civil Engineers, 2005.
 
