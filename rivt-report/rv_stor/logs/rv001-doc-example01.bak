@@ -91,7 +91,7 @@ rv.V("""Beam Response
     calculate section properties from imported functions and calculate 
     the maximum moment, bending stress and mid-span deflection. 
 
-    | PYTHON | rvsrc/sectprop.py | Beam functions
+    | PYTHON | rvsrc/scripts/sectprop.py | Beam functions
 
     section_1 :=: rectsect(b_1, h_1) | in3, cm3, 2 | rectangle - S (sectprop.py)
 
@@ -149,8 +149,7 @@ rv.D("""Publish Doc
     fork1_license = https://opensource.org/license/mit/
     
     [layout]
-    title = UDL Beam
-    subtitle =  Example 1 - rivt Doc  
+    subtitle =  UDL Beam
     copyright = --
     client = Attn: User Example
     coverpage = true

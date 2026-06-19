@@ -25,7 +25,6 @@ rv.I("""Summary
     The file may be formatted as a text, PDF or HTML doc by changing the type
     parameter in the PUBLISH command at the end of each rivt file (Doc-API
     *rv.D*). Published files are found in the _published folder.
-
     """)
 
 # %% rv.I("""Load Combinations
@@ -45,7 +44,6 @@ rv.I("""Load Combinations
     16-3           1.2(D+F+T) + 1.6(Lr or S or R) + (f1L or 0.8W)
     ============= ================================================
     _[[END]]
-
     """)
 
 # %% rv.V("""Loads and Geometry
@@ -81,7 +79,6 @@ rv.V("""Loads and Geometry
     ll_1 <=: 1.6 * spc_1 * L_1 | klf, kN_m, 2 | Live load [ASCE7-05 2.3.2]
     
     omega_1 <=: dl_1 + ll_1 | klf, kN_m, 2 | Total load [ASCE7-05 2.3.2]
-    
     """)
 
 # %% rv.V("""Beam Stress
@@ -111,7 +108,6 @@ rv.V("""Beam Response
     fb_1 < Fb_1 | ksi, 2, OK, >>> NOT OK | Stress ratio 
 
     delta_1 :=: midspan_delta(spn_1, omega_1, E_1, inertia_1) | inch, mm, 2 | mid-span deflection (sectprop.py)
-
     """)
 
 rv.R("""doc notes | endnotes
@@ -149,8 +145,7 @@ rv.D("""Publish Doc
     fork1_license = https://opensource.org/license/mit/
     
     [layout]
-    title = UDL Beam
-    subtitle =  rivt markup examples
+    subtitle =  UDL Beam
     copyright = --
     client = Attn: User Example
     coverpage = true
@@ -166,8 +161,7 @@ rv.D("""Publish Doc
     toc_level = 1
 
     [process]
-    doc_verbose = true; if false, minimum output during doc processing
+    doc_verbose = true; if false minmize output during doc processing
     auto_cfg = true ; if false, config files are not updated from rivt file
-    _[[END]]
-    
+    _[[END]]    
     """)

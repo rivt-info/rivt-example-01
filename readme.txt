@@ -1,6 +1,6 @@
 
 --------------------------------------------------------------------------------
-| rivt | Example 1 - rivt Doc | R Holland | v-1.0.0a12 | 2026-06-17 - 01:52AM
+| rivt | Example 1 - rivt Doc | R Holland | v-1.0.0a12 | 2026-06-18 - 05:56PM
 --------------------------------------------------------------------------------
 
 
@@ -93,13 +93,13 @@ Fig. 1 - Beam Diagram [file: rvsrc/img/beam1.png  ]
 
 dl₁ = 3.64 klf    [dl₁] = 53.09 kN_m  | Dead load [ASCE7-05 2.3.2]
 
-=============  ============  ==================  ==========  =========
-D₃             spc₁          D₄                  D₂          D₁
-=============  ============  ==================  ==========  =========
-10.00 psf      2.00 ft       3.00 klf            2.10 psf    3.80 psf
-—————          —————         —————               —————       —————
-partitions DL  beam spacing  fixed machinery DL  plywood DL  joists DL
-=============  ============  ==================  ==========  =========
+==================  =========  ==========  ============  =============
+D₄                  D₁         D₂          spc₁          D₃
+==================  =========  ==========  ============  =============
+3.00 klf            3.80 psf   2.10 psf    2.00 ft       10.00 psf
+—————               —————      —————       —————         —————
+fixed machinery DL  joists DL  plywood DL  beam spacing  partitions DL
+==================  =========  ==========  ============  =============
  
 
 ┌  Eq-2 | Live load [ASCE7-05 2.3.2]
@@ -109,13 +109,13 @@ partitions DL  beam spacing  fixed machinery DL  plywood DL  joists DL
 
 ll₁ = 0.13 klf    [ll₁] = 1.87 kN_m  | Live load [ASCE7-05 2.3.2]
 
-============  ===========
-spc₁          L₁
-============  ===========
-2.00 ft       40.00 psf
-—————         —————
-beam spacing  ASCE7-O5 LL
-============  ===========
+===========  ============
+L₁           spc₁
+===========  ============
+40.00 psf    2.00 ft
+—————        —————
+ASCE7-O5 LL  beam spacing
+===========  ============
  
 
 ┌  Eq-3 | Total load [ASCE7-05 2.3.2]
@@ -126,11 +126,11 @@ beam spacing  ASCE7-O5 LL
 ω₁ = 3.77 klf    [ω₁] = 54.96 kN_m  | Total load [ASCE7-05 2.3.2]
 
 ==========================  ==========================
-dl₁                         ll₁
+ll₁                         dl₁
 ==========================  ==========================
-3.64 klf                    128.00 ft·psf
+128.00 ft·psf               3.64 klf
 —————                       —————
-Dead load [ASCE7-05 2.3.2]  Live load [ASCE7-05 2.3.2]
+Live load [ASCE7-05 2.3.2]  Dead load [ASCE7-05 2.3.2]
 ==========================  ==========================
  
  
@@ -143,7 +143,7 @@ calculate section properties from imported functions and calculate
 the maximum moment, bending stress and mid-span deflection.
  
 
-Table 4: Beam functions (rvsrc/sectprop.py)
+Table 4: Beam functions (rvsrc/scripts/sectprop.py)
 
 ==========================  ============================================
 Function                    Docstring
@@ -164,11 +164,11 @@ midspan_delta(ln, w, e, i)  mid-span deflection of simply supported beam
 section₁ = 540.00 in3   [section₁] = 8849.01 cm3  | rectangle - S (sectprop.py)
 
 ==========  ==========
-b₁          h₁
+h₁          b₁
 ==========  ==========
-10.00 inch  18.00 inch
+18.00 inch  10.00 inch
 —————       —————
-beam width  beam depth
+beam depth  beam width
 ==========  ==========
  
 
@@ -180,11 +180,11 @@ beam width  beam depth
 inertia₁ = 4860.0 in4   [inertia₁] = 202288.5 cm4  | rectangle - I (sectprop.py)
 
 ==========  ==========
-b₁          h₁
+h₁          b₁
 ==========  ==========
-10.0 inch   18.0 inch
+18.0 inch   10.0 inch
 —————       —————
-beam width  beam depth
+beam depth  beam width
 ==========  ==========
  
           ----------------------------------------
@@ -218,13 +218,13 @@ Maximum bending stress formula
 
 m₁ = 120.52 ftkip    [m₁] = 163.40 mkN  | Mid-span UDL moment
 
-=========  ===========================
-spn₁       ω₁
-=========  ===========================
-16.00 ft   3.77 klf
-—————      —————
-beam span  Total load [ASCE7-05 2.3.2]
-=========  ===========================
+===========================  =========
+ω₁                           spn₁
+===========================  =========
+3.77 klf                     16.00 ft
+—————                        —————
+Total load [ASCE7-05 2.3.2]  beam span
+===========================  =========
  
 
 ┌  Eq-8 | Bending stress
@@ -236,13 +236,13 @@ beam span  Total load [ASCE7-05 2.3.2]
 
 fb₁ = 2678.2 lb_in2    [fb₁] = 18.5 MPA  | Bending stress
 
-===========================  ===================
-section₁                     m₁
-===========================  ===================
-540.0 inch3                  120.5 ft2·klf
-—————                        —————
-rectangle - S (sectprop.py)  Mid-span UDL moment
-===========================  ===================
+===================  ===========================
+m₁                   section₁
+===================  ===========================
+120.5 ft2·klf        540.0 inch3
+—————                —————
+Mid-span UDL moment  rectangle - S (sectprop.py)
+===================  ===========================
  
 ┌  Eq-9 | Stress ratio
 │
@@ -266,11 +266,11 @@ rectangle - S (sectprop.py)  Mid-span UDL moment
 δ₁ = 0.04 inch   [δ₁] = 1.00 mm  | mid-span deflection (sectprop.py)
 
 =========  =====================  ===========================  ===========================
-spn₁       E₁                     ω₁                           inertia₁
+spn₁       E₁                     inertia₁                     ω₁
 =========  =====================  ===========================  ===========================
-16.00 ft   29000.00 ksi           3.77 klf                     4860.00 inch4
+16.00 ft   29000.00 ksi           4860.00 inch4                3.77 klf
 —————      —————                  —————                        —————
-beam span  modulus of elasticity  Total load [ASCE7-05 2.3.2]  rectangle - I (sectprop.py)
+beam span  modulus of elasticity  rectangle - I (sectprop.py)  Total load [ASCE7-05 2.3.2]
 =========  =====================  ===========================  ===========================
  
  

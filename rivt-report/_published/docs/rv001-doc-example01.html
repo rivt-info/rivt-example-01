@@ -56,7 +56,7 @@
     <script src="_static/togglebutton.js?v=1ae7504c"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="_static/design-tabs.js?v=f930bc37"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'rv001-singledoc-example01';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'rv001-doc-example01';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -420,12 +420,12 @@ column width.</p>
 
 dl₁ = 3.64 klf     [dl₁] = 53.09 kN_m   | Dead load [ASCE7-05 2.3.2]
 
-D₄                  D₂          D₃             spc₁          D₁
-——————————————————  ——————————  —————————————  ————————————  —————————
-3.00 klf            2.10 psf    10.00 psf      2.00 ft       3.80 psf
-—————               —————       —————          —————         —————
-fixed machinery DL  plywood DL  partitions DL  beam spacing  joists DL
-——————————————————  ——————————  —————————————  ————————————  —————————
+D₄                  D₁         D₂          spc₁          D₃
+——————————————————  —————————  ——————————  ————————————  —————————————
+3.00 klf            3.80 psf   2.10 psf    2.00 ft       10.00 psf
+—————               —————      —————       —————         —————
+fixed machinery DL  joists DL  plywood DL  beam spacing  partitions DL
+——————————————————  —————————  ——————————  ————————————  —————————————
 </pre></div>
 </div>
 <div class="line-block">
@@ -467,7 +467,7 @@ Live load [ASCE7-05 2.3.2]  Dead load [ASCE7-05 2.3.2]
 <p>The following lines import the beam geometry from an external file,
 calculate section properties from imported functions and calculate
 the maximum moment, bending stress and mid-span deflection.</p>
-<p><strong>Table 4</strong>: Beam functions (rvsrc/sectprop.py)</p>
+<p><strong>Table 4</strong>: Beam functions (rvsrc/scripts/sectprop.py)</p>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Function</p></th>
@@ -496,11 +496,11 @@ with UDL</p></td>
 
 section₁ = 540.00 in3     [section₁] = 8849.01 cm3   | rectangle - S (sectprop.py)
 
-b₁          h₁
+h₁          b₁
 ——————————  ——————————
-10.00 inch  18.00 inch
+18.00 inch  10.00 inch
 —————       —————
-beam width  beam depth
+beam depth  beam width
 ——————————  ——————————
 </pre></div>
 </div>
@@ -512,11 +512,11 @@ beam width  beam depth
 
 inertia₁ = 4860.0 in4     [inertia₁] = 202288.5 cm4   | rectangle - I (sectprop.py)
 
-b₁          h₁
+h₁          b₁
 ——————————  ——————————
-10.0 inch   18.0 inch
+18.0 inch   10.0 inch
 —————       —————
-beam width  beam depth
+beam depth  beam width
 ——————————  ——————————
 </pre></div>
 </div>
@@ -567,12 +567,12 @@ m₁ = ────────
 
 m₁ = 120.52 ftkip     [m₁] = 163.40 mkN   | Mid-span UDL moment
 
-spn₁       ω₁
-—————————  ———————————————————————————
-16.00 ft   3.77 klf
-—————      —————
-beam span  Total load [ASCE7-05 2.3.2]
-—————————  ———————————————————————————
+ω₁                           spn₁
+———————————————————————————  —————————
+3.77 klf                     16.00 ft
+—————                        —————
+Total load [ASCE7-05 2.3.2]  beam span
+———————————————————————————  —————————
 </pre></div>
 </div>
 <div class="line-block">
@@ -585,12 +585,12 @@ fb₁ = ────────
 
 fb₁ = 2678.2 lb_in2     [fb₁] = 18.5 MPA   | Bending stress
 
-section₁                     m₁
-———————————————————————————  ———————————————————
-540.0 inch3                  120.5 ft2·klf
-—————                        —————
-rectangle - S (sectprop.py)  Mid-span UDL moment
-———————————————————————————  ———————————————————
+m₁                   section₁
+———————————————————  ———————————————————————————
+120.5 ft2·klf        540.0 inch3
+—————                —————
+Mid-span UDL moment  rectangle - S (sectprop.py)
+———————————————————  ———————————————————————————
 </pre></div>
 </div>
 <div class="line-block">
@@ -614,11 +614,11 @@ rectangle - S (sectprop.py)  Mid-span UDL moment
 
 δ₁ = 0.04 inch     [δ₁] = 1.00 mm   | mid-span deflection (sectprop.py)
 
-spn₁       E₁                     ω₁                           inertia₁
+spn₁       E₁                     inertia₁                     ω₁
 —————————  —————————————————————  ———————————————————————————  ———————————————————————————
-16.00 ft   29000.00 ksi           3.77 klf                     4860.00 inch4
+16.00 ft   29000.00 ksi           4860.00 inch4                3.77 klf
 —————      —————                  —————                        —————
-beam span  modulus of elasticity  Total load [ASCE7-05 2.3.2]  rectangle - I (sectprop.py)
+beam span  modulus of elasticity  rectangle - I (sectprop.py)  Total load [ASCE7-05 2.3.2]
 —————————  —————————————————————  ———————————————————————————  ———————————————————————————
 </pre></div>
 </div>
@@ -727,7 +727,7 @@ beam span  modulus of elasticity  Total load [ASCE7-05 2.3.2]  rectangle - I (se
 <!-- _templates/rv-date.html -->
 <div class="footer-item">
     <p class="rvdate">
-        2026-06-17
+        2026-06-18
     </p>
 </div></div>
       

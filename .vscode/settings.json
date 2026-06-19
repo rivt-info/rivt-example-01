@@ -391,7 +391,7 @@
             "isWholeLine": true,
         },
     ],
-    "terminal.integrated.defaultLocation": "editor",
+    "terminal.integrated.defaultLocation": "view",
     "terminal.integrated.defaultProfile.windows": "Command Prompt",
     "terminal.integrated.fontSize": 14,
     "terminal.integrated.scrollback": 5000,
