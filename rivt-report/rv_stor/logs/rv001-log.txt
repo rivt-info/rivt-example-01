@@ -1,33 +1,33 @@
-06-18 17:56  rv001-doc-example01   INFO     Doc start
-06-18 17:56  rv001-doc-example01   INFO     rivtlib version: 1.0.0a5
-06-18 17:56  rv001-doc-example01   INFO     rivt backup : C:\git\rivt-example-01-git\rivt-report\rv_stor\logs\rv001-doc-example01.bak
-06-18 17:56  rv001-doc-example01   INFO     Summary  
-06-18 17:56  rv001-doc-example01   INFO     SECTION 0.1 - type I
-06-18 17:56  rv001-doc-example01   INFO     tag : _[U]
-06-18 17:56  rv001-doc-example01   INFO     Load Combinations 
-06-18 17:56  rv001-doc-example01   INFO     SECTION 0.1 - 2 - type I
-06-18 17:56  rv001-doc-example01   INFO     tag : _[[TABLE]]
-06-18 17:56  rv001-doc-example01   INFO     Loads and Geometry 
-06-18 17:56  rv001-doc-example01   INFO     SECTION 0.1 - 3 - type V
-06-18 17:56  rv001-doc-example01   INFO     tag : _[T]
-06-18 17:56  rv001-doc-example01   INFO     command : VALTABLE
-06-18 17:56  rv001-doc-example01   INFO     command : IMAGE
-06-18 17:56  rv001-doc-example01   DEBUG    STREAM b'IHDR' 16 13
-06-18 17:56  rv001-doc-example01   DEBUG    STREAM b'pHYs' 41 9
-06-18 17:56  rv001-doc-example01   DEBUG    STREAM b'IDAT' 62 8192
-06-18 17:56  rv001-doc-example01   INFO     tag : _[C]
-06-18 17:56  rv001-doc-example01   INFO     Beam Response
-06-18 17:56  rv001-doc-example01   INFO     SECTION 0.1 - 4 - type V
-06-18 17:56  rv001-doc-example01   INFO     command : PYTHON
-06-18 17:56  rv001-doc-example01   INFO     command : IMAGE2
-06-18 17:56  rv001-doc-example01   DEBUG    STREAM b'IHDR' 16 13
-06-18 17:56  rv001-doc-example01   DEBUG    STREAM b'pHYs' 41 9
-06-18 17:56  rv001-doc-example01   DEBUG    STREAM b'IDAT' 62 7479
-06-18 17:56  rv001-doc-example01   DEBUG    STREAM b'IHDR' 16 13
-06-18 17:56  rv001-doc-example01   DEBUG    STREAM b'pHYs' 41 9
-06-18 17:56  rv001-doc-example01   DEBUG    STREAM b'IDAT' 62 8192
-06-18 17:56  rv001-doc-example01   INFO     tag : _[B]
-06-18 17:56  rv001-doc-example01   INFO     tag : _[M]
-06-18 17:56  rv001-doc-example01   INFO     doc notes | endnotes
-06-18 17:56  rv001-doc-example01   INFO     SECTION : Publish Doc 
-06-18 17:56  rv001-doc-example01   INFO     block tag : METADATA]]
+06-26 16:18  rv001-doc-example01   INFO     Doc start
+06-26 16:18  rv001-doc-example01   INFO     rivtlib version: 1.0.0a5
+06-26 16:18  rv001-doc-example01   INFO     rivt backup : c:\git\rivt-example-01-git\rivt-report\rv_stor\logs\rv001-doc-example01.bak
+06-26 16:18  rv001-doc-example01   INFO     Summary and Loads
+06-26 16:18  rv001-doc-example01   INFO     SECTION 0.1 - type I
+06-26 16:18  rv001-doc-example01   INFO     tag : _[U]
+06-26 16:18  rv001-doc-example01   INFO     Load Combinations 
+06-26 16:18  rv001-doc-example01   INFO     SECTION 0.1 - 2 - type I
+06-26 16:18  rv001-doc-example01   INFO     tag : _[[TABLE]]
+06-26 16:18  rv001-doc-example01   INFO     Loads and Geometry 
+06-26 16:18  rv001-doc-example01   INFO     SECTION 0.1 - 3 - type V
+06-26 16:18  rv001-doc-example01   INFO     tag : _[T]
+06-26 16:18  rv001-doc-example01   INFO     command : VALTABLE
+06-26 16:18  rv001-doc-example01   INFO     command : IMAGE
+06-26 16:18  rv001-doc-example01   DEBUG    STREAM b'IHDR' 16 13
+06-26 16:18  rv001-doc-example01   DEBUG    STREAM b'pHYs' 41 9
+06-26 16:18  rv001-doc-example01   DEBUG    STREAM b'IDAT' 62 8192
+06-26 16:18  rv001-doc-example01   INFO     tag : _[C]
+06-26 16:18  rv001-doc-example01   INFO     Beam Response
+06-26 16:18  rv001-doc-example01   INFO     SECTION 0.1 - 4 - type V
+06-26 16:18  rv001-doc-example01   INFO     command : PYTHON
+06-26 16:18  rv001-doc-example01   INFO     command : IMAGE2
+06-26 16:18  rv001-doc-example01   DEBUG    STREAM b'IHDR' 16 13
+06-26 16:18  rv001-doc-example01   DEBUG    STREAM b'pHYs' 41 9
+06-26 16:18  rv001-doc-example01   DEBUG    STREAM b'IDAT' 62 7479
+06-26 16:18  rv001-doc-example01   DEBUG    STREAM b'IHDR' 16 13
+06-26 16:18  rv001-doc-example01   DEBUG    STREAM b'pHYs' 41 9
+06-26 16:18  rv001-doc-example01   DEBUG    STREAM b'IDAT' 62 8192
+06-26 16:18  rv001-doc-example01   INFO     tag : _[B]
+06-26 16:18  rv001-doc-example01   INFO     tag : _[M]
+06-26 16:18  rv001-doc-example01   INFO     doc notes | endnotes
+06-26 16:18  rv001-doc-example01   INFO     SECTION : Publish Doc 
+06-26 16:18  rv001-doc-example01   INFO     block tag : METADATA]]

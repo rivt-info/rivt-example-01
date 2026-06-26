@@ -1,5 +1,4 @@
-#! python
-# %% import
+#! python3
 
 import rivtlib.rvapi as rv
 
@@ -10,8 +9,8 @@ import rivtlib.rvapi as rv
 # rv private = true ; if false, default section heading changed to public (private)
 
 
-# %% rv.I("""Summary
-rv.I("""Summary  
+# %% rv.I("""Summary and Loads
+rv.I("""Summary and Loads
 
     This rivt file example calculates the maximum stress and deflection in a
     simply supported, uniformly loaded beam using E-B theory _[#]. It also
@@ -27,7 +26,8 @@ rv.I("""Summary
     *rv.D*). Published files are found in the _published folder.
     """)
 
-# %% rv.I("""Load Combinations
+
+# %% rv.I("""Load Combinations 
 rv.I("""Load Combinations 
 
     ## Indented comments with double hashes will not appear in the doc
@@ -54,15 +54,15 @@ rv.V("""Loads and Geometry
     table.
     
     Define Unit Loads _[T]
-    D_1 ==: 3.8 * psf | psf, kPA, 2 | joists DL         
-    D_2 ==: 2.1 * psf | psf, kPA, 2 | plywood DL          
-    D_3 ==: 10.0 * psf | psf, kPA, 2 | partitions DL       
-    D_4 ==: 2 * 1.5 * klf | klf, kN_m, 2 | fixed machinery DL
-    L_1 ==: 40 * psf | psf, kPA, 2 | ASCE7-O5 LL
+    D_1 ==: 3.8 * p_sf | p_sf, kPA, 2 | joists DL         
+    D_2 ==: 2.1 * p_sf | p_sf, kPA, 2 | plywood DL          
+    D_3 ==: 10.0 * p_sf | p_sf, kPA, 2 | partitions DL       
+    D_4 ==: 2 * 1.5 * k_ft | k_ft, kN_m, 2 | fixed machinery DL
+    L_1 ==: 40 * p_sf | p_sf, kPA, 2 | ASCE7-O5 LL
     b_1 ==: 10 * inch | inch, mm, 2 | beam width
     h_1 ==: 18 * inch | inch, mm, 2 | beam depth
-    E_1 ==: 29000 * ksi | ksi, MPA, 2 | modulus of elasticity
-    Fb_1 ==: 20000 * psqin | psqin, MPA, 2 | allowable stress   
+    E_1 ==: 29000 * k_si | k_si, MPA, 2 | modulus of elasticity
+    Fb_1 ==: 20000 * p_si | p_si, MPA, 2 | allowable stress   
     
     The VALTABLE command reads variable values from a file in the rvsrc
     folder. The description is the table title, followed by the max
@@ -74,11 +74,11 @@ rv.V("""Loads and Geometry
     | IMAGE | rvsrc/img/beam1.png | Beam Diagram, 60, num, not
 
     Uniform Distributed Loads _[C]
-    dl_1 <=: 1.2 * (spc_1 * (D_1 + D_2 + D_3) + D_4) | klf, kN_m, 2 | Dead load [ASCE7-05 2.3.2]
+    dl_1 <=: 1.2 * (spc_1 * (D_1 + D_2 + D_3) + D_4) | k_ft, kN_m, 2 | Dead load [ASCE7-05 2.3.2]
 
-    ll_1 <=: 1.6 * spc_1 * L_1 | klf, kN_m, 2 | Live load [ASCE7-05 2.3.2]
+    ll_1 <=: 1.6 * spc_1 * L_1 | k_ft, kN_m, 2 | Live load [ASCE7-05 2.3.2]
     
-    omega_1 <=: dl_1 + ll_1 | klf, kN_m, 2 | Total load [ASCE7-05 2.3.2]
+    omega_1 <=: dl_1 + ll_1 | k_ft, kN_m, 2 | Total load [ASCE7-05 2.3.2]
     """)
 
 # %% rv.V("""Beam Stress
@@ -103,9 +103,9 @@ rv.V("""Beam Response
         
     m_1 <=: omega_1 * spn_1**2 / 8 | ftkips, mkN, 2 | Mid-span UDL moment 
     
-    fb_1 <=: m_1 / section_1 | psqin, MPA, 1 | Bending stress 
+    fb_1 <=: m_1 / section_1 | p_si, MPA, 1 | Bending stress 
 
-    fb_1 < Fb_1 | ksi, 2, OK, >>> NOT OK | Stress ratio 
+    fb_1 < Fb_1 | k_si, 2, OK, >>> NOT OK | Stress ratio 
 
     delta_1 :=: midspan_delta(spn_1, omega_1, E_1, inertia_1) | inch, mm, 2 | mid-span deflection (sectprop.py)
     """)
@@ -127,10 +127,10 @@ rv.D("""Publish Doc
     
     Published files are found in sub-folders of the _published folder. A text
     version of the doc or report is is always written to the rivt and
-    _rivt-public folders as a README.txt file which is displayed on the
-    first page of a GitHub repo. 
+    _rivt-public folders as a README.txt file. READMEs are formatted and
+    displayed on the first page of a GitHub repo.
     
-    | PUBLISH | Example 1 - rivt Doc | pdf
+    | PUBLISH | Example 1 - rivt Doc | txt
     
     _[[METADATA]] 
     [doc]
@@ -157,8 +157,8 @@ rv.D("""Publish Doc
     pdf_pagesize = letter
     pdf_margins = 1in, 1in, 1in, 1in 
     pdf_link_underline = false
-    ; table of contents levels: =1 includes subdivisions, =2 includes sections
-    toc_level = 1
+    ; table of contents levels: 1 - includes subdivisions, 2 - includes sections
+    toc_level = 2
 
     [process]
     doc_verbose = true; if false minmize output during doc processing

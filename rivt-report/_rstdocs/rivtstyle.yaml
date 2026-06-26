@@ -98,8 +98,8 @@ styles:
     alignment: TA_RIGHT
     parent: bodytext
   code:
-    spaceBefore: 6
-    spaceAfter: 6
+    spaceBefore: 3
+    spaceAfter: 3
     backColor: "#d1dede"
     borderColor: darkgray
     borderPadding: 6
@@ -146,7 +146,7 @@ styles:
   endnote:
     commands:
       - [VALIGN, [0, 0], [-1, -1], TOP]
-    colWidths: [25pt, null]
+    colWidths: [30pt, null]
   footer-box:
     alignment: TA_CENTER
     fontName: fontSans
@@ -157,7 +157,7 @@ styles:
         - - -1
           - -1
         - 0.25
-        - white
+        - transparent
   header-box:
     alignment: TA_RIGHT
     fontName: fontSans
@@ -168,7 +168,8 @@ styles:
         - - -1
           - -1
         - 0.25
-        - white
+        - transparent
+  admonition:
   heading:
     keepWithNext: true
     parent: normal
@@ -228,12 +229,23 @@ styles:
     hyphenation: false
     parent: normal
     wordWrap: null
+    spaceBefore: 6
+    spaceAfter: 6
+    leading: 11
   normal:
     parent: base
   note:
+    firstlineIndent: 0
+    leftIndent: 0
+    bulletIndent: 0
     parent: admonition
+    backColor: "#d1dede"
+    borderColor: black
+    borderPadding: 10
+    borderWidth: 0.5
   note-heading:
     parent: admonition-heading
+    fontName: fontSansBold
   option-list:
     colWidths:
       - null

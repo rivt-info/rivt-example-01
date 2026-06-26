@@ -1,6 +1,6 @@
 
 --------------------------------------------------------------------------------
-| rivt | Example 1 - rivt Doc | R Holland | v-1.0.0a12 | 2026-06-18 - 05:56PM
+| rivt | Example 1 - rivt Doc | R Holland | v-1.0.0a12 | 2026-06-21 - 11:24PM
 --------------------------------------------------------------------------------
 
 
@@ -20,7 +20,6 @@ The file may be formatted as a text, PDF or HTML doc by changing the type
 parameter in the PUBLISH command at the end of each rivt file (Doc-API
 rv.D). Published files are found in the _published folder.
  
- 
 
 0.1 - 2 | Load Combinations
 --------------------------------------------------------------------------------
@@ -37,7 +36,6 @@ Equation No.    Load Combination
 16-3           1.2(D+F+T) + 1.6(Lr or S or R) + (f1L or 0.8W) 
 ============= ================================================ 
 
- 
  
 
 0.1 - 3 | Loads and Geometry
@@ -93,13 +91,13 @@ Fig. 1 - Beam Diagram [file: rvsrc/img/beam1.png  ]
 
 dl₁ = 3.64 klf    [dl₁] = 53.09 kN_m  | Dead load [ASCE7-05 2.3.2]
 
-==================  =========  ==========  ============  =============
-D₄                  D₁         D₂          spc₁          D₃
-==================  =========  ==========  ============  =============
-3.00 klf            3.80 psf   2.10 psf    2.00 ft       10.00 psf
-—————               —————      —————       —————         —————
-fixed machinery DL  joists DL  plywood DL  beam spacing  partitions DL
-==================  =========  ==========  ============  =============
+============  =============  ==========  =========  ==================
+spc₁          D₃             D₂          D₁         D₄
+============  =============  ==========  =========  ==================
+2.00 ft       10.00 psf      2.10 psf    3.80 psf   3.00 klf
+—————         —————          —————       —————      —————
+beam spacing  partitions DL  plywood DL  joists DL  fixed machinery DL
+============  =============  ==========  =========  ==================
  
 
 ┌  Eq-2 | Live load [ASCE7-05 2.3.2]
@@ -109,13 +107,13 @@ fixed machinery DL  joists DL  plywood DL  beam spacing  partitions DL
 
 ll₁ = 0.13 klf    [ll₁] = 1.87 kN_m  | Live load [ASCE7-05 2.3.2]
 
-===========  ============
-L₁           spc₁
-===========  ============
-40.00 psf    2.00 ft
-—————        —————
-ASCE7-O5 LL  beam spacing
-===========  ============
+============  ===========
+spc₁          L₁
+============  ===========
+2.00 ft       40.00 psf
+—————         —————
+beam spacing  ASCE7-O5 LL
+============  ===========
  
 
 ┌  Eq-3 | Total load [ASCE7-05 2.3.2]
@@ -132,7 +130,6 @@ ll₁                         dl₁
 —————                       —————
 Live load [ASCE7-05 2.3.2]  Dead load [ASCE7-05 2.3.2]
 ==========================  ==========================
- 
  
 
 0.1 - 4 | Beam Response
@@ -236,13 +233,13 @@ Total load [ASCE7-05 2.3.2]  beam span
 
 fb₁ = 2678.2 lb_in2    [fb₁] = 18.5 MPA  | Bending stress
 
-===================  ===========================
-m₁                   section₁
-===================  ===========================
-120.5 ft2·klf        540.0 inch3
-—————                —————
-Mid-span UDL moment  rectangle - S (sectprop.py)
-===================  ===========================
+===========================  ===================
+section₁                     m₁
+===========================  ===================
+540.0 inch3                  120.5 ft2·klf
+—————                        —————
+rectangle - S (sectprop.py)  Mid-span UDL moment
+===========================  ===================
  
 ┌  Eq-9 | Stress ratio
 │
@@ -265,14 +262,13 @@ Mid-span UDL moment  rectangle - S (sectprop.py)
 
 δ₁ = 0.04 inch   [δ₁] = 1.00 mm  | mid-span deflection (sectprop.py)
 
-=========  =====================  ===========================  ===========================
-spn₁       E₁                     inertia₁                     ω₁
-=========  =====================  ===========================  ===========================
-16.00 ft   29000.00 ksi           4860.00 inch4                3.77 klf
-—————      —————                  —————                        —————
-beam span  modulus of elasticity  rectangle - I (sectprop.py)  Total load [ASCE7-05 2.3.2]
-=========  =====================  ===========================  ===========================
- 
+===========================  =====================  ===========================  =========
+inertia₁                     E₁                     ω₁                           spn₁
+===========================  =====================  ===========================  =========
+4860.00 inch4                29000.00 ksi           3.77 klf                     16.00 ft
+—————                        —————                  —————                        —————
+rectangle - I (sectprop.py)  modulus of elasticity  Total load [ASCE7-05 2.3.2]  beam span
+===========================  =====================  ===========================  =========
  
 
 --------------------------------------------------------------------------------

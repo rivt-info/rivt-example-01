@@ -17,8 +17,30 @@
             ]
         }
     ],
+    "notebook.outline.showCodeCells": true,
+    "notebook.outline.showCodeCellSymbols": false,
     "notebook.markup.fontSize": 13,
     "notebook.output.fontSize": 13,
+    "python.languageServer": "Pylance",
+    "[python]": {
+        "editor.indentSize": "tabSize",
+        "editor.formatOnType": false,
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "charliermarsh.ruff",
+        "editor.stickyScroll.enabled": false,
+    },
+    "jupyter.interactiveWindow.textEditor.executeSelection": true,
+    "jupyter.askForKernelRestart": false,
+    "python.analysis.enablePytestSupport": false,
+    "notebook.defaultFormatter": "charliermarsh.ruff",
+    "notebook.output.textLineLimit": 400,
+    "jupyter.themeMatplotlibPlots": true,
+    "python.terminal.executeInFileDir": true,
+    "jupyter.widgetScriptSources": [
+        "jsdelivr.com",
+        "unpkg.com"
+    ],
+    "jupyter.interactiveWindow.cellMarker.decorateCells": "allCells",
     "python.terminal.activateEnvironment": true,
     "python.defaultInterpreterPath": "C:/Users/rhh2/Python314",
     "editor.colorDecoratorsActivatedOn": "clickAndHover",
@@ -30,23 +52,6 @@
     ],
     "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
-    "fsdeploy.deployOnSave": true,
-    "fsdeploy.nodes": [
-        {
-            "source": "C:/git/rivt-example-01-git",
-            "target": "E:/OneDrive/StL-rivt/rivt-example-01",
-            "include": "**/*.*",
-            "exclude": ".git,.gitignore",
-            "deleteTargetOnDeploy": true,
-        },
-        {
-            "source": "C:/git/rivt-example-01-git",
-            "target": "E:/OneDrive/StL-rivt/rivt-example-01",
-            "include": "**/*.*",
-            "exclude": ".git,.gitignore",
-            "deleteTargetOnDeploy": true,
-        }
-    ],
     "actionButtons": {
         "defaultColor": "#ff0034",
         "reloadButton": "♻️",
@@ -412,27 +417,6 @@
         "gitlens:/**/*.code-snippets": "default",
         "*.svg": "default",
     },
-    "python.languageServer": "Pylance",
-    "[python]": {
-        "editor.indentSize": "tabSize",
-        "editor.formatOnType": false,
-        "editor.formatOnSave": true,
-        "editor.defaultFormatter": "charliermarsh.ruff",
-        "editor.stickyScroll.enabled": false,
-    },
-    "jupyter.interactiveWindow.textEditor.executeSelection": true,
-    "jupyter.askForKernelRestart": false,
-    "python.analysis.enablePytestSupport": false,
-    "notebook.defaultFormatter": "charliermarsh.ruff",
-    "notebook.outline.showCodeCells": true,
-    "notebook.output.textLineLimit": 400,
-    "jupyter.themeMatplotlibPlots": true,
-    "python.terminal.executeInFileDir": true,
-    "jupyter.widgetScriptSources": [
-        "jsdelivr.com",
-        "unpkg.com"
-    ],
-    "jupyter.interactiveWindow.cellMarker.decorateCells": "allCells",
     "insertDateString.format": "MM-DD-YYYY hh:mm:ss",
     "insertDateString.formatDate": "MM-DD-YYYY",
     "seito-openfile.searchSubFoldersOfWorkspaceFolders": [],
@@ -526,16 +510,21 @@
     "window.zoomLevel": 1,
     "favorites.resources": [
         {
-            "filePath": "rivt-report\\_published",
-            "group": "Default"
-        },
-        {
             "filePath": "rivt-report\\_published\\docs",
             "group": "Default"
         },
         {
             "filePath": "rivt-report\\_published\\pdfdocs",
             "group": "Default"
+        },
+        {
+            "filePath": "rivt-report\\_published\\readme",
+            "group": "Default"
+        },
+        {
+            "filePath": "rivt-report\\_published\\txtdocs",
+            "group": "Default"
         }
     ],
+    "favorites.sortOrder": "MANUAL",
 }
