@@ -40,7 +40,6 @@ rv.I("""Summary and Loads
 rv.I("""Load Combinations 
 
     ## Indented comments with double hashes will not appear in the doc
-    ## An inline table contained in a TABLE block is written to a CSV file.
       
     Dead and live loads effects are taken from ASCE 7-05 _[#]
 
