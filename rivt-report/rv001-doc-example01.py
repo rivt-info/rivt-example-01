@@ -1,14 +1,29 @@
 #! python3
-""" This tutorial steps through the process of writing a rivt file and creating
-a doc. A second tutorial demonstrates how to create a rivt report with multiple
-docs. 
+""" This is a rivt doc example.  It is used in the tutorial at 
+https://www.rivt.info. Example 3 is a rivt report example at
+https://www.openmodels.info/models/rivt.
 
-To review the full tutorial list click on the folded page icon beneath the
-search icon (magnifying glass) in the left sidebar. Each step explains an
-aspect of a rivt file and identifies a few options for modifying it. Each step
-can be opened by clicking the item in the list or on the small comment icon
-adjacent to a line number. The comment icon toggles the step open and closed.
-        
+This example illustrates: 
+
+    rivtlib markup
+
+    - multiple API sections
+    - footnotes
+    - inline comments
+    - Url links
+    - Variable definitions
+    - Table blocks and commands
+    - Value table command
+    - Metadata and layout block
+    - Python function command
+    - Image command
+    - Publish command
+
+    VSCode / Python features
+    - cell labels
+    - docstrings
+    - extension modules    
+
 """
 
 import rivtlib.rvapi as rv
@@ -16,7 +31,6 @@ import rivtlib.rvapi as rv
 # rv set_width = 80  ; character width of text output (80)
 # rv no_tag = true ; if false, the API type is added to section number (true)
 # rv private = true ; if false, default section heading changed to public (private)
-
 
 # %% rv.I("""Summary and Loads
 rv.I("""Summary and Loads
@@ -33,8 +47,7 @@ rv.I("""Summary and Loads
     The file may be formatted as a text, PDF or HTML doc by changing the type
     parameter in the PUBLISH command at the end of each rivt file (Doc-API
     *rv.D*). Published files are found in the _published folder.
-    """)
-
+""")
 
 # %% rv.I("""Load Combinations 
 rv.I("""Load Combinations 
@@ -127,7 +140,8 @@ rv.R("""doc notes | endnotes
     American Society of Civil Engineers, 2005.
     """)
 
-# %% rv.D("""Publish Doc
+
+# %% rv.D("""Publish Doc 
 rv.D("""Publish Doc 
     
     A rivt file may be published as a text, PDF or HTML doc by specifying the
