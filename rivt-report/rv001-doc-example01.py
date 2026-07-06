@@ -1,7 +1,6 @@
 #! python3
 """ This is a rivt doc example.  It is used in the tutorial at 
-https://www.rivt.info. Example 3 is a rivt report example at
-https://www.openmodels.info/models/rivt.
+https://www.rivt.info. 
 
 This example illustrates: 
 
@@ -131,6 +130,7 @@ rv.V("""Beam Response
     delta_1 :=: midspan_delta(spn_1, omega_1, E_1, inertia_1) | inch, mm, 2 | mid-span deflection (sectprop.py)
     """)
 
+# %% rv.R("""doc notes | endnotes
 rv.R("""doc notes | endnotes
     "Euler–Bernoulli beam theory", Wikipedia, Wikimedia Foundation. [Online].
     https://en.wikipedia.org/wiki/Euler_Bernoulli_beam_theory. 
