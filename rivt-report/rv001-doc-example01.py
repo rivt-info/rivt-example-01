@@ -64,7 +64,7 @@ rv.I("""Load Combinations
     16-3           1.2(D+F+T) + 1.6(Lr or S or R) + (f1L or 0.8W)
     ============= ================================================
     _[[END]]
-    """)
+""")
 
 # %% rv.V("""Loads and Geometry
 rv.V("""Loads and Geometry 
@@ -84,13 +84,12 @@ rv.V("""Loads and Geometry
     E_1 ==: 29000 * k_si | k_si, MPA, 2 | modulus of elasticity
     Fb_1 ==: 20000 * p_si | p_si, MPA, 2 | allowable stress   
     
-    The VALTABLE command reads variable values from a file in the rvsrc
+    The VALTABLE command reads variable values from a file in the rvsrc/data
     folder. The description is the table title, followed by the max
     column width. 
 
-    | VALTABLE | rvsrc/beam1.csv | Beam Geometry, 40
+    | VALTABLE | rvsrc/data/beam1.csv | Beam Geometry, 40
 
-    ## The IMAGE command inserts an image file with caption, % scale, num;non option 
     | IMAGE | rvsrc/img/beam1.png | Beam Diagram, 60, num, not
 
     Uniform Distributed Loads _[C]
@@ -178,10 +177,10 @@ rv.D("""Publish Doc
     project_ref = proj. 0001
     pdf_pagesize = letter
     pdf_margins = 1in, 1in, 1in, 1in 
-    pdf_link_underline = false
+    pdf_link_underline = true
     ; colors - red, blue, green, yellow, black, gray, brown
     ; lightblue, magenta, lime, maroon, gray, olive, cyan
-    pdf_link_color = brown
+    pdf_link_color = black
     ; toc levels: 1 - includes subdivisions, 2 - also includes sections
     toc_level = 2
 

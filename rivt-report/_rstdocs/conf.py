@@ -72,7 +72,7 @@ favicons = [
 # source start file, target name, title, author, options
 # options: ('index', 'MyProject', 'My Project', 'Author Name', {"pdf_compressed": True})
 # More than one author : \r'Guido van Rossum\Fred L. Drake, Jr., editor'
-pdf_documents = [("rv001-doc-tutorial", "rv001-doc-tutorial", "Example 1 - rivt Doc", 
+pdf_documents = [("rv001-doc-example01", "rv001-doc-example01", "Example 1 - rivt Doc", 
             "R Holland")]
 # A colon-separated list of folders to search for fonts.
 pdf_font_path = ["_rstdocs/_static/fonts","../_rstdocs/_static/fonts/" ]

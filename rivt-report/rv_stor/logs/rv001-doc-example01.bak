@@ -1,13 +1,35 @@
 #! python3
+""" This is a rivt doc example.  It is used in the tutorial at 
+https://www.rivt.info. 
+
+This example illustrates: 
+
+    rivtlib markup
+
+    - multiple API sections
+    - footnotes
+    - inline comments
+    - Url links
+    - Variable definitions
+    - Table blocks and commands
+    - Value table command
+    - Metadata and layout block
+    - Python function command
+    - Image command
+    - Publish command
+
+    VSCode / Python features
+    - cell labels
+    - docstrings
+    - extension modules    
+
+"""
 
 import rivtlib.rvapi as rv
 
-# The following settings change defaults (shown n parenthesis) for each doc.
-# A leading hash (#) and trailing semicolon (;) are required.
 # rv set_width = 80  ; character width of text output (80)
 # rv no_tag = true ; if false, the API type is added to section number (true)
 # rv private = true ; if false, default section heading changed to public (private)
-
 
 # %% rv.I("""Summary and Loads
 rv.I("""Summary and Loads
@@ -24,14 +46,12 @@ rv.I("""Summary and Loads
     The file may be formatted as a text, PDF or HTML doc by changing the type
     parameter in the PUBLISH command at the end of each rivt file (Doc-API
     *rv.D*). Published files are found in the _published folder.
-    """)
-
+""")
 
 # %% rv.I("""Load Combinations 
 rv.I("""Load Combinations 
 
     ## Indented comments with double hashes will not appear in the doc
-    ## An inline table contained in a TABLE block is written to a CSV file.
       
     Dead and live loads effects are taken from ASCE 7-05 _[#]
 
@@ -44,7 +64,7 @@ rv.I("""Load Combinations
     16-3           1.2(D+F+T) + 1.6(Lr or S or R) + (f1L or 0.8W)
     ============= ================================================
     _[[END]]
-    """)
+""")
 
 # %% rv.V("""Loads and Geometry
 rv.V("""Loads and Geometry 
@@ -64,13 +84,12 @@ rv.V("""Loads and Geometry
     E_1 ==: 29000 * k_si | k_si, MPA, 2 | modulus of elasticity
     Fb_1 ==: 20000 * p_si | p_si, MPA, 2 | allowable stress   
     
-    The VALTABLE command reads variable values from a file in the rvsrc
+    The VALTABLE command reads variable values from a file in the rvsrc/data
     folder. The description is the table title, followed by the max
     column width. 
 
-    | VALTABLE | rvsrc/beam1.csv | Beam Geometry, 40
+    | VALTABLE | rvsrc/data/beam1.csv | Beam Geometry, 40
 
-    ## The IMAGE command inserts an image file with caption, % scale, num;non option 
     | IMAGE | rvsrc/img/beam1.png | Beam Diagram, 60, num, not
 
     Uniform Distributed Loads _[C]
@@ -110,6 +129,7 @@ rv.V("""Beam Response
     delta_1 :=: midspan_delta(spn_1, omega_1, E_1, inertia_1) | inch, mm, 2 | mid-span deflection (sectprop.py)
     """)
 
+# %% rv.R("""doc notes | endnotes
 rv.R("""doc notes | endnotes
     "Euler–Bernoulli beam theory", Wikipedia, Wikimedia Foundation. [Online].
     https://en.wikipedia.org/wiki/Euler_Bernoulli_beam_theory. 
@@ -119,7 +139,8 @@ rv.R("""doc notes | endnotes
     American Society of Civil Engineers, 2005.
     """)
 
-# %% rv.D("""Publish Doc
+
+# %% rv.D("""Publish Doc 
 rv.D("""Publish Doc 
     
     A rivt file may be published as a text, PDF or HTML doc by specifying the
@@ -156,11 +177,11 @@ rv.D("""Publish Doc
     project_ref = proj. 0001
     pdf_pagesize = letter
     pdf_margins = 1in, 1in, 1in, 1in 
-    pdf_link_underline = false
-    ; red, blue, green, yellow, black, cyan, magenta, gray, brown
-    ; lightblue, magenta, lime, maroon, gray, olive
-    pdf_link_color = brown
-    ; table of contents levels: 1 - includes subdivisions, 2 - includes sections
+    pdf_link_underline = true
+    ; colors - red, blue, green, yellow, black, gray, brown
+    ; lightblue, magenta, lime, maroon, gray, olive, cyan
+    pdf_link_color = black
+    ; toc levels: 1 - includes subdivisions, 2 - also includes sections
     toc_level = 2
 
     [process]

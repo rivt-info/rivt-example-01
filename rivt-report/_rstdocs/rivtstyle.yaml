@@ -1,5 +1,5 @@
 
-linkColor: brown
+linkColor: black
 linkFontName: DejaVuSansBold
 fontsAlias:
   fontSerif: DejaVuSans
@@ -69,7 +69,7 @@ styles:
     strike: false
     textColor: black
     wordWrap: null
-    linkUnderline: false
+    linkUnderline: true
     commands: []
   big-text:
     fontSize: 175%
