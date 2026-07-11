@@ -17,6 +17,8 @@
             ]
         }
     ],
+    "python.REPL.sendToNativeREPL": true,
+    "python.REPL.enableREPLSmartSend": true,
     "workbench.editor.tabSizing": "shrink",
     "notebook.outline.showCodeCells": true,
     "notebook.outline.showCodeCellSymbols": false,
@@ -30,18 +32,10 @@
         "editor.defaultFormatter": "charliermarsh.ruff",
         "editor.stickyScroll.enabled": false,
     },
-    "jupyter.interactiveWindow.textEditor.executeSelection": true,
-    "jupyter.askForKernelRestart": false,
     "python.analysis.enablePytestSupport": false,
     "notebook.defaultFormatter": "charliermarsh.ruff",
     "notebook.output.textLineLimit": 400,
-    "jupyter.themeMatplotlibPlots": true,
     "python.terminal.executeInFileDir": true,
-    "jupyter.widgetScriptSources": [
-        "jsdelivr.com",
-        "unpkg.com"
-    ],
-    "jupyter.interactiveWindow.cellMarker.decorateCells": "allCells",
     "python.terminal.activateEnvironment": true,
     "python.defaultInterpreterPath": "C:/Users/rhh2/Python314",
     "editor.colorDecoratorsActivatedOn": "clickAndHover",
@@ -189,7 +183,7 @@
         },
         {
             "text": "rv.X(",
-            "color": "darkorange",
+            "color": "red",
             "isWholeLine": true,
         },
         {
@@ -483,7 +477,6 @@
     "ShortcutMenuBar.openFilesList": true,
     "ShortcutMenuBar.findReplace": false,
     "ShortcutMenuBar.openSettings": false,
-    "latex-workshop.message.warning.show": false,
     "accessibility.verbosity.notification": false,
     "git.postCommitCommand": "sync",
     "git.enableSmartCommit": true,

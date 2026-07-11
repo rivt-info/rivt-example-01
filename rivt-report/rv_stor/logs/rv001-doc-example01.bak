@@ -65,7 +65,7 @@ rv.I("""Load Combinations
     ============= ================================================
     _[[END]]
 """)
-
+rv.X()
 # %% rv.V("""Loads and Geometry
 rv.V("""Loads and Geometry 
     
@@ -139,7 +139,6 @@ rv.R("""doc notes | endnotes
     American Society of Civil Engineers, 2005.
     """)
 
-
 # %% rv.D("""Publish Doc 
 rv.D("""Publish Doc 
     
@@ -194,4 +193,3 @@ rv.D("""Publish Doc
     _[[END]]    
     """)
 
-# %%
