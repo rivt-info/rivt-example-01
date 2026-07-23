@@ -1,5 +1,110 @@
-**Example 1 - rivt Doc**
-================================================================================
+.. |s| unicode:: 0xA0 
+
+
+
+.. |blklogo| image:: ./_static/logo2.png
+   :height: 100px
+   :alt: logo
+
+
+    
+.. header::
+    .. list-table::
+        :class: header-box
+        :align: left
+        :widths: 90 10
+        
+        * - **Example 1 - rivt Doc** - v1.0.0a17 |s| |s| |s| |s|  **###Section###**
+          - p. **###Page###**   
+
+          
+
+.. footer:: 
+    .. list-table::
+        :class: footer-box
+        :align: left
+        :widths: 84 22 16
+        
+        * - 2026-07-23 |s| |s| |s| **|** |s| |s| |s| R Holland        
+          - **rivt**        
+          - |blklogo|
+
+
+                  
+
+.. role:: cite
+   :class: citation-reference
+
+.. role:: btext
+   :class: big-text
+
+.. role:: mtext
+    :class: medium-text
+
+.. role:: stext
+    :class: small-text
+
+|
+|
+|
+|
+        
+.. image:: _static/logo1.png
+   :width: 30%
+   :align: center
+
+|
+|
+|
+|
+|
+
+.. rst-class:: center
+
+    :mtext:`UDL Beam`
+
+|
+
+.. rst-class:: center
+
+    :btext:`Example 1 - rivt Doc`
+    
+|
+|
+|
+|
+|
+
+
+.. rst-class:: center
+
+    :mtext:`user example`
+
+|
+
+.. rst-class:: center
+
+    :stext:`proj. 0001`
+
+   
+.. raw:: pdf
+
+   PageBreak noHead
+      
+**Example 1 - rivt Doc** - v1.0.0a17
+
+--------------------
+
+|
+
+.. contents:: Table of Contents
+  :depth: 2
+
+  
+.. raw:: pdf
+ 
+   PageBreak mainPage
+   SetPageCounter 1
 
  
 .. raw:: pdf
@@ -94,7 +199,7 @@ column width.
  
 |
 
-**Table 3**: Beam Geometry (rvsrc/vals/beam1.csv)
+**Table 3**: Beam Geometry (beam1.csv)
 
 ==========  ========  =========  =============
 variable    value     [value]    description
@@ -106,7 +211,7 @@ spn_1       16.00 ft  4.88 m     beam span
 
  
 
-.. figure:: c:/git/rivt-example-01-git/rivt-report/rvsrc/img/beam1.png
+.. figure:: c:/git/rivt-example-01-git/rivt-report/rvsrc/image/beam1.png
    :width: 60%
    :align: center
 
@@ -133,12 +238,12 @@ spn_1       16.00 ft  4.88 m     beam span
 
            dl₁ = 3.64 k_ft     [dl₁] = 53.09 kN_m   | Dead load [ASCE7-05 2.3.2]
 
-           D₃             D₄                  spc₁          D₂          D₁
-           —————————————  ——————————————————  ————————————  ——————————  —————————
-           10.00 p_sf     3.00 k_ft           2.00 ft       2.10 p_sf   3.80 p_sf
-           —————          —————               —————         —————       —————
-           partitions DL  fixed machinery DL  beam spacing  plywood DL  joists DL
-           —————————————  ——————————————————  ————————————  ——————————  —————————
+           D₃             spc₁          D₄                  D₁         D₂
+           —————————————  ————————————  ——————————————————  —————————  ——————————
+           10.00 p_sf     2.00 ft       3.00 k_ft           3.80 p_sf  2.10 p_sf
+           —————          —————         —————               —————      —————
+           partitions DL  beam spacing  fixed machinery DL  joists DL  plywood DL
+           —————————————  ————————————  ——————————————————  —————————  ——————————
 
 
  
@@ -203,7 +308,7 @@ calculate section properties from imported functions and calculate
 the maximum moment, bending stress and mid-span deflection. 
  
 
-**Table 4**: Beam functions (rvsrc/scripts/sectprop.py)
+**Table 4**: Beam functions (sectprop.py)
 
 
 ==========================  ============================================
@@ -229,11 +334,11 @@ midspan_delta(ln, w, e, i)  mid-span deflection of simply supported beam
 
            section₁ = 540.00 in3     [section₁] = 8849.01 cm3   | rectangle - S (sectprop.py)
 
-           h₁          b₁
+           b₁          h₁
            ——————————  ——————————
-           18.00 inch  10.00 inch
+           10.00 inch  18.00 inch
            —————       —————
-           beam depth  beam width
+           beam width  beam depth
            ——————————  ——————————
 
 
@@ -251,11 +356,11 @@ midspan_delta(ln, w, e, i)  mid-span deflection of simply supported beam
 
            inertia₁ = 4860.0 in4     [inertia₁] = 202288.5 cm4   | rectangle - I (sectprop.py)
 
-           h₁          b₁
+           b₁          h₁
            ——————————  ——————————
-           18.0 inch   10.0 inch
+           10.0 inch   18.0 inch
            —————       —————
-           beam depth  beam width
+           beam width  beam depth
            ——————————  ——————————
 
 
@@ -265,12 +370,12 @@ midspan_delta(ln, w, e, i)  mid-span deflection of simply supported beam
     :widths: 46 54
     :header-rows: 0
 
-    * - .. figure:: c:/git/rivt-example-01-git/rivt-report/rvsrc/img/ss-beam2.png
+    * - .. figure:: c:/git/rivt-example-01-git/rivt-report/rvsrc/image/ss-beam2.png
             :width: 100%
 
             **Fig. 2 -** Moment diagram 
      
-      - .. figure:: c:/git/rivt-example-01-git/rivt-report/rvsrc/img/ss-beam1.png
+      - .. figure:: c:/git/rivt-example-01-git/rivt-report/rvsrc/image/ss-beam1.png
             :width: 100%
             
             **Fig. 3 -** Deflection diagram 
@@ -377,16 +482,15 @@ midspan_delta(ln, w, e, i)  mid-span deflection of simply supported beam
 
            δ₁ = 0.04 inch     [δ₁] = 1.00 mm   | mid-span deflection (sectprop.py)
 
-           spn₁       inertia₁       E₁             ω₁
-           —————————  —————————————  —————————————  ————————————————————
-           16.00 ft   4860.00 inch4  29000.00 k_si  3.77 k_ft
-           —————      —————          —————          —————
-           beam span  rectangle - I  modulus of     Total load [ASCE7-05
-           -          (sectprop.py)  elasticity     2.3.2]
-           —————————  —————————————  —————————————  ————————————————————
+           ω₁                    E₁             spn₁       inertia₁
+           ————————————————————  —————————————  —————————  —————————————
+           3.77 k_ft             29000.00 k_si  16.00 ft   4860.00 inch4
+           —————                 —————          —————      —————
+           Total load [ASCE7-05  modulus of     beam span  rectangle - I
+           2.3.2]                elasticity     -          (sectprop.py)
+           ————————————————————  —————————————  —————————  —————————————
 
 
- 
  
 
 --------------------
@@ -408,3 +512,5 @@ midspan_delta(ln, w, e, i)  mid-span deflection of simply supported beam
 
 
 
+
+ 

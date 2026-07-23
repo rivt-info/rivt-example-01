@@ -9,7 +9,7 @@ font_folder_path = os.path.join(os.path.dirname(__file__), '_static',  'fonts')
 project = "Example 1 - rivt Doc"
 copyright = "--"
 author = "self.R Holland"
-release = "1.0.0a13"
+release = "1.0.0a17"
 
 extensions = [
     "sphinx.ext.githubpages",
@@ -25,6 +25,7 @@ extensions = [
     "rst2pdf.pdfbuilder",
     "sphinxcontrib.mermaid"
 ]
+pygments_style = "borland"
 root_doc = "index"
 duration_write_json = ""
 html_show_sourcelink = False

@@ -1,4 +1,101 @@
 {
+    "import API ( api )": {
+        "prefix": "api",
+        "description": "import rivt api",
+        "scope": "python",
+        "body": [
+            "import rivtlib.rvapi as rv"
+        ]
+    },
+    "Runx API ( rvr )": {
+        "prefix": "rvr",
+        "description": "API Run - short",
+        "scope": "python",
+        "body": [
+            "rv.R(r\"\"\"${1:section-label} ",
+            "",
+            "    ${0:text}",
+            "    \"\"\")"
+        ]
+    },
+    "Run API ( rvrx )": {
+        "prefix": "rvrx",
+        "description": "API Run - full",
+        "scope": "python",
+        "body": [
+            "rv.R(r\"\"\"${1:label} | ${2:file} | ${3|rivt|}, ${4|pdfpage,nopage|}, ${5|private,public|}, ${6|hide,show|}, ${7|merge,section|,",
+            "",
+            "    ${0:text}",
+            "    \"\"\")"
+        ]
+    },
+    "Insert API ( rvi )": {
+        "prefix": "rvi",
+        "description": "API Insert - short",
+        "scope": "python",
+        "body": [
+            "rv.I(r\"\"\"${1:section-label} ",
+            "",
+            "    ${0:text}",
+            "    \"\"\")"
+        ]
+    },
+    "Insertx API ( rvix )": {
+        "prefix": "rvix",
+        "description": "API Insert - full",
+        "scope": "python",
+        "body": [
+            "rv.I(r\"\"\"${1:label} | ${2:file} | ${3|rivt|}, ${4|pdfpage,nopage|}, ${5|private,public|}, ${6|hide,show|}, ${7|merge,section|,",
+            "",
+            "    ${0:text}",
+            "    \"\"\")"
+        ]
+    },
+    "Values API ( rvv )": {
+        "prefix": "rvv",
+        "description": "Values API method",
+        "scope": "python",
+        "body": [
+            "rv.V(r\"\"\"${1:section-label} ",
+            "",
+            "    ${0:text}",
+            "    \"\"\")"
+        ]
+    },
+    "Valuesx API ( rvvx )": {
+        "prefix": "rvvx",
+        "description": "Values API method",
+        "scope": "python",
+        "body": [
+            "rv.V((r\"\"\"${1:label} | ${2:file} | ${3|rivt|}, ${4|pdfpage,nopage|}, ${5|private,public|}, ${6|hide,show|}, ${7|merge,section|,",
+            "",
+            "    ${0:text}",
+            "    ",
+            "    \"\"\")"
+        ]
+    },
+    "Text API ( rvt )": {
+        "prefix": "rvt",
+        "description": "Text API method",
+        "scope": "python",
+        "body": [
+            "rv.T(r\"\"\"${1:label} | ${2|rivt|} | ${3|PYTHON, python, text, rst, rivt, latex, html|}",
+            "    ",
+            "    ${0:text} ",
+            "    \"\"\")"
+        ]
+    },
+    "Text API ( rvtx )": {
+        "prefix": "rvtx",
+        "description": "Text API method",
+        "scope": "python",
+        "body": [
+            "rv.T(r\"\"\"${1:label} | ${2:file} | ${3|PYTHON, python, text, rst, rivt, latex|}, ${4|pdfpage,nopage|}, ${5|private,public|}, ${6|hide,show|}, ${7|merge,section|},",
+            "",
+            "    ${0:text} ",
+            "    \"\"\")"
+        ]
+    },
     "compare ( =<>)": {
         "prefix": "=<>",
         "description": "assign value to function",
@@ -30,96 +127,6 @@
         "scope": "python",
         "body": [
             "${1:var} ==: ${2:val} | ${3:unit1}, ${4:unit2}, ${5:dec} | ${0:descrip}"
-        ]
-    },
-    "import API ( api )": {
-        "prefix": "api",
-        "description": "import rivt api",
-        "scope": "python",
-        "body": [
-            "import rivtlib.rvapi as rv"
-        ]
-    },
-    "Runx API ( rvr )": {
-        "prefix": "rvr",
-        "description": "API Run - short",
-        "scope": "python",
-        "body": [
-            "rv.R(r\"\"\"${1:section-label} ",
-            "",
-            "    ${0:text}",
-            "",
-            "    \"\"\")"
-        ]
-    },
-    "Run API ( rvrx )": {
-        "prefix": "rvrx",
-        "description": "API Run - full",
-        "scope": "python",
-        "body": [
-            "rv.R(r\"\"\"${1:section-label} | ${2|private,public|}, ${3|hide,show|}, ${4|merge,section|,${5|endnotes,html,rst,mermaid,dot|} ",
-            "",
-            "    ${0:text}",
-            "    \"\"\")"
-        ]
-    },
-    "Insert API ( rvi )": {
-        "prefix": "rvi",
-        "description": "API Insert - short",
-        "scope": "python",
-        "body": [
-            "rv.I(r\"\"\"${1:section-label} ",
-            "",
-            "    ${0:text}",
-            "    ",
-            "    \"\"\")"
-        ]
-    },
-    "Insertx API ( rvix )": {
-        "prefix": "rvix",
-        "description": "API Insert - full",
-        "scope": "python",
-        "body": [
-            "rv.I(r\"\"\"${1:section-label} | ${2|private,public|}, ${3|show,hide|}, ${4|section,merge|} ",
-            "",
-            "    ${0:text}",
-            "    ",
-            "    \"\"\")"
-        ]
-    },
-    "Values API ( rvv )": {
-        "prefix": "rvv",
-        "description": "Values API method",
-        "scope": "python",
-        "body": [
-            "rv.V(r\"\"\"${1:section-label} ",
-            "",
-            "    ${0:text}",
-            "    ",
-            "    \"\"\")"
-        ]
-    },
-    "Valuesx API ( rvvx )": {
-        "prefix": "rvvx",
-        "description": "Values API method",
-        "scope": "python",
-        "body": [
-            "rv.V(r\"\"\"${1:section-label} | ${2|private,public|}, ${3|show,hide|}, ${4|section,merge|} ",
-            "",
-            "    ${0:text}",
-            "    ",
-            "    \"\"\")"
-        ]
-    },
-    "Tools API ( rvt )": {
-        "prefix": "rvt",
-        "description": "Tools API method",
-        "scope": "python",
-        "body": [
-            "rv.T(r\"\"\"${1:section-label} | ${2|private,public|}, ${3|hide,show|}, ${4|merge,section|} ",
-            "",
-            "    ${0:text} ",
-            "    \"\"\")"
         ]
     },
     "Doc API ( rvd )": {
@@ -253,19 +260,9 @@
             "---------------"
         ]
     },
-    "block python ( [py )": {
-        "prefix": "[py",
-        "description": "block python",
-        "scope": "python",
-        "body": [
-            "_[[PYTHON]] ${1:params}",
-            "${0:text}",
-            "_[[END]]"
-        ]
-    },
     "block text ( [ta )1": {
         "prefix": "[ta",
-        "description": "block tag text",
+        "description": "table block",
         "scope": "python",
         "body": [
             "_[[TABLE]] ${1:title}",
@@ -273,22 +270,25 @@
             "_[[END]]"
         ]
     },
-    "block text ( [te )1": {
-        "prefix": "[te",
-        "description": "block tag text",
+    "endnotes ( [no  )": {
+        "prefix": "[no",
+        "description": "endnotes block tag",
         "scope": "python",
         "body": [
-            "_[[TEXT]] ${1|literal,italic,bold,topic|}",
+            "_[[ENDNOTES]]",
             "${0:text}",
+            "",
             "_[[END]]"
         ]
     },
-    "block end ( [en  )": {
+    "end (  [en )": {
         "prefix": "[en",
-        "description": "block tag end",
+        "description": "block end",
         "scope": "python",
         "body": [
-            "_[[END]]"
+            "_[[END]]",
+            "",
+            ""
         ]
     }
 }

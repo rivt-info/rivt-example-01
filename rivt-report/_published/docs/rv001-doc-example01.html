@@ -45,7 +45,7 @@
 
     <script src="_static/jquery.js?v=5d32c60e"></script>
     <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-    <script src="_static/documentation_options.js?v=6abb727b"></script>
+    <script src="_static/documentation_options.js?v=96ca68dc"></script>
     <script src="_static/doctools.js?v=fd6eb6e6"></script>
     <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="_static/clipboard.min.js?v=a7894cd8"></script>
@@ -420,12 +420,12 @@ column width.</p>
 
 dl₁ = 3.64 k_ft     [dl₁] = 53.09 kN_m   | Dead load [ASCE7-05 2.3.2]
 
-D₁         D₂          D₃             spc₁          D₄
-—————————  ——————————  —————————————  ————————————  ——————————————————
-3.80 p_sf  2.10 p_sf   10.00 p_sf     2.00 ft       3.00 k_ft
-—————      —————       —————          —————         —————
-joists DL  plywood DL  partitions DL  beam spacing  fixed machinery DL
-—————————  ——————————  —————————————  ————————————  ——————————————————
+D₃             D₄                  spc₁          D₂          D₁
+—————————————  ——————————————————  ————————————  ——————————  —————————
+10.00 p_sf     3.00 k_ft           2.00 ft       2.10 p_sf   3.80 p_sf
+—————          —————               —————         —————       —————
+partitions DL  fixed machinery DL  beam spacing  plywood DL  joists DL
+—————————————  ——————————————————  ————————————  ——————————  —————————
 </pre></div>
 </div>
 <div class="line-block">
@@ -452,11 +452,11 @@ beam spacing  ASCE7-O5 LL
 
 ω₁ = 3.77 k_ft     [ω₁] = 54.96 kN_m   | Total load [ASCE7-05 2.3.2]
 
-dl₁                  ll₁
+ll₁                  dl₁
 ———————————————————  ———————————————————
-3.64 k_ft            128.00 ft·p_sf
+128.00 ft·p_sf       3.64 k_ft
 —————                —————
-Dead load [ASCE7-05  Live load [ASCE7-05
+Live load [ASCE7-05  Dead load [ASCE7-05
 2.3.2]               2.3.2]
 ———————————————————  ———————————————————
 </pre></div>
@@ -587,13 +587,13 @@ fb₁ = ────────
 
 fb₁ = 2678.2 p_si     [fb₁] = 18.5 MPA   | Bending stress
 
-m₁                   section₁
-———————————————————  —————————————
-120.5 ft2·k_ft       540.0 inch3
-—————                —————
-Mid-span UDL moment  rectangle - S
--                    (sectprop.py)
-———————————————————  —————————————
+section₁       m₁
+—————————————  ———————————————————
+540.0 inch3    120.5 ft2·k_ft
+—————          —————
+rectangle - S  Mid-span UDL moment
+(sectprop.py)  -
+—————————————  ———————————————————
 </pre></div>
 </div>
 <div class="line-block">
@@ -617,13 +617,13 @@ Mid-span UDL moment  rectangle - S
 
 δ₁ = 0.04 inch     [δ₁] = 1.00 mm   | mid-span deflection (sectprop.py)
 
-spn₁       inertia₁       ω₁                    E₁
-—————————  —————————————  ————————————————————  —————————————
-16.00 ft   4860.00 inch4  3.77 k_ft             29000.00 k_si
-—————      —————          —————                 —————
-beam span  rectangle - I  Total load [ASCE7-05  modulus of
--          (sectprop.py)  2.3.2]                elasticity
-—————————  —————————————  ————————————————————  —————————————
+spn₁       inertia₁       E₁             ω₁
+—————————  —————————————  —————————————  ————————————————————
+16.00 ft   4860.00 inch4  29000.00 k_si  3.77 k_ft
+—————      —————          —————          —————
+beam span  rectangle - I  modulus of     Total load [ASCE7-05
+-          (sectprop.py)  elasticity     2.3.2]
+—————————  —————————————  —————————————  ————————————————————
 </pre></div>
 </div>
 <hr class="docutils" />
@@ -716,7 +716,7 @@ beam span  rectangle - I  Total load [ASCE7-05  modulus of
 <!-- _templates/rv-title.html -->
 <div class="footer-item">
     <p class="rvtitle">
-        Example 1 - rivt Doc  &nbsp;&nbsp;  v.1.0.0a13 
+        Example 1 - rivt Doc  &nbsp;&nbsp;  v.1.0.0a17 
     </p>
 </div></div>
       
@@ -729,7 +729,7 @@ beam span  rectangle - I  Total load [ASCE7-05  modulus of
 <!-- _templates/rv-date.html -->
 <div class="footer-item">
     <p class="rvdate">
-        2026-07-15
+        2026-07-18
     </p>
 </div></div>
       

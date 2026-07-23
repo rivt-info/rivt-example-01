@@ -355,6 +355,11 @@
             "isWholeLine": true,
         },
         {
+            "text": "_[[ENDNOTES]]",
+            "color": "#4989a2",
+            "isWholeLine": true,
+        },
+        {
             "text": "_[[END]]",
             "color": "#4989a2",
             "isWholeLine": true,
@@ -403,35 +408,43 @@
     "editor.parameterHints.enabled": false,
     "editor.foldingStrategy": "auto",
     "editor.tokenColorCustomizations": {
-        "[*Dark*]": {
-            "textMateRules": [
-                {
-                    "scope": [
-                        "string.quoted.multi.python",
-                        "meta.function-call.arguments.python",
-                        "meta.function-call.python",
-                        "meta.member.access.python",
-                        "source.python"
-                    ],
-                    "settings": {
-                        "foreground": "#127612"
-                    }
+        "textMateRules": [
+            {
+                "scope": "string.quoted.single.python",
+                "settings": {
+                    "foreground": "#61786d"
+                }
+            },
+            {
+                "scope": "string.quoted.double.python",
+                "settings": {
+                    "foreground": "#61786d"
+                }
+            },
+            {
+                "scope": [
+                    "string.quoted.docstring.multi.python",
+                    "string.quoted.multi.python"
+                ],
+                "settings": {
+                    "foreground": "#74ae8f",
+                    "fontStyle": "italic"
                 },
-                {
-                    "name": "Python Triple Quoted Raw Strings",
-                    "scope": [
-                        "string.regexp.unquoted.triple.python",
-                        "string.regexp.unquoted.raw.python",
-                        "string.regexp.unquoted",
-                        "string.regexp",
-                        "constant.character.escape.regexp"
-                    ],
-                    "settings": {
-                        "foreground": "#bfc0c0"
-                    }
-                },
-            ]
-        }
+            },
+            {
+                "name": "Python Triple Quoted Raw Strings",
+                "scope": [
+                    "string.regexp.unquoted.triple.python",
+                    "string.regexp.unquoted.raw.python",
+                    "string.regexp.unquoted",
+                    "string.regexp",
+                    "constant.character.escape.regexp"
+                ],
+                "settings": {
+                    "foreground": "#bfc0c0"
+                }
+            },
+        ]
     },
     "editor.rulers": [
         {

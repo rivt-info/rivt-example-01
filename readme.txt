@@ -1,6 +1,6 @@
 
 --------------------------------------------------------------------------------
-| rivt | Example 1 - rivt Doc | R Holland | v-1.0.0a13 | 2026-07-15 - 11:16AM
+| rivt | Example 1 - rivt Doc | R Holland | v-1.0.0a17 | 2026-07-23 - 02:21AM
 --------------------------------------------------------------------------------
 
 
@@ -66,7 +66,7 @@ folder. The description is the table title, followed by the max
 column width.
  
 
-Table 3: Beam Geometry (rvsrc/vals/beam1.csv)
+Table 3: Beam Geometry (beam1.csv)
 ==========  ========  =========  =============
 variable    value     [value]    description
 ==========  ========  =========  =============
@@ -77,7 +77,7 @@ spn_1       16.00 ft  4.88 m     beam span
 
  
           ----------------------------------------
-Fig. 1 - Beam Diagram [file: rvsrc/img/beam1.png  ]
+Fig. 1 - Beam Diagram [file: beam1.png  ]
           ----------------------------------------
 
  
@@ -91,13 +91,13 @@ Fig. 1 - Beam Diagram [file: rvsrc/img/beam1.png  ]
 
 dl₁ = 3.64 k_ft    [dl₁] = 53.09 kN_m  | Dead load [ASCE7-05 2.3.2]
 
-==================  ==========  =========  ============  =============
-D₄                  D₂          D₁         spc₁          D₃
-==================  ==========  =========  ============  =============
-3.00 k_ft           2.10 p_sf   3.80 p_sf  2.00 ft       10.00 p_sf
-—————               —————       —————      —————         —————
-fixed machinery DL  plywood DL  joists DL  beam spacing  partitions DL
-==================  ==========  =========  ============  =============
+=============  ============  ==================  =========  ==========
+D₃             spc₁          D₄                  D₁         D₂
+=============  ============  ==================  =========  ==========
+10.00 p_sf     2.00 ft       3.00 k_ft           3.80 p_sf  2.10 p_sf
+—————          —————         —————               —————      —————
+partitions DL  beam spacing  fixed machinery DL  joists DL  plywood DL
+=============  ============  ==================  =========  ==========
  
 
 ┌  Eq-2 | Live load [ASCE7-05 2.3.2]
@@ -107,13 +107,13 @@ fixed machinery DL  plywood DL  joists DL  beam spacing  partitions DL
 
 ll₁ = 0.13 k_ft    [ll₁] = 1.87 kN_m  | Live load [ASCE7-05 2.3.2]
 
-===========  ============
-L₁           spc₁
-===========  ============
-40.00 p_sf   2.00 ft
-—————        —————
-ASCE7-O5 LL  beam spacing
-===========  ============
+============  ===========
+spc₁          L₁
+============  ===========
+2.00 ft       40.00 p_sf
+—————         —————
+beam spacing  ASCE7-O5 LL
+============  ===========
  
 
 ┌  Eq-3 | Total load [ASCE7-05 2.3.2]
@@ -141,7 +141,7 @@ calculate section properties from imported functions and calculate
 the maximum moment, bending stress and mid-span deflection.
  
 
-Table 4: Beam functions (rvsrc/scripts/sectprop.py)
+Table 4: Beam functions (sectprop.py)
 
 ==========================  ============================================
 Function                    Docstring
@@ -187,7 +187,7 @@ beam width  beam depth
  
           ----------------------------------------
 Fig. 2 - Moment diagram  | Fig. 3 - Deflection diagram 
-files: rvsrc/img/ss-beam2.png, rvsrc/img/ss-beam1.png 
+files: ss-beam2.png, ss-beam1.png 
           ----------------------------------------
 
 
@@ -216,14 +216,14 @@ Maximum bending stress formula
 
 m₁ = 120.52 ft-kip    [m₁] = 163.40 mkN  | Mid-span UDL moment
 
-====================  =========
-ω₁                    spn₁
-====================  =========
-3.77 k_ft             16.00 ft
-—————                 —————
-Total load [ASCE7-05  beam span
-2.3.2]                -
-====================  =========
+=========  ====================
+spn₁       ω₁
+=========  ====================
+16.00 ft   3.77 k_ft
+—————      —————
+beam span  Total load [ASCE7-05
+-          2.3.2]
+=========  ====================
  
 
 ┌  Eq-8 | Bending stress
@@ -265,16 +265,15 @@ rectangle - S  Mid-span UDL moment
 
 δ₁ = 0.04 inch   [δ₁] = 1.00 mm  | mid-span deflection (sectprop.py)
 
-=============  ====================  =========  =============
-inertia₁       ω₁                    spn₁       E₁
-=============  ====================  =========  =============
-4860.00 inch4  3.77 k_ft             16.00 ft   29000.00 k_si
-—————          —————                 —————      —————
-rectangle - I  Total load [ASCE7-05  beam span  modulus of
-(sectprop.py)  2.3.2]                -          elasticity
-=============  ====================  =========  =============
+====================  =============  =========  =============
+ω₁                    E₁             spn₁       inertia₁
+====================  =============  =========  =============
+3.77 k_ft             29000.00 k_si  16.00 ft   4860.00 inch4
+—————                 —————          —————      —————
+Total load [ASCE7-05  modulus of     beam span  rectangle - I
+2.3.2]                elasticity     -          (sectprop.py)
+====================  =============  =========  =============
  
-
 
 --------------------------------------------------------------------------------
 
@@ -285,3 +284,5 @@ Jun. 15, 2026].
 [0.1.2] ASCE/SEI 7-05, Minimum Design Loads for Buildings and Other
 Structures,American Society of Civil Engineers, 2005.
 
+
+ 
