@@ -1,6 +1,5 @@
 #! python3
-""" This is a rivt doc example used in the tutorial at 
-https://www.rivt.info. 
+""" This is a rivt doc example used in the tutorial at https://www.rivt.info. 
 
 This example illustrates: 
 
@@ -14,7 +13,7 @@ This example illustrates:
     - Table blocks and commands
     - Value table command
     - Metadata and layout block
-    - Python function command
+    - Python function assignment
     - Image command
     - Publish command
 
@@ -32,7 +31,7 @@ import rivtlib.rvapi as rv
 # rv private = true ; if false, default section heading changed to public (private)
 
 # %% rv.I("""Summary and Loads
-rv.I(r"""Summary and Loads
+rv.I("""Summary and Loads
 
     This rivt file example calculates the maximum stress and deflection in a
     simply supported, uniformly loaded beam using E-B theory _[#]. It also
@@ -42,14 +41,15 @@ rv.I(r"""Summary and Loads
     The example illustrates the use of some of the most common API functions,
     commands and tags. Further details are provided in the 
     _[U] rivt user manual, https://www.rivt.info |.
-
+    
     The file may be formatted as a text, PDF or HTML doc by changing the type
-    parameter in the PUBLISH command at the end of each rivt file (Doc-API
-    *rv.D*). Published files are found in the _published folder.
+    parameter in the Doc API | PUBLISH | command at the end of each 
+    rivt file (*rv.D()*). Published files are found in the 
+    _published folder.
 """)
 
 # %% rv.I("""Load Combinations 
-rv.I(r"""Load Combinations 
+rv.I("""Load Combinations 
 
     ## Indented comments with double hashes will not appear in the doc
       
@@ -67,7 +67,7 @@ rv.I(r"""Load Combinations
 """)
 
 # %% rv.V("""Loads and Geometry
-rv.V(r"""Loads and Geometry 
+rv.V("""Loads and Geometry 
     
     Successive value definitions are formatted as a table. Variable values are
     defined with the define operator. The line tag [T] labels and numbers the
@@ -101,7 +101,7 @@ rv.V(r"""Loads and Geometry
     """)
 
 # %% rv.V("""Beam Stress
-rv.V(r"""Beam Response
+rv.V("""Beam Response
 
     The following lines import the beam geometry from an external file, 
     calculate section properties from imported functions and calculate 
@@ -139,8 +139,8 @@ rv.V(r"""Beam Response
     """)
 
 
-# %% rv.D(r"""Publish Doc 
-rv.D(r"""Publish Doc 
+# %% rv.D("""Publish Doc 
+rv.D("""Publish Doc 
     
     A rivt file may be published as a text, PDF or HTML doc by specifying the
     PUBLISH type parameter as txt, pdf or html. 
@@ -150,7 +150,7 @@ rv.D(r"""Publish Doc
     _rivt-public folders as a README.txt file. READMEs are formatted and
     displayed on the first page of a GitHub repo.
     
-    | PUBLISH | Example 1 - rivt Doc | pdf
+    | PUBLISH | Example 1 - rivt Doc | txt
     
     _[[METADATA]] 
     [doc]

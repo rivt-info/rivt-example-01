@@ -244,6 +244,10 @@
             "color": "#0f8f69",
         },
         {
+            "text": "| VALDATA |",
+            "color": "#0f8f69",
+        },
+        {
             "text": "| PUBLISH |",
             "color": "#0f8f69",
         },
@@ -386,25 +390,6 @@
         "gitlens:/**/*.code-snippets": "default",
         "*.svg": "default",
     },
-    "python.languageServer": "Pylance",
-    "[python]": {
-        "editor.indentSize": "tabSize",
-        "editor.formatOnType": false,
-        "editor.formatOnSave": true,
-        "editor.defaultFormatter": "charliermarsh.ruff",
-        "editor.stickyScroll.enabled": false,
-    },
-    "python.analysis.enablePytestSupport": false,
-    "notebook.defaultFormatter": "charliermarsh.ruff",
-    "notebook.outline.showCodeCells": true,
-    "notebook.output.textLineLimit": 400,
-    "python.terminal.executeInFileDir": true,
-    "insertDateString.format": "MM-DD-YYYY hh:mm:ss",
-    "insertDateString.formatDate": "MM-DD-YYYY",
-    "seito-openfile.searchSubFoldersOfWorkspaceFolders": [],
-    "seito-openfile.openNewTab": true,
-    "seito-openfile.searchPaths": [],
-    "seito-openfile.notFoundTriggerQuickOpen": false,
     "editor.parameterHints.enabled": false,
     "editor.foldingStrategy": "auto",
     "editor.tokenColorCustomizations": {
@@ -412,7 +397,7 @@
             {
                 "scope": "string.quoted.single.python",
                 "settings": {
-                    "foreground": "#61786d"
+                    "foreground": "#4baf7f"
                 }
             },
             {
@@ -427,22 +412,9 @@
                     "string.quoted.multi.python"
                 ],
                 "settings": {
-                    "foreground": "#74ae8f",
-                    "fontStyle": "italic"
+                    "foreground": "#a1a1a1",
+                    "fontStyle": "normal"
                 },
-            },
-            {
-                "name": "Python Triple Quoted Raw Strings",
-                "scope": [
-                    "string.regexp.unquoted.triple.python",
-                    "string.regexp.unquoted.raw.python",
-                    "string.regexp.unquoted",
-                    "string.regexp",
-                    "constant.character.escape.regexp"
-                ],
-                "settings": {
-                    "foreground": "#bfc0c0"
-                }
             },
         ]
     },
@@ -475,6 +447,25 @@
     },
     "editor.unicodeHighlight.nonBasicASCII": false,
     "editor.unicodeHighlight.ambiguousCharacters": false,
+    "python.languageServer": "Pylance",
+    "[python]": {
+        "editor.indentSize": "tabSize",
+        "editor.formatOnType": false,
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "charliermarsh.ruff",
+        "editor.stickyScroll.enabled": false,
+    },
+    "python.analysis.enablePytestSupport": false,
+    "notebook.defaultFormatter": "charliermarsh.ruff",
+    "notebook.outline.showCodeCells": true,
+    "notebook.output.textLineLimit": 400,
+    "python.terminal.executeInFileDir": true,
+    "insertDateString.format": "MM-DD-YYYY hh:mm:ss",
+    "insertDateString.formatDate": "MM-DD-YYYY",
+    "seito-openfile.searchSubFoldersOfWorkspaceFolders": [],
+    "seito-openfile.openNewTab": true,
+    "seito-openfile.searchPaths": [],
+    "seito-openfile.notFoundTriggerQuickOpen": false,
     "ShortcutMenuBar.saveAll": true,
     "ShortcutMenuBar.beautify": false,
     "ShortcutMenuBar.showCommands": false,
