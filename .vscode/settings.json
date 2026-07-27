@@ -1,5 +1,5 @@
 {
-    "python.defaultInterpreterPath": "/workspaces/rivtlib/.venv/bin/python",
+    "python.defaultInterpreterPath": "",
     "search.useIgnoreFiles": false,
     "search.exclude": {
         "**/.help": false
