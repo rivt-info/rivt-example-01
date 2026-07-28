@@ -134,12 +134,12 @@ spn_1       16.00 ft  4.88 m     beam span
 
            dl₁ = 3.64 k_ft     [dl₁] = 53.09 kN_m   | Dead load [ASCE7-05 2.3.2]
 
-           D₁         D₄                  D₃             spc₁          D₂
-           —————————  ——————————————————  —————————————  ————————————  ——————————
-           3.80 p_sf  3.00 k_ft           10.00 p_sf     2.00 ft       2.10 p_sf
-           —————      —————               —————          —————         —————
-           joists DL  fixed machinery DL  partitions DL  beam spacing  plywood DL
-           —————————  ——————————————————  —————————————  ————————————  ——————————
+           D₃             D₁         spc₁          D₄                  D₂
+           —————————————  —————————  ————————————  ——————————————————  ——————————
+           10.00 p_sf     3.80 p_sf  2.00 ft       3.00 k_ft           2.10 p_sf
+           —————          —————      —————         —————               —————
+           partitions DL  joists DL  beam spacing  fixed machinery DL  plywood DL
+           —————————————  —————————  ————————————  ——————————————————  ——————————
 
 
  
@@ -156,12 +156,12 @@ spn_1       16.00 ft  4.88 m     beam span
 
            ll₁ = 0.13 k_ft     [ll₁] = 1.87 kN_m   | Live load [ASCE7-05 2.3.2]
 
-           L₁           spc₁
-           ———————————  ————————————
-           40.00 p_sf   2.00 ft
-           —————        —————
-           ASCE7-O5 LL  beam spacing
-           ———————————  ————————————
+           spc₁          L₁
+           ————————————  ———————————
+           2.00 ft       40.00 p_sf
+           —————         —————
+           beam spacing  ASCE7-O5 LL
+           ————————————  ———————————
 
 
  
