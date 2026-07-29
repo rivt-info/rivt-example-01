@@ -46,7 +46,7 @@ rv.I("""Summary and Loads
     parameter in the Doc API | PUBLISH | command at the end of each 
     rivt file (*rv.D()*). Published files are found in the 
     _published folder.
-""")
+    """)
 
 # %% rv.I("""Load Combinations 
 rv.I("""Load Combinations 
@@ -64,7 +64,8 @@ rv.I("""Load Combinations
     16-3           1.2(D+F+T) + 1.6(Lr or S or R) + (f1L or 0.8W)
     ============= ================================================
     _[[END]]
-""")
+
+    """)
 
 # %% rv.V("""Loads and Geometry
 rv.V("""Loads and Geometry 
@@ -98,6 +99,7 @@ rv.V("""Loads and Geometry
     ll_1 <=: 1.6 * spc_1 * L_1 | k_ft, kN_m, 2 | Live load [ASCE7-05 2.3.2]
     
     omega_1 <=: dl_1 + ll_1 | k_ft, kN_m, 2 | Total load [ASCE7-05 2.3.2]
+    
     """)
 
 # %% rv.V("""Beam Stress
@@ -128,14 +130,6 @@ rv.V("""Beam Response
 
     delta_1 :=: midspan_delta(spn_1, omega_1, E_1, inertia_1) | inch, mm, 2 | mid-span deflection (sectprop.py)
         
-    _[[ENDNOTES]]
-    "Euler–Bernoulli beam theory", Wikipedia, Wikimedia Foundation. [Online].
-    https://en.wikipedia.org/wiki/Euler_Bernoulli_beam_theory. 
-    [Accessed: Jun. 15, 2026].
-
-    ASCE/SEI 7-05, Minimum Design Loads for Buildings and Other Structures,
-    American Society of Civil Engineers, 2005.
-    _[[END]]]
     """)
 
 
@@ -191,5 +185,6 @@ rv.D("""Publish Doc
     doc_verbose = true; if false minmize output during doc processing
     auto_cfg = true ; if false, config files are not updated from rivt file
     _[[END]]    
+    
     """)
 
